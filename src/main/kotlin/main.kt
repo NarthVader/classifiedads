@@ -261,6 +261,7 @@ fun runHooblyWA(driver: ChromeDriver) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
         println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
     } catch (o: Exception) {
         println("Other Exceptions: $o")
     }
@@ -289,6 +290,7 @@ fun runHooblyFL(driver: ChromeDriver) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
         println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
     } catch (o: Exception) {
         println("Other Exceptions: $o")
     }
@@ -317,6 +319,7 @@ fun runHooblyAZ(driver: ChromeDriver) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
         println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
     } catch (o: Exception) {
         println("Other Exceptions: $o")
     }
@@ -346,6 +349,7 @@ fun runHooblyCA(driver: ChromeDriver) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
         println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
     } catch (o: Exception) {
         println("Other Exceptions: $o")
     }
@@ -354,13 +358,13 @@ fun runHooblyCA(driver: ChromeDriver) {
 fun birdsNowWA(driver: ChromeDriver) {
 
     Thread.sleep(1000)
-    val birdsWA: IntArray = intArrayOf(520353,520364,520726,520733,520759,520833,520885,520893,
+    val birdsWA: IntArray = intArrayOf(520353,520364,520726,520733,520759,520833,520885,
         520950,526507,526530,527361,527836,528305,528311,528585,528593,528595,528597,530942,
         530943,530947,531347,531348,531349,531392,531395,534155,534157,534162,534869,534871,
         534872,535179,535294,537300,537303,537313,537314,537315,537420,543572,543931,544252,
         544254,544385,544769,545328,545339,545475,545479,545480,545547,545597,545683,545685,
         545688,545691,545694,545738,545739,545741,545788,545791,545842,545907,545908,545945,
-        545946,545947,546949,546952,547028,547111,547160,547210,547215,547217,547366,547406,
+        545946,545947,546949,546952,547028,547111,547160,547210,547215,547217,547366,
         547408,547409,547410,547510,547615,547616,547687,547810,547812,547814,547815,547816)
     println("birdNowWA: " + birdsWA.size)
 
