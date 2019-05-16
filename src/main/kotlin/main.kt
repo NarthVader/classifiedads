@@ -22,14 +22,14 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
-    runBirdsWA(driver)
-    runBirdsCA(driver)
-    runBirdsAZ(driver)
-    runBirdsFL(driver)
-    runCats(driver)
-    runReps(driver)
-    runDogs(driver)
-    runClassifieds(driver)
+//    runBirdsWA(driver)
+//    runBirdsCA(driver)
+//    runBirdsAZ(driver)
+//    runBirdsFL(driver)
+//    runCats(driver)
+//    runReps(driver)
+//    runDogs(driver)
+//    runClassifieds(driver)
     runHooblyWA(driver)
     runHooblyFL(driver)
     runHooblyAZ(driver)
@@ -522,16 +522,35 @@ fun adNow(driver: ChromeDriver) {
 fun hooblyWA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    //var hoobly: Array<String> = arrayOf("SSN4Y", "NiOVp", "CBCva", "BkYaN", "9P2B8", "5WYMC", "0Hfpa", "15L9N", "AR7Yv")
-    var hoobly: Array<String> = arrayOf("ZepT3", "ZaAVE", "Ygkpx", "XaVLW", "U5ORI", "U3Kyk", "T9KD9", "Rz06f", "RnbXy", "RXjWL", "RM2kj", "RJLxf", "R3nUg", "Qqxm3", "PWkea", "PMcnn", "P8kMO",
-        "hy9kk", "gYj0h", "gEQad", "g3nhg", "fzDzw", "f3z17", "eUjxw", "eReTB", "eNlme", "daEMf", "i6yGN", "izqAl", "dRJ3Y", "nyuye", "o1mAh", "oJa97", "aeHhe", "bP4MD", "jCibI", "jadVB",
-        "cGidH", "coQC7", "dJNJx", "nmelX", "nahn0", "b1eCk", "0amSa", "0c8TU", "1Zc33", "QE0y1", "0xfS6", "0dFbB", "ClTO6", "ujbPf", "jt9po", "CBCva", "BkYaN", "jw56S", "kGcVb", "kO0eK",
-        "kkOQ4", "zgepf", "lIaFU", "uiP0f", "uhaOR", "tc3Vn", "u6QmP", "sG58K", "sFZNZ", "s5hIl", "rcUay", "r8RU7", "qObVq", "SSN4Y", "pgYmL", "pnKZI", "oPSz3", "pV23g", "phD99", "pmO3W",
-        "poBgK", "r0IrO", "r58ZR", "zcNGO", "zUEcA", "xKnWG", "wrMJA", "wYGKz", "vXqoa", "vS98U", "vLHQF", "vKVeh", "vH0Yt", "ZkrnR", "a0H8V", "aI8Wo", "NiOVp", "5WYMC", "0Hfpa", "15L9N",
-        "AR7Yv", "9P2B8", "ukKbe", "OSEqM", "MVH2g", "MG8Ci", "LsUpg", "L6vGo", "Ky3Hi", "Kmz5O", "Kgswo", "KTFZ9", "KNEXh", "HY7My", "HZp6H", "HfnD5", "Hht47", "IO2tD", "IvLtb", "JGmTG",
-        "JJYf0", "JgKKb", "JigqQ", "Grndr", "GYab0", "GXtS0", "Fl1ZI", "FCzWC", "F6fK6", "EJjSz", "DQN8y", "DBvqv", "CmeqH", "AccBa", "AgAwK", "AgM9W", "AkcrL", "Awal6", "BCbAQ", "BKEZK",
-        "CHS03", "CWfgP", "Cj53A", "AL1F5", "7yRTf", "7wgmN", "7NNAG", "72ae9", "6Y6yS", "5relL", "5lxlC", "5RTkg", "4iTm6", "BjUZX", "Cocby", "hl1tt", "1NW2v", "1iva6", "28ADk", "2fapx",
-        "2gqrs", "2uESV")
+    //var hoobly: Array<String> = arrayOf("SSN4Y", "NiOVp", "CBCva", "BkYaN", "9P2B8", "5WYMC", "0Hfpa", "15L9N", "AR7Yv") "ZepT3", "ZaAVE", "Ygkpx", "XaVLW", "U5ORI", "U3Kyk", "T9KD9", "Rz06f", "RnbXy", "RXjWL", "RM2kj", "RJLxf", "R3nUg", "Qqxm3", "PWkea", "PMcnn", "P8kMO",
+    //        "hy9kk", "gYj0h", "gEQad", "g3nhg", "fzDzw", "f3z17", "eUjxw", "eReTB", "eNlme", "daEMf", "i6yGN", "izqAl", "dRJ3Y", "nyuye", "o1mAh", "oJa97", "aeHhe", "bP4MD", "jCibI", "jadVB",
+    //        "cGidH", "coQC7", "dJNJx", "nmelX", "nahn0", "b1eCk", "0amSa", "0c8TU", "1Zc33", "QE0y1", "0xfS6", "0dFbB", "ClTO6", "ujbPf", "jt9po", "CBCva", "BkYaN", "jw56S", "kGcVb", "kO0eK",
+    //        "kkOQ4", "zgepf", "lIaFU", "uiP0f", "uhaOR", "tc3Vn", "u6QmP", "sG58K", "sFZNZ", "s5hIl", "rcUay", "r8RU7", "qObVq", "SSN4Y", "pgYmL", "pnKZI", "oPSz3", "pV23g", "phD99", "pmO3W",
+    //        "poBgK", "r0IrO", "r58ZR", "zcNGO", "zUEcA", "xKnWG", "wrMJA", "wYGKz", "vXqoa", "vS98U", "vLHQF", "vKVeh", "vH0Yt", "ZkrnR", "a0H8V", "aI8Wo", "NiOVp", "5WYMC", "0Hfpa", "15L9N",
+    //        "AR7Yv", "9P2B8", "ukKbe", "OSEqM", "MVH2g", "MG8Ci", "LsUpg", "L6vGo", "Ky3Hi", "Kmz5O", "Kgswo", "KTFZ9", "KNEXh", "HY7My", "HZp6H", "HfnD5", "Hht47", "IO2tD", "IvLtb", "JGmTG",
+    //        "JJYf0", "JgKKb", "JigqQ", "Grndr", "GYab0", "GXtS0", "Fl1ZI", "FCzWC", "F6fK6", "EJjSz", "DQN8y", "DBvqv", "CmeqH", "AccBa", "AgAwK", "AgM9W", "AkcrL", "Awal6", "BCbAQ", "BKEZK",
+    //        "CHS03", "CWfgP", "Cj53A", "AL1F5", "7yRTf", "7wgmN", "7NNAG", "72ae9", "6Y6yS", "5relL", "5lxlC", "5RTkg", "4iTm6", "BjUZX", "Cocby", "hl1tt", "1NW2v", "1iva6", "28ADk", "2fapx",
+    //        "2gqrs", "2uESV"
+    var hoobly: Array<String> = arrayOf("2uESV", "2gqrs", "2fapx", "28ADk", "1iva6", "1NW2v", "hl1tt", "Cocby", "BjUZX", "4iTm6",
+        "5RTkg", "5lxlC", "5relL", "6Y6yS", "72ae9", "7NNAG", "7wgmN", "7yRTf", "AL1F5", "Cj53A",
+        "CWfgP", "CHS03", "BKEZK", "BCbAQ", "Awal6", "AkcrL", "AgM9W", "AgAwK", "AccBa", "CmeqH",
+        "DBvqv", "DQN8y", "EJjSz", "F6fK6", "FCzWC", "Fl1ZI", "GXtS0", "GYab0", "Grndr", "JigqQ",
+        "JgKKb", "JJYf0", "JGmTG", "Hht47", "IvLtb", "IO2tD", "HfnD5", "HZp6H", "HY7My", "KNEXh",
+        "KTFZ9", "Kgswo", "Kmz5O", "Ky3Hi", "L6vGo", "LsUpg", "MG8Ci", "MVH2g", "OSEqM", "ukKbe",
+        "9P2B8", "AR7Yv", "15L9N", "0Hfpa", "5WYMC", "NiOVp", "aI8Wo", "a0H8V", "ZkrnR", "vH0Yt",
+        "vKVeh", "vLHQF", "vS98U", "vXqoa", "wYGKz", "wrMJA", "xKnWG", "zUEcA", "zcNGO", "r58ZR",
+        "r0IrO", "poBgK", "pmO3W", "phD99", "pV23g", "oPSz3", "pnKZI", "pgYmL", "SSN4Y", "qObVq",
+        "r8RU7", "rcUay", "s5hIl", "sFZNZ", "sG58K", "u6QmP", "tc3Vn", "uhaOR", "uiP0f", "lIaFU",
+        "zgepf", "kkOQ4", "kO0eK", "kGcVb", "jw56S", "BkYaN", "CBCva", "jt9po", "ujbPf", "ClTO6",
+        "0dFbB", "0xfS6", "QE0y1", "1Zc33", "0c8TU", "0amSa", "b1eCk", "nahn0", "nmelX", "dJNJx",
+        "coQC7", "cGidH", "jadVB", "jCibI", "bP4MD", "aeHhe", "oJa97", "o1mAh", "nyuye", "dRJ3Y",
+        "izqAl", "i6yGN", "daEMf", "eNlme", "eReTB", "eUjxw", "f3z17", "fzDzw", "g3nhg", "gEQad",
+        "gYj0h", "hy9kk", "P8kMO", "PMcnn", "PWkea", "Qqxm3", "R3nUg", "RJLxf", "RM2kj", "RXjWL",
+        "RnbXy", "Rz06f", "T9KD9", "U3Kyk", "U5ORI", "Ygkpx", "ZaAVE", "ZepT3", "vjc07", "ta5kK",
+        "xDttY", "DnbOS", "GaoJt", "6uYcK", "IUadk", "2NAa1", "6Q3Vh", "6qGm2", "JMQws", "CmPz2",
+        "MdUHa", "FZ0Bm", "NaN0H", "QOZH1", "WiYEc", "aVw9O", "dYrD6", "eD3Rn", "Uhi55", "eeDAL",
+        "gfYMc", "hd8r6", "ioG8G", "k4N5C", "ltc2x", "lwUzY", "pncBM", "vKclC")
+
     println("hooblyWA: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
@@ -549,7 +568,10 @@ fun hooblyWA(driver: ChromeDriver) {
 fun hooblyFL(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    var hoobly: Array<String> = arrayOf("pmyId", "yjTX8", "V1oBv", "2S3vr", "09Cp6", "3l65y", "9arAy", "cRCAz", "jwUjw")
+    //"pmyId", "yjTX8", "V1oBv", "2S3vr", "09Cp6", "3l65y", "9arAy", "cRCAz", "jwUjw"
+    var hoobly: Array<String> = arrayOf("FPlAs", "kF6lh", "l6eEy", "flTwp", "cmdyr", "l89k5", "tewX5", "G05ly", "pi99M", "ohKgb",
+        "nuhMi", "xyfiT", "CUMch", "n4Bnq", "Nc20R", "zOdc6", "BbiCS", "zeq08", "AHedI", "SQksa",
+        "7cQR8", "zXLd6", "feg87", "7rtFO", "G5fcU", "MDZ3d", "gsqLh", "fkLjz")
     println("hooblyFL: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
@@ -567,7 +589,10 @@ fun hooblyFL(driver: ChromeDriver) {
 fun hooblyAZ(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    var hoobly: Array<String> = arrayOf("l5kQ9", "YcDSD", "sGt44", "ho8n7", "aj1tV", "V5p2R", "wTuOm", "gIdvV", "VUDlt")
+    //"l5kQ9", "YcDSD", "sGt44", "ho8n7", "aj1tV", "V5p2R", "wTuOm", "gIdvV", "VUDlt"
+    var hoobly: Array<String> = arrayOf("7MrjN", "h6POZ", "hoOxg", "ZNq1T", "69WA0", "SmQhH", "yK5Ro", "9mZKz", "C4wcl", "jpSrh",
+        "1WOeY", "2FPED", "DLZ32", "vG7af", "E9OY6", "aNDSk", "ffcG4", "1jcUq", "YPQyK", "egumo",
+        "xfSlP", "nWZFV", "ozVSI", "mOose", "HhzPl", "6LgSS", "aHfQm", "QwvUF", "C1xCa", "h6POZ", "hV5if")
     println("hooblyAZ: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
@@ -586,7 +611,11 @@ fun hooblyAZ(driver: ChromeDriver) {
 fun hooblyCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    var hoobly: Array<String> = arrayOf("CFCBe", "9eMkb", "iaDmn", "YFSFe", "uIvlf", "bC0sv", "a1NGG", "DHcvX", "kfeGx")
+    //"CFCBe", "9eMkb", "iaDmn", "YFSFe", "uIvlf", "bC0sv", "a1NGG", "DHcvX", "kfeGx"
+    var hoobly: Array<String> = arrayOf("lwO0b", "uEhZb", "kfeGx", "DHcvX", "a1NGG", "bC0sv", "uIvlf", "YFSFe", "iaDmn", "9eMkb",
+        "CFCBe", "RVEsv", "JpXqh", "77Ec1", "UXvup", "miryH", "z2xXB", "znNNe", "TJ8DM", "Jmj6h",
+        "uRHMp", "a83tI", "AFn8c", "G1H7C", "eqIaw", "2B7y0", "4yg3N", "2HrtL", "KNbQg", "45bRF",
+        "N9cro", "ZSNbM", "RKSUg", "ITYhd")
     println("hooblyCA: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
