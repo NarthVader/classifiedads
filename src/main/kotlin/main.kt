@@ -420,7 +420,8 @@ fun birdsNowAZ(driver: ChromeDriver) {
 fun birdsNowFL(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    val birdsFL: IntArray = intArrayOf(550466,550500,550501,550502,550503,550504,550505,550506,550508,550509)
+    val birdsFL: IntArray = intArrayOf(550466,550500,550501,550502,550503,550504,550505,550506,550508,550509,
+        554664,554669,554575,554668,554670,554660,554647,554662,554654,554658,554667,554651,554661,554665,554657,554663,554666,554671,554577)
     println("birdNowFL: " + birdsFL.size)
 
     for (i in 0..birdsFL.size-1) {
