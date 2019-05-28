@@ -22,18 +22,18 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
-    runBirdsWA(driver)
-    runBirdsCA(driver)
-    runBirdsAZ(driver)
-    runBirdsFL(driver)
+//    runBirdsWA(driver)
+//    runBirdsCA(driver)
+//    runBirdsAZ(driver)
+//    runBirdsFL(driver)
     runCats(driver)
-    runReps(driver)
-    runDogs(driver)
-    runClassifieds(driver)
-    runHooblyWA(driver)
-    runHooblyFL(driver)
-    runHooblyAZ(driver)
-    runHooblyCA(driver)
+//    runReps(driver)
+//    runDogs(driver)
+//    runClassifieds(driver)
+//    runHooblyWA(driver)
+//    runHooblyFL(driver)
+//    runHooblyAZ(driver)
+//    runHooblyCA(driver)
 }
 
 fun runBirdsWA(driver: ChromeDriver) {
@@ -438,7 +438,8 @@ fun birdsNowFL(driver: ChromeDriver) {
 fun catsNow(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    val cats: IntArray = intArrayOf(2742,2743,2752,2753,2755,2757,2758,2759,2760,2762,2763,2764,2765,2767,2768,2775,2776,2777,2778,2779,2780)
+
+    val cats: IntArray = intArrayOf(2752,2753,2755,2757,2758,2759,2762,2763,2764,2765,2743,2767,2768,2775,2776,2777,2778,2779,2780)
     println("Cats Now: " + cats.size)
 
     for (i in 0..cats.size-1) {
