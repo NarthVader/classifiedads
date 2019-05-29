@@ -21,19 +21,19 @@ fun scrape() {
     cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true)
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
-//
-//    runBirdsWA(driver)
-//    runBirdsCA(driver)
-//    runBirdsAZ(driver)
+
+    runBirdsWA(driver)
+    runBirdsCA(driver)
+    runBirdsAZ(driver)
     runBirdsFL(driver)
-//    runCats(driver)
-//    runReps(driver)
-//    runDogs(driver)
-//    runClassifieds(driver)
-//    runHooblyWA(driver)
-//    runHooblyFL(driver)
-//    runHooblyAZ(driver)
-//    runHooblyCA(driver)
+    runCats(driver)
+    runReps(driver)
+    runDogs(driver)
+    runClassifieds(driver)
+    runHooblyWA(driver)
+    runHooblyFL(driver)
+    runHooblyAZ(driver)
+    runHooblyCA(driver)
 }
 
 fun runBirdsWA(driver: ChromeDriver) {
