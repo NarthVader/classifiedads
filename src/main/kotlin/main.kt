@@ -26,6 +26,9 @@ fun scrape() {
     runBirdsCA(driver)
     runBirdsAZ(driver)
     runBirdsFL(driver)
+    runBirdsTX(driver)
+    runBirdsNY(driver)
+    runBirdsIL(driver)
     runCats(driver)
     runReps(driver)
     runDogs(driver)
@@ -129,6 +132,84 @@ fun runBirdsFL(driver: ChromeDriver) {
         println("Alert Exception: $a")
         driver.switchTo().alert().accept()
         birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsTX(driver: ChromeDriver) {
+
+    val usrBirdsTX = "customersupportTX@thefinchfarm.com"
+    val pwBirdsTX = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsTX")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsTX")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowTX(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsNY(driver: ChromeDriver) {
+
+    val usrBirdsNY = "customersupportNY@thefinchfarm.com"
+    val pwBirdsNY = "SELL2020!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsNY")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsNY")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowNY(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsIL(driver: ChromeDriver) {
+
+    val usrBirdsIL = "TFFsavvypetsIL@gmail.com"
+    val pwBirdsIL = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIL")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
     } catch (t: TimeoutException) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
@@ -426,6 +507,57 @@ fun birdsNowFL(driver: ChromeDriver) {
 
     for (i in 0..birdsFL.size-1) {
         val index = birdsFL[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowTX(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+    val birdsTX: IntArray = intArrayOf(555365,555350,555346,555310,555307,555314,555337,555358,555348,555311,555327,555357,555343,555362,555312,555313,555309,555339,555354,555342,555336,555306,555360,555316,555366,555266,555351,555344,555356,555338,555353)
+    println("birdNowTX: " + birdsTX.size)
+
+    for (i in 0..birdsTX.size-1) {
+        val index = birdsTX[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowNY(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+    val birdsNY: IntArray = intArrayOf(551369,555636,555633,550797,550527,555622,555626,555127,555635,555619,555627,555643,550605,555631,555620,550563,555621,555617,555629,555640,555630,555624,555615,555644,550796,555616,555638,555632,555641,555628,555639)
+    println("birdNowNY: " + birdsNY.size)
+
+    for (i in 0..birdsNY.size-1) {
+        val index = birdsNY[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowIL(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+    val birdsIL: IntArray = intArrayOf(555468,555763,555761,555466,555479,555476,555647,555769,555762,555467,555768,555469,555759,555474,555475,555461,555650,555766,555758,555646,555453,555770,555477,555771,555393,555764,555760,555767,555649,555765)
+    println("birdNowIL: " + birdsIL.size)
+
+    for (i in 0..birdsIL.size-1) {
+        val index = birdsIL[i]
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
