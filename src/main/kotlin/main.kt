@@ -449,13 +449,22 @@ fun birdsNowWA(driver: ChromeDriver) {
         87 to "Gold Breasted Waxbill", 527 to "Gold Capped Conure", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet", 751 to "Iranian Highflying Tumbler",
         256 to "Kakariki (Red Crowned Parakeet)", 742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet", 252 to "Lady Gouldian Finch - Blue-back",
         144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill", 435 to "Lovebirds - Black Masked", 477 to "Lovebirds - Blue Masked", 528 to "Lovebirds - Blue Peach-faced",
-        1161 to "Lutino Indian Ringneck Parakeet")
+        1161 to "Lutino Indian Ringneck Parakeet", 143 to "Mosaic Canary", 115 to "Zebra Finch - Normal", 109 to "Orange Crown Weaver (Red Bishop)", 120 to "Owl Finch", 606 to "Parrotlet - Green",
+        608 to "Parrotlet - Pied", 273 to "Pied Parrotfinch", 116 to "Pied Zebra Finch", 546 to "Conure - Pineapple Green-Cheeked", 456 to "Quaker Parrot (Monk Parakeet)", 86 to "Red-Billed Firefinch",
+        131 to "Red-faced Parrotfinch", 820 to "Red Agate Canary", 142 to "Red Factor Canary", 810 to "Regent (Rock Pebbler) Parrot", 284 to "Ring-necked Dove - White", 441 to "Rosy Bourke's Parakeets",
+        823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet", 210 to "Seagreen Parrotfinch", 541 to "Conure - Sun", 821 to "Swainsons Lories", 637 to "Tambourine Doves",
+        800 to "Thick-billed Green Pigeon", 141 to "Variegated Canary", 442 to "Violet Eared Waxbill Finch - Pairs", 1250 to "Violet Indian Ringneck", 1258 to "White Bellied Caique ",
+        786 to "White Crested Canary", 569 to "Whiteface Pearl Cockatiel", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 110 to "Yellow Crown Weaver (Bishop)",
+        803 to "Yellow Fischer's Lovebird", 114 to "Zebra Finch - Chestnut Flanked White")
 
     val birdsNowPricing: HashMap<Int,Int> = hashMapOf(598 to 528585, 777 to 546952, 220 to 547616, 1257 to 530943, 1171 to 545479, 132 to 547687, 216 to 520364, 778 to 537420,
         460 to 545597, 597 to 547217, 572 to 528595, 439 to 534872, 457 to 537303, 469 to 531348, 553 to 528305, 478 to 545694, 483 to 547816, 269 to 545480, 458 to 537300,
         571 to 547210, 557 to 545741, 459 to 546949, 525 to 547810, 83 to 528597, 540 to 543572, 541 to 545791, 419 to 537315, 84 to 520353, 638 to 547615, 797 to 545842, 104 to 547812,
         791 to 547028, 479 to 547815, 133 to 547366, 260 to 544252, 87 to 545475, 527 to 545691, 1157 to 535294, 777 to 545547, 751 to 527836, 256 to 534869, 742 to 545683, 804 to 543931,
-        252 to 520733, 144 to 534162, 96 to 544385, 435 to 537313, 477 to 544254, 528 to 526530, 1161 to 547410)
+        252 to 520733, 144 to 534162, 96 to 544385, 435 to 537313, 477 to 544254, 528 to 526530, 1161 to 547410, 143 to 547160, 115 to 545328, 109 to 545788, 120 to 547814, 606 to 545685,
+        608 to 547409, 273 to 520726, 116 to 545908, 546 to 531349, 456 to 537314, 86 to 547111, 131 to 528593, 820 to 545907, 142 to 526507, 810 to 530942, 284 to 531392, 441 to 545739,
+        823 to 534155, 771 to 545339, 210 to 520759, 541 to 547510, 821 to 545945, 637 to 520950, 800 to 531395, 141 to 520833, 442 to 545946, 1250 to 528311, 1258 to 520885, 786 to 534157,
+        569 to 530947, 250 to 545738, 257 to 545688, 110 to 545947, 803 to 534871, 114 to 547215)
 
     val birdsWA: IntArray = intArrayOf(520353,520364,520726,520733,520759,520833,520885,
         520950,526507,526530,527836,528305,528311,528585,528593,528595,528597,530942,
