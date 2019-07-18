@@ -439,6 +439,24 @@ fun runHooblyCA(driver: ChromeDriver) {
 fun birdsNowWA(driver: ChromeDriver) {
 
     Thread.sleep(1000)
+    val bigCommerce: HashMap<Int,String> = hashMapOf(598 to "African Grey Parrots", 777 to "Green Indian Ringneck Parakeet", 220 to "Black-bellied Firefinch", 1257 to "Black Headed Caique",
+        1171 to "Blue and Gold Macaw", 132 to "Blue-faced Parrotfinch", 216 to "Blue Billed Firefinch", 460 to "Budgies - (Budgerigar Parakeets) - Blue", 778 to "Blue Indian Ringneck Parakeet",
+        597 to "Blue Quaker Parrot (Monk Parakeet)", 572 to "Bourke Parakeets - Rubino", 439 to "Bourke's Parrot", 457 to "Budgerigar Parakeets (Budgies) - Green", 469 to "Budgies - (Budgerigar Parakeets) - Pied",
+        553 to "Budgies - (Budgerigar Parakeets) - Violet", 478 to "Budgies - (Budgerigar Parakeets) - Yellow", 483 to "Budgies - (Budgerigar Parakeets) - White",
+        269 to "Canary-Winged Parakeets", 458 to "Cockatiel", 571 to "Cockatiel - Cinnamon", 557 to "Cockatiel - Lutino", 459 to "Cockatiel - Pied", 525 to "Cockatiel - White-faced",
+        83 to "Combassou Finch", 540 to "Conure - Jenday (Jandaya Parakeet)", 541 to "Conure - Sun", 419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch", 638 to "Dusky-headed Conure",
+        797 to "Eclectus", 104 to "Euro Society Finch - Varied Colors", 791 to "Fawn Diamond Firetail", 479 to "Canary - Fife Fancy", 133 to "Forbes Parrotfinch", 260 to "Frill Canary - Northern Dutch",
+        87 to "Gold Breasted Waxbill", 527 to "Gold Capped Conure", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet", 751 to "Iranian Highflying Tumbler",
+        256 to "Kakariki (Red Crowned Parakeet)", 742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet", 252 to "Lady Gouldian Finch - Blue-back",
+        144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill", 435 to "Lovebirds - Black Masked", 477 to "Lovebirds - Blue Masked", 528 to "Lovebirds - Blue Peach-faced",
+        1161 to "Lutino Indian Ringneck Parakeet")
+
+    val birdsNowPricing: HashMap<Int,Int> = hashMapOf(598 to 528585, 777 to 546952, 220 to 547616, 1257 to 530943, 1171 to 545479, 132 to 547687, 216 to 520364, 778 to 537420,
+        460 to 545597, 597 to 547217, 572 to 528595, 439 to 534872, 457 to 537303, 469 to 531348, 553 to 528305, 478 to 545694, 483 to 547816, 269 to 545480, 458 to 537300,
+        571 to 547210, 557 to 545741, 459 to 546949, 525 to 547810, 83 to 528597, 540 to 543572, 541 to 545791, 419 to 537315, 84 to 520353, 638 to 547615, 797 to 545842, 104 to 547812,
+        791 to 547028, 479 to 547815, 133 to 547366, 260 to 544252, 87 to 545475, 527 to 545691, 1157 to 535294, 777 to 545547, 751 to 527836, 256 to 534869, 742 to 545683, 804 to 543931,
+        252 to 520733, 144 to 534162, 96 to 544385, 435 to 537313, 477 to 544254, 528 to 526530, 1161 to 547410)
+
     val birdsWA: IntArray = intArrayOf(520353,520364,520726,520733,520759,520833,520885,
         520950,526507,526530,527836,528305,528311,528585,528593,528595,528597,530942,
         530943,530947,531347,531348,531349,531392,531395,534155,534157,534162,534869,534871,
