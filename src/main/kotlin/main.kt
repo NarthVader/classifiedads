@@ -25,7 +25,7 @@ val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots",
     116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
     81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
     823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
-    800 to "Thick-billed Green Pigeon",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",1258 to "White Bellied Caique",
+    800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",1258 to "White Bellied Caique",
     139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel",257 to "Yellow Canary",
     110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
 
@@ -599,6 +599,13 @@ fun birdsNowFL(driver: ChromeDriver) {
 fun birdsNowTX(driver: ChromeDriver) {
 
     Thread.sleep(3000)
+
+    val birdsNowTXPrice: HashMap<Int,Int> = hashMapOf(594 to 555365, 609 to 555350, 435 to 555346, 778 to 555310, 604 to 555307, 528 to 555314, 458 to 555337,
+        87 to 555358, 1157 to 555348, 777 to 555311, 606 to 555327, 89 to 555357, 557 to 555343, 1161 to 555362,120 to 555312,
+        274 to 555313, 546 to 555309, 820 to 555339, 86 to 555354, 81 to 555342,
+        131 to 555336, 142 to 555306, 441 to 555360, 541 to 555316, 1156 to 555366, 1250 to 555266, 139 to 555351,
+        525 to 555344, 250 to 555356, 257 to 555338, 115 to 555353)
+
     val birdsTX: IntArray = intArrayOf(555365,555350,555346,555310,555307,555314,555337,555358,555348,555311,555327,555357,555343,555362,555312,555313,555309,555339,555354,555342,555336,555306,555360,555316,555366,555266,555351,555344,555356,555338,555353)
     println("birdNowTX: " + birdsTX.size)
 
@@ -616,6 +623,16 @@ fun birdsNowTX(driver: ChromeDriver) {
 fun birdsNowNY(driver: ChromeDriver) {
 
     Thread.sleep(3000)
+    
+    val top30template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 609 to "Cockatiel - Albino", 435 to "Lovebirds - Black Masked", 778 to "Blue Indian Ringneck Parakeet",
+        604 to "Parrotlet - Blue", 528 to "Lovebirds - Blue Peach-faced", 458 to "Cockatiel", 87 to "Gold Breasted Waxbill", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet",
+        606 to "Parrotlet - Green", 89 to "Green Singer (Yellow fronted canary)", 144 to "Lady Gouldian Green Back Normal", 557 to "Cockatiel - Lutino", 1161 to "Lutino Indian Ringneck Parakeet",
+        120 to "Owl Finch",
+        274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
+        131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 441 to "Rosy Bourke's Parakeets", 541 to "Conure - Sun", 1156 to "Umbrella Cockatoo",
+        1250 to "Violet Indian Ringneck", 139 to "White Canary",
+        525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
+
     val birdsNY: IntArray = intArrayOf(551369,555636,555633,550797,550527,555622,555626,555127,555635,555619,555627,555643,550605,555631,555620,555621,555617,555629,555640,555630,555624,555615,555644,550796,555616,555638,555632,555641,555628,555639)
     println("birdNowNY: " + birdsNY.size)
 
