@@ -54,7 +54,7 @@ val bigCommerce: HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 
     143 to "Mosaic Canary", 120 to "Owl Finch", 604 to "Parrotlet - Blue", 274 to "Lovebirds - Peach-faced", 81 to "Red Cheeked Cordon Bleu Finch", 264 to "Scotch Fancy Canary",
     139 to "White Canary", 525 to "Cockatiel - White-faced", 115 to "Zebra Finch - Normal")
 
-val top30template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 609 to "Cockatiel - Albino", 435 to "Lovebirds - Black Masked", 778 to "Blue Indian Ringneck Parakeet",
+val top30template1:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 609 to "Cockatiel - Albino", 435 to "Lovebirds - Black Masked", 778 to "Blue Indian Ringneck Parakeet",
     604 to "Parrotlet - Blue", 528 to "Lovebirds - Blue Peach-faced", 87 to "Gold Breasted Waxbill", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet",
     606 to "Parrotlet - Green", 89 to "Green Singer (Yellow fronted canary)", 144 to "Lady Gouldian Green Back Normal", 557 to "Cockatiel - Lutino", 120 to "Owl Finch",
     274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
@@ -75,21 +75,21 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
-    runBirdsWA(driver)
-    runBirdsCA(driver)
-    runBirdsAZ(driver)
-    runBirdsFL(driver)
-    runBirdsTX(driver)
-    runBirdsNY(driver)
+//    runBirdsWA(driver)
+//    runBirdsCA(driver)
+//    runBirdsAZ(driver)
+//    runBirdsFL(driver)
+//    runBirdsTX(driver)
+//    runBirdsNY(driver)
     runBirdsIL(driver)
-    runCats(driver)
-    runReps(driver)
-    runDogs(driver)
-    runClassifieds(driver)
-    runHooblyWA(driver)
-    runHooblyFL(driver)
-    runHooblyAZ(driver)
-    runHooblyCA(driver)
+//    runCats(driver)
+//    runReps(driver)
+//    runDogs(driver)
+//    runClassifieds(driver)
+//    runHooblyWA(driver)
+//    runHooblyFL(driver)
+//    runHooblyAZ(driver)
+//    runHooblyCA(driver)
 }
 
 fun runBirdsWA(driver: ChromeDriver) {
@@ -258,6 +258,32 @@ fun runBirdsIL(driver: ChromeDriver) {
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
         birdsNowIL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsPA(driver: ChromeDriver) {
+
+    val usrBirdsPA = "customersupportPA@thefinchfarm.com"
+    val pwBirdsPA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsPA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsPA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowPA(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -665,6 +691,34 @@ fun birdsNowIL(driver: ChromeDriver) {
 
     for (i in 0..birdsIL.size-1) {
         val index = birdsIL[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowPA(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsNowPAPricing: HashMap<Int,Int> = hashMapOf(594 to 555861, 609 to 555890, 435 to 555888, 778 to 555859,
+        604 to 555867, 528 to 555865, 458 to 555880, 87 to 555898, 144 to 555903, 777 to 555860,
+        606 to 555877, 89 to 555897, 557 to 555886, 1161 to 555901,
+        120 to 555862,
+        274 to 555864, 546 to 555858, 820 to 555882, 86 to 555894, 81 to 555883,
+        131 to 555879, 142 to 555857, 441 to 555900, 541 to 555866, 1156 to 555902,
+        1250 to 555781, 139 to 555891,
+        525 to 555887, 419 to 555889, 250 to 555895, 257 to 555881, 115 to 555893)
+
+    val birdsPA: IntArray = intArrayOf(555861,555890,555888,555859,555867,555865,555880,555898,555903,555860,555877,555897,555886,555901,555862,555864,555858,
+        555882,555894,555883,555879,555857,555900,555866,555902,555781,555891,555887,555895,555881,555893,555889)
+    println("birdNowPA: " + birdsPA.size)
+
+    for (i in 0..birdsPA.size-1) {
+        val index = birdsPA[i]
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
