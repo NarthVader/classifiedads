@@ -81,7 +81,8 @@ fun scrape() {
 //    runBirdsFL(driver)
 //    runBirdsTX(driver)
 //    runBirdsNY(driver)
-    runBirdsIL(driver)
+//    runBirdsIL(driver)
+    runBirdsPA(driver)
 //    runCats(driver)
 //    runReps(driver)
 //    runDogs(driver)
@@ -284,6 +285,32 @@ fun runBirdsPA(driver: ChromeDriver) {
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
         birdsNowPA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsOH(driver: ChromeDriver) {
+
+    val usrBirdsOH = "customersupportOH@thefinchfarm.com"
+    val pwBirdsOH = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsOH")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsOH")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowOH(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -719,6 +746,26 @@ fun birdsNowPA(driver: ChromeDriver) {
 
     for (i in 0..birdsPA.size-1) {
         val index = birdsPA[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowOH(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf(1250 to 556209)
+
+    val birdsOH: IntArray = intArrayOf(556209)
+    println("birdNowPA: " + birdsOH.size)
+
+    for (i in 0..birdsOH.size-1) {
+        val index = birdsOH[i]
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
