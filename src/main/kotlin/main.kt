@@ -82,7 +82,9 @@ fun scrape() {
 //    runBirdsTX(driver)
 //    runBirdsNY(driver)
 //    runBirdsIL(driver)
-    runBirdsPA(driver)
+//    runBirdsPA(driver)
+//    runBirdsOH(driver)
+//    runBirdsIN(driver)
 //    runCats(driver)
 //    runReps(driver)
 //    runDogs(driver)
@@ -311,6 +313,32 @@ fun runBirdsOH(driver: ChromeDriver) {
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
         birdsNowOH(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsIN(driver: ChromeDriver) {
+
+    val usrBirdsIN = "customersupportIN@thefinchfarm.com"
+    val pwBirdsIN = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIN")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIN")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIN(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -762,10 +790,30 @@ fun birdsNowOH(driver: ChromeDriver) {
     val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf(1250 to 556209)
 
     val birdsOH: IntArray = intArrayOf(556209)
-    println("birdNowPA: " + birdsOH.size)
+    println("birdNowOH: " + birdsOH.size)
 
     for (i in 0..birdsOH.size-1) {
         val index = birdsOH[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
+fun birdsNowIN(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsNowINPricing: HashMap<Int,Int> = hashMapOf(1250 to 556208)
+
+    val birdsIN: IntArray = intArrayOf(556208)
+    println("birdNowIN: " + birdsIN.size)
+
+    for (i in 0..birdsIN.size-1) {
+        val index = birdsIN[i]
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
