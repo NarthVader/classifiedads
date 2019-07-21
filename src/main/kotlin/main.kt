@@ -75,24 +75,25 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
-//    runBirdsWA(driver)
-//    runBirdsCA(driver)
-//    runBirdsAZ(driver)
-//    runBirdsFL(driver)
-//    runBirdsTX(driver)
-//    runBirdsNY(driver)
-//    runBirdsIL(driver)
-//    runBirdsPA(driver)
-//    runBirdsOH(driver)
-//    runBirdsIN(driver)
-//    runCats(driver)
-//    runReps(driver)
-//    runDogs(driver)
-//    runClassifieds(driver)
-//    runHooblyWA(driver)
-//    runHooblyFL(driver)
-//    runHooblyAZ(driver)
-//    runHooblyCA(driver)
+    runBirdsWA(driver)
+    runBirdsCA(driver)
+    runBirdsAZ(driver)
+    runBirdsFL(driver)
+    runBirdsTX(driver)
+    runBirdsNY(driver)
+    runBirdsIL(driver)
+    runBirdsPA(driver)
+    runBirdsOH(driver)
+    runBirdsIN(driver)
+    runBirdsMA(driver)
+    runCats(driver)
+    runReps(driver)
+    runDogs(driver)
+    runClassifieds(driver)
+    runHooblyWA(driver)
+    runHooblyFL(driver)
+    runHooblyAZ(driver)
+    runHooblyCA(driver)
 }
 
 fun runBirdsWA(driver: ChromeDriver) {
@@ -344,6 +345,32 @@ fun runBirdsIN(driver: ChromeDriver) {
         println("Alert Exception: $a")
         driver.switchTo().alert().accept()
         birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsMA(driver: ChromeDriver) {
+
+    val usrBirdsMA = "customersupportMA@thefinchfarm.com"
+    val pwBirdsMA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowMA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowMA(driver)
     } catch (t: TimeoutException) {
         println("Timeout Exception: $t")
     } catch (n: NoSuchElementException) {
@@ -823,6 +850,29 @@ fun birdsNowIN(driver: ChromeDriver) {
     Thread.sleep(3000)
 }
 
+fun birdsNowMA(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsNowMAPricing: HashMap<Int,Int> = hashMapOf(1250 to 556314, 778 to 556312, 777 to 556313,
+        120 to 556315,
+        546 to 556311,
+        1250 to 556207)
+
+    val birdsMA: IntArray = intArrayOf(556314,556312,556313,556315,556311,556207)
+    println("birdNowMA: " + birdsMA.size)
+
+    for (i in 0..birdsMA.size-1) {
+        val index = birdsMA[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
 
 val top30template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 609 to "Cockatiel - Albino", 435 to "Lovebirds - Black Masked", 778 to "Blue Indian Ringneck Parakeet",
     604 to "Parrotlet - Blue", 528 to "Lovebirds - Blue Peach-faced", 458 to "Cockatiel", 419 to "Conure - Yellow-sided Green Cheek", 87 to "Gold Breasted Waxbill", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet",
@@ -933,25 +983,56 @@ fun hooblyWA(driver: ChromeDriver) {
     //        "JJYf0", "JgKKb", "JigqQ", "Grndr", "GYab0", "GXtS0", "Fl1ZI", "FCzWC", "F6fK6", "EJjSz", "DQN8y", "DBvqv", "CmeqH", "AccBa", "AgAwK", "AgM9W", "AkcrL", "Awal6", "BCbAQ", "BKEZK",
     //        "CHS03", "CWfgP", "Cj53A", "AL1F5", "7yRTf", "7wgmN", "7NNAG", "72ae9", "6Y6yS", "5relL", "5lxlC", "5RTkg", "4iTm6", "BjUZX", "Cocby", "hl1tt", "1NW2v", "1iva6", "28ADk", "2fapx",
     //        "2gqrs", "2uESV"
-    var hoobly: Array<String> = arrayOf("2uESV", "2gqrs", "2fapx", "28ADk", "1iva6", "1NW2v", "hl1tt", "Cocby", "BjUZX", "4iTm6",
-        "5RTkg", "5lxlC", "5relL", "6Y6yS", "72ae9", "7NNAG", "7wgmN", "7yRTf", "AL1F5", "Cj53A",
-        "CWfgP", "CHS03", "BKEZK", "BCbAQ", "Awal6", "AkcrL", "AgM9W", "AgAwK", "AccBa", "CmeqH",
-        "DBvqv", "DQN8y", "EJjSz", "F6fK6", "FCzWC", "Fl1ZI", "GXtS0", "GYab0", "Grndr", "JigqQ",
-        "JgKKb", "JJYf0", "JGmTG", "Hht47", "IvLtb", "IO2tD", "HfnD5", "HZp6H", "HY7My", "KNEXh",
-        "KTFZ9", "Kgswo", "Kmz5O", "Ky3Hi", "L6vGo", "LsUpg", "MG8Ci", "MVH2g", "OSEqM", "ukKbe",
-        "9P2B8", "AR7Yv", "15L9N", "0Hfpa", "5WYMC", "NiOVp", "aI8Wo", "a0H8V", "ZkrnR", "vH0Yt",
-        "vKVeh", "vLHQF", "vS98U", "vXqoa", "wYGKz", "wrMJA", "xKnWG", "zUEcA", "zcNGO", "r58ZR",
-        "r0IrO", "poBgK", "pmO3W", "phD99", "pV23g", "oPSz3", "pnKZI", "pgYmL", "SSN4Y", "qObVq",
-        "r8RU7", "rcUay", "s5hIl", "sFZNZ", "sG58K", "u6QmP", "tc3Vn", "uhaOR", "uiP0f", "lIaFU",
-        "zgepf", "kkOQ4", "kO0eK", "kGcVb", "jw56S", "BkYaN", "CBCva", "jt9po", "ujbPf", "ClTO6",
-        "0dFbB", "0xfS6", "QE0y1", "1Zc33", "0c8TU", "0amSa", "b1eCk", "nahn0", "nmelX", "dJNJx",
-        "coQC7", "cGidH", "jadVB", "jCibI", "bP4MD", "aeHhe", "oJa97", "o1mAh", "nyuye", "dRJ3Y",
-        "izqAl", "i6yGN", "daEMf", "eNlme", "eReTB", "eUjxw", "f3z17", "fzDzw", "g3nhg", "gEQad",
-        "gYj0h", "hy9kk", "P8kMO", "PMcnn", "PWkea", "Qqxm3", "R3nUg", "RJLxf", "RM2kj", "RXjWL",
-        "RnbXy", "Rz06f", "T9KD9", "U3Kyk", "U5ORI", "Ygkpx", "ZaAVE", "ZepT3", "vjc07", "ta5kK",
-        "xDttY", "DnbOS", "GaoJt", "6uYcK", "IUadk", "2NAa1", "6Q3Vh", "6qGm2", "JMQws", "CmPz2",
-        "MdUHa", "FZ0Bm", "NaN0H", "QOZH1", "WiYEc", "aVw9O", "dYrD6", "eD3Rn", "Uhi55", "eeDAL",
-        "gfYMc", "hd8r6", "ioG8G", "k4N5C", "ltc2x", "lwUzY", "pncBM", "vKclC")
+//    var hoobly: Array<String> = arrayOf("2uESV", "2gqrs", "2fapx", "28ADk", "1iva6", "1NW2v", "hl1tt", "Cocby", "BjUZX", "4iTm6",
+//        "5RTkg", "5lxlC", "5relL", "6Y6yS", "72ae9", "7NNAG", "7wgmN", "7yRTf", "AL1F5", "Cj53A",
+//        "CWfgP", "CHS03", "BKEZK", "BCbAQ", "Awal6", "AkcrL", "AgM9W", "AgAwK", "AccBa", "CmeqH",
+//        "DBvqv", "DQN8y", "EJjSz", "F6fK6", "FCzWC", "Fl1ZI", "GXtS0", "GYab0", "Grndr", "JigqQ",
+//        "JgKKb", "JJYf0", "JGmTG", "Hht47", "IvLtb", "IO2tD", "HfnD5", "HZp6H", "HY7My", "KNEXh",
+//        "KTFZ9", "Kgswo", "Kmz5O", "Ky3Hi", "L6vGo", "LsUpg", "MG8Ci", "MVH2g", "OSEqM", "ukKbe",
+//        "9P2B8", "AR7Yv", "15L9N", "0Hfpa", "5WYMC", "NiOVp", "aI8Wo", "a0H8V", "ZkrnR", "vH0Yt",
+//        "vKVeh", "vLHQF", "vS98U", "vXqoa", "wYGKz", "wrMJA", "xKnWG", "zUEcA", "zcNGO", "r58ZR",
+//        "r0IrO", "poBgK", "pmO3W", "phD99", "pV23g", "oPSz3", "pnKZI", "pgYmL", "SSN4Y", "qObVq",
+//        "r8RU7", "rcUay", "s5hIl", "sFZNZ", "sG58K", "u6QmP", "tc3Vn", "uhaOR", "uiP0f", "lIaFU",
+//        "zgepf", "kkOQ4", "kO0eK", "kGcVb", "jw56S", "BkYaN", "CBCva", "jt9po", "ujbPf", "ClTO6",
+//        "0dFbB", "0xfS6", "QE0y1", "1Zc33", "0c8TU", "0amSa", "b1eCk", "nahn0", "nmelX", "dJNJx",
+//        "coQC7", "cGidH", "jadVB", "jCibI", "bP4MD", "aeHhe", "oJa97", "o1mAh", "nyuye", "dRJ3Y",
+//        "izqAl", "i6yGN", "daEMf", "eNlme", "eReTB", "eUjxw", "f3z17", "fzDzw", "g3nhg", "gEQad",
+//        "gYj0h", "hy9kk", "P8kMO", "PMcnn", "PWkea", "Qqxm3", "R3nUg", "RJLxf", "RM2kj", "RXjWL",
+//        "RnbXy", "Rz06f", "T9KD9", "U3Kyk", "U5ORI", "Ygkpx", "ZaAVE", "ZepT3", "vjc07", "ta5kK",
+//        "xDttY", "DnbOS", "GaoJt", "6uYcK", "IUadk", "2NAa1", "6Q3Vh", "6qGm2", "JMQws", "CmPz2",
+//        "MdUHa", "FZ0Bm", "NaN0H", "QOZH1", "WiYEc", "aVw9O", "dYrD6", "eD3Rn", "Uhi55", "eeDAL",
+//        "gfYMc", "hd8r6", "ioG8G", "k4N5C", "ltc2x", "lwUzY", "pncBM", "vKclC")
+
+    val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets",220 to "Black-bellied Firefinch",
+        1257 to "Black Headed Caique", 1171 to "Blue and Gold Macaw",132 to "Blue-faced Parrotfinch",216 to "Blue Billed Firefinch",460 to "Budgies - (Budgerigar Parakeets) - Blue",
+        778 to "Blue Indian Ringneck Parakeet", 597 to "Blue Quaker Parrot (Monk Parakeet)",572 to "Bourke Parakeets - Rubino",439 to "Bourke's Parrot",
+        457 to "Budgerigar Parakeets (Budgies) - Green",469 to "Budgies - (Budgerigar Parakeets) - Pied", 553 to "Budgies - (Budgerigar Parakeets) - Violet",
+        478 to "Budgies - (Budgerigar Parakeets) - Yellow",483 to "Budgies - (Budgerigar Parakeets) - White",479 to "Canary - Fife Fancy",156 to "Crested Canaries",
+        269 to "Canary-Winged Parakeets",458 to "Cockatiel",609 to "Cockatiel - Albino",571 to "Cockatiel - Cinnamon",557 to "Cockatiel - Lutino",459 to "Cockatiel - Pied",
+        525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
+        541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
+        104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 783 to "Fiery Golden Mantle", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
+        87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 795 to "Goffin's Cockatoo", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
+        89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",751 to "Iranian Highflying Tumbler", 256 to "Kakariki (Red Crowned Parakeet)",
+        742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet",250 to "Lady Gouldian Finch - Yellow-back",252 to "Lady Gouldian Finch - Blue-back",
+        144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill",263 to "Lizard Canary", 435 to "Lovebirds - Black Masked",477 to "Lovebirds - Blue Masked",
+        528 to "Lovebirds - Blue Peach-faced", 423 to "Lovebirds - Fischer's",274 to "Lovebirds - Peach-faced", 1161 to "Lutino Indian Ringneck Parakeet",143 to "Mosaic Canary",
+        109 to "Orange Crown Weaver (Red Bishop)", 120 to "Owl Finch",604 to "Parrotlet - Blue",606 to "Parrotlet - Green", 608 to "Parrotlet - Pied",273 to "Pied Parrotfinch",
+        116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
+        81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
+        823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
+        800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",
+        1258 to "White Bellied Caique",
+        139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel",250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary",
+        110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
+
+    val hooblyWAPricing: HashMap<Int,String> = hashMapOf(1250 to "hd8r6", 84 to "KNEXh", 86 to "rcUay",458 to "lwUzY", 250 to "vKclC", 479 to "nyuye", 1161 to "i6yGN",
+        260 to "QE0y1",783 to "CWfgP", 477 to "vjc07", 419 to "JMQws", 605 to "0dFbB", 132 to "4iTm6", 594 to "FZ0Bm", 572 to "RnbXy", 1161 to "vXqoa", 269 to "HY7My",
+        141 to "dJNJx",139 to "k4N5C",546 to "ltc2x", 751 to "T9KD9", 483 to "U3Kyk", 795 to "U5ORI", 604 to "NaN0H", 777 to "eeDAL", 778 to "ZaAVE", 423 to "AgAwK",
+        284 to "7wgmN", 274 to "BkYaN", 457 to "0c8TU", 646 to "ClTO6", 120 to "ZepT3", )
+
+    var hoobly:Array<String> = arrayOf("hd8r6","KNEXh","rcUay","lwUzY","vKclC","nyuye","i6yGN","QE0y1","CWfgP","vjc07","JMQws","0dFbB","4iTm6","FZ0Bm","RnbXy","vXqoa","HY7My",
+        "dJNJx","k4N5C","ltc2x","T9KD9","U3Kyk","U5ORI","NaN0H","eeDAL","ZaAVE","AgAwK","7wgmN","BkYaN","0c8TU","ClTO6","ZepT3")
 
     println("hooblyWA: " + hoobly.size)
 
