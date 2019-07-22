@@ -1003,29 +1003,6 @@ fun hooblyWA(driver: ChromeDriver) {
 //        "MdUHa", "FZ0Bm", "NaN0H", "QOZH1", "WiYEc", "aVw9O", "dYrD6", "eD3Rn", "Uhi55", "eeDAL",
 //        "gfYMc", "hd8r6", "ioG8G", "k4N5C", "ltc2x", "lwUzY", "pncBM", "vKclC")
 
-    val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets",220 to "Black-bellied Firefinch",
-        1257 to "Black Headed Caique", 1171 to "Blue and Gold Macaw",132 to "Blue-faced Parrotfinch",216 to "Blue Billed Firefinch",460 to "Budgies - (Budgerigar Parakeets) - Blue",
-        778 to "Blue Indian Ringneck Parakeet", 597 to "Blue Quaker Parrot (Monk Parakeet)",572 to "Bourke Parakeets - Rubino",439 to "Bourke's Parrot",
-        457 to "Budgerigar Parakeets (Budgies) - Green",469 to "Budgies - (Budgerigar Parakeets) - Pied", 553 to "Budgies - (Budgerigar Parakeets) - Violet",
-        478 to "Budgies - (Budgerigar Parakeets) - Yellow",483 to "Budgies - (Budgerigar Parakeets) - White",479 to "Canary - Fife Fancy",156 to "Crested Canaries",
-        269 to "Canary-Winged Parakeets",458 to "Cockatiel",609 to "Cockatiel - Albino",571 to "Cockatiel - Cinnamon",557 to "Cockatiel - Lutino",459 to "Cockatiel - Pied",
-        570 to "Cockatiel - Pearl", 525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
-        647 to "Conure - NanSun", 541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
-        104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 783 to "Fiery Golden Mantle", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
-        87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 795 to "Goffin's Cockatoo", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
-        89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",751 to "Iranian Highflying Tumbler", 256 to "Kakariki (Red Crowned Parakeet)",
-        742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet",250 to "Lady Gouldian Finch - Yellow-back",252 to "Lady Gouldian Finch - Blue-back",
-        144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill",263 to "Lizard Canary", 435 to "Lovebirds - Black Masked",477 to "Lovebirds - Blue Masked",
-        528 to "Lovebirds - Blue Peach-faced", 423 to "Lovebirds - Fischer's",274 to "Lovebirds - Peach-faced", 1161 to "Lutino Indian Ringneck Parakeet",143 to "Mosaic Canary",
-        109 to "Orange Crown Weaver (Red Bishop)", 120 to "Owl Finch",604 to "Parrotlet - Blue",606 to "Parrotlet - Green", 608 to "Parrotlet - Pied",273 to "Pied Parrotfinch",
-        116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
-        81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
-        823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
-        800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",
-        1258 to "White Bellied Caique",
-        139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel", 257 to "Yellow Canary",
-        110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",801 to "Zebra Doves",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
-
     val hooblyWAPricing: HashMap<Int,String> = hashMapOf(1250 to "hd8r6", 84 to "KNEXh", 86 to "rcUay",458 to "lwUzY", 250 to "vKclC", 479 to "nyuye", 1161 to "i6yGN",
         260 to "QE0y1",783 to "CWfgP", 477 to "vjc07", 419 to "JMQws", 605 to "0dFbB", 132 to "4iTm6", 594 to "FZ0Bm", 572 to "RnbXy", 1161 to "vXqoa", 269 to "HY7My",
         141 to "dJNJx",139 to "k4N5C",546 to "ltc2x", 751 to "T9KD9", 483 to "U3Kyk", 795 to "U5ORI", 604 to "NaN0H", 777 to "eeDAL", 778 to "ZaAVE", 423 to "AgAwK",
@@ -1054,10 +1031,14 @@ fun hooblyWA(driver: ChromeDriver) {
 fun hooblyFL(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    //"pmyId", "yjTX8", "V1oBv", "2S3vr", "09Cp6", "3l65y", "9arAy", "cRCAz", "jwUjw"
-    var hoobly: Array<String> = arrayOf("FPlAs", "kF6lh", "l6eEy", "flTwp", "cmdyr", "l89k5", "tewX5", "G05ly", "pi99M", "ohKgb",
-        "nuhMi", "xyfiT", "CUMch", "n4Bnq", "Nc20R", "zOdc6", "BbiCS", "zeq08", "AHedI", "SQksa",
-        "7cQR8", "zXLd6", "feg87", "7rtFO", "G5fcU", "MDZ3d", "gsqLh", "fkLjz")
+
+    val hoobly:Array<String> = arrayOf("xyfiT","nuhMi","CUMch","Nc20R","BbiCS","AHedI","zOdc6","zeq08","7rtFO","zXLd6","SQksa","7cQR8","feg87","G5fcU","MDZ3d","0dBFw","gsqLh",
+        "xh26W","ohKgb","FPlAs","l6eEy","pi99M","n4Bnq","tewX5","G05ly","cmdyr","flTwp","kF6lh","fkLjz")
+
+    val hooblyFLPricing:HashMap<Int,String> = hashMapOf(250 to "xyfiT",820 to "nuhMi",87 to "CUMch",257 to "Nc20R",86 to "BbiCS",139 to "AHedI",609 to "zOdc6",115 to "zeq08",
+        81 to "7rtFO",525 to "zXLd6",419 to "SQksa", 435 to "7cQR8", 557 to "feg87",458 to "G5fcU",131 to "MDZ3d",1250 to "0dBFw",606 to "gsqLh",546 to "xh26W",777 to "ohKgb",89 to "FPlAs",
+        528 to "l6eEy",604 to "pi99M",441 to "n4Bnq",142 to "tewX5",594 to "G05ly",120 to "cmdyr",274 to "flTwp",778 to "kF6lh",541 to "fkLjz")
+
     println("hooblyFL: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
@@ -1075,10 +1056,14 @@ fun hooblyFL(driver: ChromeDriver) {
 fun hooblyAZ(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    //"l5kQ9", "YcDSD", "sGt44", "ho8n7", "aj1tV", "V5p2R", "wTuOm", "gIdvV", "VUDlt"
-    var hoobly: Array<String> = arrayOf("7MrjN", "h6POZ", "hoOxg", "ZNq1T", "69WA0", "SmQhH", "yK5Ro", "9mZKz", "C4wcl", "jpSrh",
-        "1WOeY", "2FPED", "DLZ32", "vG7af", "E9OY6", "aNDSk", "ffcG4", "1jcUq", "YPQyK", "egumo",
-        "xfSlP", "nWZFV", "ozVSI", "mOose", "HhzPl", "6LgSS", "aHfQm", "QwvUF", "C1xCa", "h6POZ", "hV5if")
+
+    var hooblyAZPricing:HashMap<Int,String> = hashMapOf(546 to "ZNq1T",120 to "nWZFV",274 to "xfSlP",139 to "2FPED",250 to "E9OY6",144 to "ozVSI",86 to "vG7af",131 to "h6POZ",
+        477 to "C1xCa",1157 to "QwvUF",777 to "6LgSS",594 to "HhzPl",142 to "mOose",115 to "DLZ32",609 to "1WOeY",419 to "jpSrh",435 to "C4wcl",528 to "egumo",89 to "aNDSk",
+        541 to "YPQyK",778 to "aHfQm",441 to "1jcUq",87 to "ffcG4",1250 to "pwILM",606 to "7MrjN",458 to "hoOxg",81 to "SmQhH",604 to "hV5if",557 to "yK5Ro",525 to "9mZKz",
+        820 to "69WA0")
+
+    var hoobly: Array<String> = arrayOf("ZNq1T","nWZFV","xfSlP","2FPED","E9OY6","ozVSI","vG7af","h6POZ","C1xCa","QwvUF","6LgSS","HhzPl","mOose","DLZ32","1WOeY","jpSrh","C4wcl",
+        "egumo","aNDSk","YPQyK","aHfQm","1jcUq","ffcG4","pwILM","7MrjN","hoOxg","SmQhH","hV5if","yK5Ro","9mZKz","69WA0")
     println("hooblyAZ: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
@@ -1097,11 +1082,36 @@ fun hooblyAZ(driver: ChromeDriver) {
 fun hooblyCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    //"CFCBe", "9eMkb", "iaDmn", "YFSFe", "uIvlf", "bC0sv", "a1NGG", "DHcvX", "kfeGx"
-    var hoobly: Array<String> = arrayOf("lwO0b", "uEhZb", "kfeGx", "DHcvX", "a1NGG", "bC0sv", "uIvlf", "YFSFe", "iaDmn", "9eMkb",
-        "CFCBe", "RVEsv", "JpXqh", "77Ec1", "UXvup", "miryH", "z2xXB", "znNNe", "TJ8DM", "Jmj6h",
-        "uRHMp", "a83tI", "AFn8c", "G1H7C", "eqIaw", "2B7y0", "4yg3N", "2HrtL", "KNbQg", "45bRF",
-        "N9cro", "ZSNbM", "RKSUg", "ITYhd")
+    val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets",220 to "Black-bellied Firefinch",
+        1257 to "Black Headed Caique", 1171 to "Blue and Gold Macaw",132 to "Blue-faced Parrotfinch",216 to "Blue Billed Firefinch",460 to "Budgies - (Budgerigar Parakeets) - Blue",
+        778 to "Blue Indian Ringneck Parakeet", 597 to "Blue Quaker Parrot (Monk Parakeet)",572 to "Bourke Parakeets - Rubino",439 to "Bourke's Parrot",
+        457 to "Budgerigar Parakeets (Budgies) - Green",469 to "Budgies - (Budgerigar Parakeets) - Pied", 553 to "Budgies - (Budgerigar Parakeets) - Violet",
+        478 to "Budgies - (Budgerigar Parakeets) - Yellow",483 to "Budgies - (Budgerigar Parakeets) - White",479 to "Canary - Fife Fancy",156 to "Crested Canaries",
+        269 to "Canary-Winged Parakeets",458 to "Cockatiel",609 to "Cockatiel - Albino",571 to "Cockatiel - Cinnamon",557 to "Cockatiel - Lutino",459 to "Cockatiel - Pied",
+        570 to "Cockatiel - Pearl", 525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
+        647 to "Conure - NanSun", 541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
+        104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 783 to "Fiery Golden Mantle", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
+        87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 795 to "Goffin's Cockatoo", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
+        89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",751 to "Iranian Highflying Tumbler", 256 to "Kakariki (Red Crowned Parakeet)",
+        742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet",250 to "Lady Gouldian Finch - Yellow-back",252 to "Lady Gouldian Finch - Blue-back",
+        144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill",263 to "Lizard Canary", 435 to "Lovebirds - Black Masked",477 to "Lovebirds - Blue Masked",
+        528 to "Lovebirds - Blue Peach-faced", 423 to "Lovebirds - Fischer's",274 to "Lovebirds - Peach-faced", 1161 to "Lutino Indian Ringneck Parakeet",143 to "Mosaic Canary",
+        109 to "Orange Crown Weaver (Red Bishop)", 120 to "Owl Finch",604 to "Parrotlet - Blue",606 to "Parrotlet - Green", 608 to "Parrotlet - Pied",273 to "Pied Parrotfinch",
+        116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
+        81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
+        823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
+        800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",
+        1258 to "White Bellied Caique",
+        139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel", 257 to "Yellow Canary",
+        110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",801 to "Zebra Doves",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
+
+    val hooblyCAPricing:HashMap<Int,String> = hashMapOf(131 to "lwO0b",81 to "ITYhd",86 to "UXvup",604 to "2HrtL",546 to "N9cro",458 to "RKSUg",419 to "Jmj6h",1250 to "uIvlf",
+        144 to "2B7y0",139 to "JpXqh",777 to "4yg3N",528 to "G1H7C",820 to "45bRF",441 to "RVEsv",1258 to "CFCBe",606 to "KNbQg",778 to "9eMkb",594 to "YFSFe",142 to "uEhZb",
+        1257 to "bC0sv",274 to "iaDmn",110 to "ZSNbM",115 to "77Ec1",250 to "miryH",87 to "znNNe",609 to "TJ8DM",435 to "uRHMp",525 to "a83tI",557 to "AFn8c",120 to "eqIaw",
+        89 to "z2xXB",541 to "DHcvX")
+
+    var hoobly: Array<String> = arrayOf("lwO0b","ITYhd","UXvup","2HrtL","N9cro","RKSUg","Jmj6h","uIvlf","2B7y0","JpXqh","4yg3N","G1H7C","45bRF","RVEsv","CFCBe","KNbQg","9eMkb",
+        "YFSFe","uEhZb","bC0sv","iaDmn","ZSNbM","77Ec1","miryH","znNNe","TJ8DM","uRHMp","a83tI","AFn8c","eqIaw","z2xXB","DHcvX")
     println("hooblyCA: " + hoobly.size)
 
     for (i in 0..hoobly.size-1) {
