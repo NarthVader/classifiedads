@@ -13,10 +13,10 @@ val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots",
     457 to "Budgerigar Parakeets (Budgies) - Green",469 to "Budgies - (Budgerigar Parakeets) - Pied", 553 to "Budgies - (Budgerigar Parakeets) - Violet",
     478 to "Budgies - (Budgerigar Parakeets) - Yellow",483 to "Budgies - (Budgerigar Parakeets) - White",479 to "Canary - Fife Fancy",156 to "Crested Canaries",
     269 to "Canary-Winged Parakeets",458 to "Cockatiel",609 to "Cockatiel - Albino",571 to "Cockatiel - Cinnamon",557 to "Cockatiel - Lutino",459 to "Cockatiel - Pied",
-    525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
-    541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
-    104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
-    87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
+    570 to "Cockatiel - Pearl", 525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
+    647 to "Conure - NanSun", 541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
+    104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 783 to "Fiery Golden Mantle", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
+    87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 795 to "Goffin's Cockatoo", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
     89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",751 to "Iranian Highflying Tumbler", 256 to "Kakariki (Red Crowned Parakeet)",
     742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet",250 to "Lady Gouldian Finch - Yellow-back",252 to "Lady Gouldian Finch - Blue-back",
     144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill",263 to "Lizard Canary", 435 to "Lovebirds - Black Masked",477 to "Lovebirds - Blue Masked",
@@ -25,9 +25,10 @@ val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots",
     116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
     81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
     823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
-    800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",1258 to "White Bellied Caique",
-    139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel",257 to "Yellow Canary",
-    110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
+    800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",
+    1258 to "White Bellied Caique",
+    139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel", 257 to "Yellow Canary",
+    110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",801 to "Zebra Doves",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
 
 val bigCommerce: HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 220 to "Black-bellied Firefinch", 1257 to "Black Headed Caique",
     1171 to "Blue and Gold Macaw", 132 to "Blue-faced Parrotfinch", 216 to "Blue Billed Firefinch", 460 to "Budgies - (Budgerigar Parakeets) - Blue", 778 to "Blue Indian Ringneck Parakeet",
@@ -75,6 +76,12 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
+    runAll(driver)
+    noonBatch(driver)
+    pmBatch(driver)
+}
+
+fun runAll(driver: ChromeDriver) {
     runBirdsWA(driver)
     runBirdsCA(driver)
     runBirdsAZ(driver)
@@ -94,6 +101,42 @@ fun scrape() {
     runHooblyFL(driver)
     runHooblyAZ(driver)
     runHooblyCA(driver)
+}
+
+fun noonBatch(driver: ChromeDriver) {
+    runBirdsWANoon(driver)
+    runBirdsCANoon(driver)
+    runBirdsAZNoon(driver)
+    runBirdsFLNoon(driver)
+    runBirdsTXNoon(driver)
+    runBirdsNYNoon(driver)
+    runBirdsILNoon(driver)
+    runBirdsPANoon(driver)
+    runBirdsOHNoon(driver)
+    runBirdsINNoon(driver)
+    runBirdsMANoon(driver)
+    runHooblyWANoon(driver)
+    runHooblyFLNoon(driver)
+    runHooblyAZNoon(driver)
+    runHooblyCANoon(driver)
+}
+
+fun pmBatch (driver: ChromeDriver) {
+    runBirdsWAPM(driver)
+    runBirdsCAPM(driver)
+    runBirdsAZPM(driver)
+    runBirdsFLPM(driver)
+    runBirdsTXPM(driver)
+    runBirdsNYPM(driver)
+    runBirdsILPM(driver)
+    runBirdsPAPM(driver)
+    runBirdsOHPM(driver)
+    runBirdsINPM(driver)
+    runBirdsMAPM(driver)
+    runHooblyWAPM(driver)
+    runHooblyFLPM(driver)
+    runHooblyAZPM(driver)
+    runHooblyCAPM(driver)
 }
 
 fun runBirdsWA(driver: ChromeDriver) {
@@ -1082,28 +1125,6 @@ fun hooblyAZ(driver: ChromeDriver) {
 fun hooblyCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
-    val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets",220 to "Black-bellied Firefinch",
-        1257 to "Black Headed Caique", 1171 to "Blue and Gold Macaw",132 to "Blue-faced Parrotfinch",216 to "Blue Billed Firefinch",460 to "Budgies - (Budgerigar Parakeets) - Blue",
-        778 to "Blue Indian Ringneck Parakeet", 597 to "Blue Quaker Parrot (Monk Parakeet)",572 to "Bourke Parakeets - Rubino",439 to "Bourke's Parrot",
-        457 to "Budgerigar Parakeets (Budgies) - Green",469 to "Budgies - (Budgerigar Parakeets) - Pied", 553 to "Budgies - (Budgerigar Parakeets) - Violet",
-        478 to "Budgies - (Budgerigar Parakeets) - Yellow",483 to "Budgies - (Budgerigar Parakeets) - White",479 to "Canary - Fife Fancy",156 to "Crested Canaries",
-        269 to "Canary-Winged Parakeets",458 to "Cockatiel",609 to "Cockatiel - Albino",571 to "Cockatiel - Cinnamon",557 to "Cockatiel - Lutino",459 to "Cockatiel - Pied",
-        570 to "Cockatiel - Pearl", 525 to "Cockatiel - White-faced", 83 to "Combassou Finch",540 to "Conure - Jenday (Jandaya Parakeet)",546 to "Conure - Pineapple Green-Cheeked",
-        647 to "Conure - NanSun", 541 to "Conure - Sun",419 to "Conure - Yellow-sided Green Cheek", 84 to "Cut-Throat Finch",638 to "Dusky-headed Conure", 797 to "Eclectus",
-        104 to "Euro Society Finch - Varied Colors",791 to "Fawn Diamond Firetail", 783 to "Fiery Golden Mantle", 479 to "Canary - Fife Fancy",133 to "Forbes Parrotfinch",260 to "Frill Canary - Northern Dutch",
-        87 to "Gold Breasted Waxbill",527 to "Gold Capped Conure", 795 to "Goffin's Cockatoo", 539 to "Green Canary",1157 to "Green Cheek Conure Normal",777 to "Green Indian Ringneck Parakeet",
-        89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",751 to "Iranian Highflying Tumbler", 256 to "Kakariki (Red Crowned Parakeet)",
-        742 to "Kakariki (Red Crowned Parakeet) - Pied", 804 to "Kakarikis Cinnamon Parakeet",250 to "Lady Gouldian Finch - Yellow-back",252 to "Lady Gouldian Finch - Blue-back",
-        144 to "Lady Gouldian Green Back Normal", 96 to "Lavender Waxbill",263 to "Lizard Canary", 435 to "Lovebirds - Black Masked",477 to "Lovebirds - Blue Masked",
-        528 to "Lovebirds - Blue Peach-faced", 423 to "Lovebirds - Fischer's",274 to "Lovebirds - Peach-faced", 1161 to "Lutino Indian Ringneck Parakeet",143 to "Mosaic Canary",
-        109 to "Orange Crown Weaver (Red Bishop)", 120 to "Owl Finch",604 to "Parrotlet - Blue",606 to "Parrotlet - Green", 608 to "Parrotlet - Pied",273 to "Pied Parrotfinch",
-        116 to "Pied Zebra Finch", 456 to "Quaker Parrot (Monk Parakeet)",86 to "Red-Billed Firefinch", 131 to "Red-faced Parrotfinch",820 to "Red Agate Canary",
-        81 to "Red Cheeked Cordon Bleu Finch", 142 to "Red Factor Canary",810 to "Regent (Rock Pebbler) Parrot",284 to "Ring-necked Dove - White",441 to "Rosy Bourke's Parakeets",
-        823 to "Scarlet Macaw", 771 to "Scarlet-chested Parakeet",264 to "Scotch Fancy Canary",210 to "Seagreen Parrotfinch",821 to "Swainsons Lories",637 to "Tambourine Doves",
-        800 to "Thick-billed Green Pigeon", 1156 to "Umbrella Cockatoo",141 to "Variegated Canary",442 to "Violet Eared Waxbill Finch - Pairs",1250 to "Violet Indian Ringneck",
-        1258 to "White Bellied Caique",
-        139 to "White Canary", 786 to "White Crested Canary",569 to "Whiteface Pearl Cockatiel", 257 to "Yellow Canary",
-        110 to "Yellow Crown Weaver (Bishop)", 803 to "Yellow Fischer's Lovebird",801 to "Zebra Doves",114 to "Zebra Finch - Chestnut Flanked White",115 to "Zebra Finch - Normal")
 
     val hooblyCAPricing:HashMap<Int,String> = hashMapOf(131 to "lwO0b",81 to "ITYhd",86 to "UXvup",604 to "2HrtL",546 to "N9cro",458 to "RKSUg",419 to "Jmj6h",1250 to "uIvlf",
         144 to "2B7y0",139 to "JpXqh",777 to "4yg3N",528 to "G1H7C",820 to "45bRF",441 to "RVEsv",1258 to "CFCBe",606 to "KNbQg",778 to "9eMkb",594 to "YFSFe",142 to "uEhZb",
@@ -1125,4 +1146,857 @@ fun hooblyCA(driver: ChromeDriver) {
     }
     driver.findElement(By.xpath("//a[@href='/c/logout']")).click()
     Thread.sleep(3000)
+}
+
+fun runBirdsWANoon(driver: ChromeDriver) {
+
+    val usrBirdsWA = "customersupport@thefinchfarm.com"
+    val pwBirdsWA = "TFF2020!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsWA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsWA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowWA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsCANoon(driver: ChromeDriver) {
+
+    val usrBirdsCA = "CustomersupportCA@thefinchfarm.com"
+    val pwBirdsCA = "2019!Birds"
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsCA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsCA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowCA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowCA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsAZNoon(driver: ChromeDriver) {
+
+    val usrBirdsAZ = "customersupportAZ@thefinchfarm.com"
+    val pwBirdsAZ = "TFF2019!"
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsAZ")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsAZ")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowAZ(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowAZ(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsFLNoon(driver: ChromeDriver) {
+
+    val usrBirdsFL = "customersupportFL@thefinchfarm.com"
+    val pwBirdsFL = "TFF2019!!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsFL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsFL")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowFL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsTXNoon(driver: ChromeDriver) {
+
+    val usrBirdsTX = "customersupportTX@thefinchfarm.com"
+    val pwBirdsTX = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsTX")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsTX")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowTX(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsNYNoon(driver: ChromeDriver) {
+
+    val usrBirdsNY = "customersupportNY@thefinchfarm.com"
+    val pwBirdsNY = "SELL2020!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsNY")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsNY")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowNY(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsILNoon(driver: ChromeDriver) {
+
+    val usrBirdsIL = "customersupportIL@thefinchfarm.com"
+    val pwBirdsIL = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIL")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsPANoon(driver: ChromeDriver) {
+
+    val usrBirdsPA = "customersupportPA@thefinchfarm.com"
+    val pwBirdsPA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsPA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsPA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowPA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsOHNoon(driver: ChromeDriver) {
+
+    val usrBirdsOH = "customersupportOH@thefinchfarm.com"
+    val pwBirdsOH = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsOH")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsOH")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowOH(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsINNoon(driver: ChromeDriver) {
+
+    val usrBirdsIN = "customersupportIN@thefinchfarm.com"
+    val pwBirdsIN = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIN")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIN")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIN(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsMANoon(driver: ChromeDriver) {
+
+    val usrBirdsMA = "customersupportMA@thefinchfarm.com"
+    val pwBirdsMA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowMA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowMA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runClassifiedsNoon(driver: ChromeDriver) {
+
+    val usrAd = "customersupport@thefinchfarm.com"
+    val pwAd = "Marketing2019!"
+    try {
+        driver.get("https://www.classifiedads.com/login.php")
+        driver.findElement(By.name("login_email")).sendKeys("$usrAd")
+        driver.findElement(By.name("login_password")).sendKeys("$pwAd")
+        driver.findElement(By.xpath("//input[@value='Log in']")).click()
+        Thread.sleep(1000)
+        adNow(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyWANoon(driver: ChromeDriver) {
+
+    val usrHooblyWA = "customersupport@thefinchfarm.com"
+    val pwHooblyWA = "Marketing2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyWA")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyWA")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyWA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyFLNoon(driver: ChromeDriver) {
+
+    val usrHooblyFL = "customersupportFL@thefinchfarm.com"
+    val pwHooblyFL = "TFFFL2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyFL")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyFL")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyFL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyAZNoon(driver: ChromeDriver) {
+
+    val usrHooblyAZ = "customersupportAZ@thefinchfarm.com"
+    val pwHooblyAZ = "TFFAZ2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyAZ")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyAZ")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyAZ(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyCANoon(driver: ChromeDriver) {
+
+    val usrHooblyCA = "customersupportCA@thefinchfarm.com"
+    val pwHooblyCA = "TFFC3522!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyCA")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyCA")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyCA(driver)
+        driver.quit()
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+
+fun runBirdsWAPM(driver: ChromeDriver) {
+
+    val usrBirdsWA = "customersupport@thefinchfarm.com"
+    val pwBirdsWA = "TFF2020!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsWA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsWA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowWA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsCAPM(driver: ChromeDriver) {
+
+    val usrBirdsCA = "CustomersupportCA@thefinchfarm.com"
+    val pwBirdsCA = "2019!Birds"
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsCA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsCA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowCA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowCA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsAZPM(driver: ChromeDriver) {
+
+    val usrBirdsAZ = "customersupportAZ@thefinchfarm.com"
+    val pwBirdsAZ = "TFF2019!"
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsAZ")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsAZ")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowAZ(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowAZ(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsFLPM(driver: ChromeDriver) {
+
+    val usrBirdsFL = "customersupportFL@thefinchfarm.com"
+    val pwBirdsFL = "TFF2019!!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsFL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsFL")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowFL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsTXPM(driver: ChromeDriver) {
+
+    val usrBirdsTX = "customersupportTX@thefinchfarm.com"
+    val pwBirdsTX = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsTX")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsTX")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowTX(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsNYPM(driver: ChromeDriver) {
+
+    val usrBirdsNY = "customersupportNY@thefinchfarm.com"
+    val pwBirdsNY = "SELL2020!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsNY")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsNY")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowNY(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsILPM(driver: ChromeDriver) {
+
+    val usrBirdsIL = "customersupportIL@thefinchfarm.com"
+    val pwBirdsIL = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIL")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsPAPM(driver: ChromeDriver) {
+
+    val usrBirdsPA = "customersupportPA@thefinchfarm.com"
+    val pwBirdsPA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsPA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsPA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowPA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsOHPM(driver: ChromeDriver) {
+
+    val usrBirdsOH = "customersupportOH@thefinchfarm.com"
+    val pwBirdsOH = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsOH")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsOH")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowOH(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsINPM(driver: ChromeDriver) {
+
+    val usrBirdsIN = "customersupportIN@thefinchfarm.com"
+    val pwBirdsIN = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIN")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIN")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowIN(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsMAPM(driver: ChromeDriver) {
+
+    val usrBirdsMA = "customersupportMA@thefinchfarm.com"
+    val pwBirdsMA = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowMA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowMA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runClassifiedsPM(driver: ChromeDriver) {
+
+    val usrAd = "customersupport@thefinchfarm.com"
+    val pwAd = "Marketing2019!"
+    try {
+        driver.get("https://www.classifiedads.com/login.php")
+        driver.findElement(By.name("login_email")).sendKeys("$usrAd")
+        driver.findElement(By.name("login_password")).sendKeys("$pwAd")
+        driver.findElement(By.xpath("//input[@value='Log in']")).click()
+        Thread.sleep(1000)
+        adNow(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyWAPM(driver: ChromeDriver) {
+
+    val usrHooblyWA = "customersupport@thefinchfarm.com"
+    val pwHooblyWA = "Marketing2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyWA")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyWA")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyWA(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyFLPM(driver: ChromeDriver) {
+
+    val usrHooblyFL = "customersupportFL@thefinchfarm.com"
+    val pwHooblyFL = "TFFFL2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyFL")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyFL")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyFL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyAZPM(driver: ChromeDriver) {
+
+    val usrHooblyAZ = "customersupportAZ@thefinchfarm.com"
+    val pwHooblyAZ = "TFFAZ2019!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyAZ")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyAZ")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyAZ(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runHooblyCAPM(driver: ChromeDriver) {
+
+    val usrHooblyCA = "customersupportCA@thefinchfarm.com"
+    val pwHooblyCA = "TFFC3522!"
+    try {
+        driver.get("https://www.hoobly.com/")
+        driver.findElement(By.xpath("//a[@href='/c/login']")).click()
+        driver.get("https://www.hoobly.com/c/login")
+        Thread.sleep(1000)
+        driver.findElement(By.id("email")).sendKeys("$usrHooblyCA")
+        driver.findElement(By.id("pass")).sendKeys("$pwHooblyCA")
+        driver.findElement(By.xpath("//button[@type='submit']")).click()
+        Thread.sleep(1000)
+        hooblyCA(driver)
+        driver.quit()
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowFL(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+        driver.get("https://www.birdsnow.com/main-logout-now")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
 }
