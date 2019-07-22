@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.remote.CapabilityType
 import org.openqa.selenium.remote.DesiredCapabilities
+import java.time.LocalDateTime
 
 val singleAlphaBC:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets",220 to "Black-bellied Firefinch",
     1257 to "Black Headed Caique", 1171 to "Blue and Gold Macaw",132 to "Blue-faced Parrotfinch",216 to "Blue Billed Firefinch",460 to "Budgies - (Budgerigar Parakeets) - Blue",
@@ -76,9 +77,21 @@ fun scrape() {
     cap.setCapability(ChromeOptions.CAPABILITY, options)
     val driver = ChromeDriver(cap)
 
-    runAll(driver)
-    noonBatch(driver)
-    pmBatch(driver)
+
+    val current = LocalDateTime.now()
+    val hour = current.hour
+    println("$current $hour")
+
+    if(hour in 10..15) {
+        println("noon")
+        noonBatch(driver)
+    } else if (hour in 16..22) {
+        println("pm")
+        pmBatch(driver)
+    } else {
+        println("all")
+        runAll(driver)
+    }
 }
 
 fun runAll(driver: ChromeDriver) {
