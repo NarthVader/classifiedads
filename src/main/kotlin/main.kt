@@ -1473,13 +1473,34 @@ fun birdsNowCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
+    val top40template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
+        435 to "Lovebirds - Black Masked", 1171 to "Blue and Gold Macaw", 252 to "Lady Gouldian Finch - Blue-back", 1169 to "Blue Crowned Conure",
+        778 to "Blue Indian Ringneck Parakeet", 604 to "Parrotlet - Blue", 439 to "Bourke's Parrot", 458 to "Cockatiel",
+        87 to "Gold Breasted Waxbill", 144 to "Lady Gouldian Green Back Normal", 1157 to "Green Cheek Conure Normal",
+        777 to "Green Indian Ringneck Parakeet", 89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",
+        804 to "Kakarikis Cinnamon Parakeet", 96 to "Lavender Waxbill", 557 to "Cockatiel - Lutino", 120 to "Owl Finch",
+        274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 456 to "Quaker Parrot (Monk Parakeet)",
+        820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
+        131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 1271 to "Red-Lored Amazon",
+        441 to "Rosy Bourke's Parakeets", 1168 to "Severe Chestnut Fronted Macaw",
+        541 to "Conure - Sun", 1156 to "Umbrella Cockatoo", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
+        525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
+
     val birdsNowCAPricing: HashMap<Int,Int> = hashMapOf(594 to 549550, 298 to 556355, 609 to 554844, 435 to 550215, 778 to 549549,
          458 to 550026, 87 to 554849, 777 to 549657, 89 to 554848,
         776 to 554836, 144 to 550587, 557 to 554841, 120 to 550585, 274 to 550213, 546 to 554838, 820 to 554839, 86 to 554846,
         81 to 554840, 131 to 554837, 142 to 550583, 441 to 554850, 541 to 550132, 1250 to 554834, 139 to 549689, 525 to 554842,
-        250 to 554847, 257 to 554835,  115 to 554845)
+        250 to 554847, 257 to 554835, 115 to 554845,
+        1171 to 558749, 252 to 558750, 1169 to 558752, 604 to 558753, 439 to 558754, 1157 to 558757, 804 to 558758, 96 to 558759,
+        456 to 558760, 1271 to 558761, 1168 to 558762, 1156 to 558763)
 
-    val birdsCA: IntArray = intArrayOf(549549,549550,549657,549689,
+    //new pending listings 558749,558750,558752,558753,558754,558757,558758,558759,558760,558761,558762,558763
+
+    val birdsCA: IntArray = intArrayOf(
+
+
+
+        549549,549550,549657,549689,
         550026,550132,550213,550215,
         550583,550585,550587,
         554834,554835,554836,554837,554838,554839,554840,554846,554847,554848,554849,554850,554842,554844,554845,554841 )
