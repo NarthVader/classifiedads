@@ -56,9 +56,14 @@ val bigCommerce: HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 
     143 to "Mosaic Canary", 120 to "Owl Finch", 604 to "Parrotlet - Blue", 274 to "Lovebirds - Peach-faced", 81 to "Red Cheeked Cordon Bleu Finch", 264 to "Scotch Fancy Canary",
     139 to "White Canary", 525 to "Cockatiel - White-faced", 115 to "Zebra Finch - Normal")
 
-val top30template1:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 609 to "Cockatiel - Albino", 435 to "Lovebirds - Black Masked", 778 to "Blue Indian Ringneck Parakeet",
-    604 to "Parrotlet - Blue", 528 to "Lovebirds - Blue Peach-faced", 87 to "Gold Breasted Waxbill", 1157 to "Green Cheek Conure Normal", 777 to "Green Indian Ringneck Parakeet",
-    606 to "Parrotlet - Green", 89 to "Green Singer (Yellow fronted canary)", 144 to "Lady Gouldian Green Back Normal", 557 to "Cockatiel - Lutino", 120 to "Owl Finch",
+val top30template1:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
+    435 to "Lovebirds - Black Masked", 1171 to "Blue and Gold Macaw", 252 to "Lady Gouldian Finch - Blue-back", 1169 to "Blue Crowned Conure",
+    778 to "Blue Indian Ringneck Parakeet", 604 to "Parrotlet - Blue", 439 to "Bourke's Parrot", 458 to "Cockatiel",
+    87 to "Gold Breasted Waxbill", 144 to "Lady Gouldian Green Back Normal", 1157 to "Green Cheek Conure Normal",
+    777 to "Green Indian Ringneck Parakeet", 89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",
+    804 to "Kakarikis Cinnamon Parakeet",
+    ///left of here!!!
+    557 to "Cockatiel - Lutino", 120 to "Owl Finch",
     274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
     131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 441 to "Rosy Bourke's Parakeets", 541 to "Conure - Sun", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
     525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
@@ -82,16 +87,17 @@ fun scrape() {
     val hour = current.hour
     println("$current $hour")
 
-    if(hour in 10..15) {
-        println("noon")
-        noonBatch(driver)
-    } else if (hour in 16..22) {
-        println("pm")
-        pmBatch(driver)
-    } else {
-        println("all")
-        runAll(driver)
-    }
+//    if(hour in 10..15) {
+//        println("noon")
+//        noonBatch(driver)
+//    } else if (hour in 16..22) {
+//        println("pm")
+//        pmBatch(driver)
+//    } else {
+//        println("all")
+//        runAll(driver)
+//    }
+    runAll(driver)
 }
 
 fun runAll(driver: ChromeDriver) {
@@ -1466,16 +1472,16 @@ fun birdsNowCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsNowCAPricing: HashMap<Int,Int> = hashMapOf(594 to 549550, 298 to 556355, 609 to 554844, 435 to 550215, 778 to 549549, 477 to 550218, 528 to 550214,
-        479 to 549847, 458 to 550026, 156 to 549848, 423 to 550216, 260 to 549849, 87 to 554849, 539 to 549850, 777 to 549657, 606 to 550589, 89 to 554848,
-        776 to 554836, 144 to 550587, 263 to 549794, 557 to 554841, 143 to 549795, 120 to 550585, 604 to 549547, 274 to 550213, 546 to 554838, 820 to 554839, 86 to 554846,
-        81 to 554840, 131 to 554837, 142 to 550583, 441 to 554850, 264 to 549797, 541 to 550132, 141 to 549688, 1250 to 554834, 139 to 549689, 525 to 554842, 419 to 554843,
-        250 to 554847, 257 to 554835, 803 to 550217, 115 to 554845)
+    val birdsNowCAPricing: HashMap<Int,Int> = hashMapOf(594 to 549550, 298 to 556355, 609 to 554844, 435 to 550215, 778 to 549549,
+         458 to 550026, 87 to 554849, 777 to 549657, 89 to 554848,
+        776 to 554836, 144 to 550587, 557 to 554841, 120 to 550585, 274 to 550213, 546 to 554838, 820 to 554839, 86 to 554846,
+        81 to 554840, 131 to 554837, 142 to 550583, 441 to 554850, 541 to 550132, 1250 to 554834, 139 to 549689, 525 to 554842,
+        250 to 554847, 257 to 554835,  115 to 554845)
 
-    val birdsCA: IntArray = intArrayOf(549547,549549,549550,549657,549688,549689,549794,549795,
-        549797,549847,549848,549849,549850,550026,550132,550213,550214,550215,550216,550217,550218,
-        550583,550585,550587,550589,
-        554834,554835,554836,554837,554838,554839,554840,554843,554846,554847,554848,554849,554850,554842,554844,554845,554841 )
+    val birdsCA: IntArray = intArrayOf(549549,549550,549657,549689,
+        550026,550132,550213,550215,
+        550583,550585,550587,
+        554834,554835,554836,554837,554838,554839,554840,554846,554847,554848,554849,554850,554842,554844,554845,554841 )
     println("birdNowCA: " + birdsCA.size)
 
     for (i in 0..birdsCA.size-1) {
@@ -1645,9 +1651,9 @@ fun birdsNowOH(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf(1250 to 556209)
+    val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf()
 
-    val birdsOH: IntArray = intArrayOf(556209)
+    val birdsOH: IntArray = intArrayOf()
     println("birdNowOH: " + birdsOH.size)
 
     for (i in 0..birdsOH.size-1) {
@@ -1923,8 +1929,8 @@ fun birdsNowCANoon(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsCA: IntArray = intArrayOf(549547,549549,549550,549657,549688,549689,549794,549795,
-        549797,549847,549848,549849,549850,550026,550132,550213,550214,550215,550216,550217,550218)
+    val birdsCA: IntArray = intArrayOf(549549,549550,549657,549689,
+        550026,550132,550213,550215)
     println("birdNowCA: " + birdsCA.size)
 
     for (i in 0..birdsCA.size-1) {
@@ -2247,8 +2253,8 @@ fun birdsNowCAPM(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsCA: IntArray = intArrayOf(550589,
-        554834,554835,554836,554837,554838,554839,554840,554843,554846,554847,554848,554849,554850,554842,554844,554845,554841)
+    val birdsCA: IntArray = intArrayOf(
+        554834,554835,554836,554837,554838,554839,554840,554846,554847,554848,554849,554850,554842,554844,554845,554841)
     println("birdNowCA: " + birdsCA.size)
 
     for (i in 0..birdsCA.size-1) {
