@@ -56,16 +56,17 @@ val bigCommerce: HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 
     143 to "Mosaic Canary", 120 to "Owl Finch", 604 to "Parrotlet - Blue", 274 to "Lovebirds - Peach-faced", 81 to "Red Cheeked Cordon Bleu Finch", 264 to "Scotch Fancy Canary",
     139 to "White Canary", 525 to "Cockatiel - White-faced", 115 to "Zebra Finch - Normal")
 
-val top30template1:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
+val top40template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
     435 to "Lovebirds - Black Masked", 1171 to "Blue and Gold Macaw", 252 to "Lady Gouldian Finch - Blue-back", 1169 to "Blue Crowned Conure",
     778 to "Blue Indian Ringneck Parakeet", 604 to "Parrotlet - Blue", 439 to "Bourke's Parrot", 458 to "Cockatiel",
     87 to "Gold Breasted Waxbill", 144 to "Lady Gouldian Green Back Normal", 1157 to "Green Cheek Conure Normal",
     777 to "Green Indian Ringneck Parakeet", 89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",
-    804 to "Kakarikis Cinnamon Parakeet",
-    ///left of here!!!
-    557 to "Cockatiel - Lutino", 120 to "Owl Finch",
-    274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
-    131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 441 to "Rosy Bourke's Parakeets", 541 to "Conure - Sun", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
+    804 to "Kakarikis Cinnamon Parakeet", 96 to "Lavender Waxbill", 557 to "Cockatiel - Lutino", 120 to "Owl Finch",
+    274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 456 to "Quaker Parrot (Monk Parakeet)",
+    820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
+    131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 1271 to "Red-Lored Amazon",
+    441 to "Rosy Bourke's Parakeets", 1168 to "Severe Chestnut Fronted Macaw",
+    541 to "Conure - Sun", 1156 to "Umbrella Cockatoo", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
     525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
 
 fun main(args: Array<String>) {
