@@ -1508,10 +1508,6 @@ fun birdsNowAZ(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val top40template:HashMap<Int,String> = hashMapOf( 1250 to "Violet Indian Ringneck", 139 to "White Canary",
-        525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
-
-
     val birdsNowAZPricing: HashMap<Int,Int> = hashMapOf(1156 to 558832, 1168 to 558831, 1271 to 558830, 456 to 558829, 96 to 558828, 804 to 558827, 776 to 558826, 1157 to 558825, 439 to 558824, 1169 to 558822, 252 to 558821, 1171 to 558820, 298 to 558819, 594 to 550513, 609 to 554876, 435 to 554873, 778 to 550458, 604 to 550511, 458 to 554541, 87 to 554885,
         777 to 550512, 89 to 554884, 114 to 550515, 557 to 554871, 120 to 550516, 274 to 550517, 546 to 554868, 820 to 554869, 86 to 554881, 81 to 554870, 131 to 554865,
         142 to 550514, 441 to 554886, 541 to 550518, 1250 to 554880, 139 to 554877, 525 to 554872, 250 to 554882, 257 to 554867, 115 to 554878)
