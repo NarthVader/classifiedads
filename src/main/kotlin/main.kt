@@ -1473,19 +1473,6 @@ fun birdsNowCA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val top40template:HashMap<Int,String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
-        435 to "Lovebirds - Black Masked", 1171 to "Blue and Gold Macaw", 252 to "Lady Gouldian Finch - Blue-back", 1169 to "Blue Crowned Conure",
-        778 to "Blue Indian Ringneck Parakeet", 604 to "Parrotlet - Blue", 439 to "Bourke's Parrot", 458 to "Cockatiel",
-        87 to "Gold Breasted Waxbill", 144 to "Lady Gouldian Green Back Normal", 1157 to "Green Cheek Conure Normal",
-        777 to "Green Indian Ringneck Parakeet", 89 to "Green Singer (Yellow fronted canary)", 776 to "Grey Indian Ringneck Parakeet",
-        804 to "Kakarikis Cinnamon Parakeet", 96 to "Lavender Waxbill", 557 to "Cockatiel - Lutino", 120 to "Owl Finch",
-        274 to "Lovebirds - Peach-faced", 546 to "Conure - Pineapple Green-Cheeked", 456 to "Quaker Parrot (Monk Parakeet)",
-        820 to "Red Agate Canary", 86 to "Red-Billed Firefinch", 81 to "Red Cheeked Cordon Bleu Finch",
-        131 to "Red-faced Parrotfinch", 142 to "Red Factor Canary", 1271 to "Red-Lored Amazon",
-        441 to "Rosy Bourke's Parakeets", 1168 to "Severe Chestnut Fronted Macaw",
-        541 to "Conure - Sun", 1156 to "Umbrella Cockatoo", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
-        525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
-
     val birdsNowCAPricing: HashMap<Int,Int> = hashMapOf(594 to 549550, 298 to 556355, 609 to 554844, 435 to 550215, 778 to 549549,
          458 to 550026, 87 to 554849, 777 to 549657, 89 to 554848,
         776 to 554836, 144 to 550587, 557 to 554841, 120 to 550585, 274 to 550213, 546 to 554838, 820 to 554839, 86 to 554846,
@@ -1673,9 +1660,22 @@ fun birdsNowOH(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf()
+    val birdsNowOHPricing: HashMap<Int,Int> = hashMapOf(594 to 558297, 298 to 558502, 609 to 558299,
+        435 to 558300, 1171 to 558499, 252 to 558504, 1169 to 558497,
+        778 to 558301, 604 to 558303, 439 to 558495, 458 to 558306,
+        87 to 558307, 144 to 558311, 1157 to 558308,
+        777 to 558309, 89 to 558310, 776 to 558501,
+        804 to 558505, 96 to 558493, 557 to 558312, 120 to 558313,
+        274 to 558314, 546 to 558315, 456 to 558503,
+        820 to 558316, 86 to 558317, 81 to 558318,
+        131 to 558319, 142 to 558321, 1271 to 558492,
+        441 to 558324, 1168 to 558508,
+        541 to 558325, 1156 to 558326, 1250 to 556209, 139 to 558328,
+        525 to 558329, 250 to 558330, 257 to 558331, 115 to 558332)
 
-    val birdsOH: IntArray = intArrayOf()
+    val birdsOH: IntArray = intArrayOf(558297,558502,558299,558300,558499,558504,558497,558301,558303,558303,558306,558307,558311,
+        558308,558309,558310,558501,558505,558493,558312,558313,558314,558315,558503,558316,558317,558318,558319,558321,558492,558324,558508,
+        558325,558326,556209,558328,558329,558330,558331,558332)
     println("birdNowOH: " + birdsOH.size)
 
     for (i in 0..birdsOH.size-1) {
