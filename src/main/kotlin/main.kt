@@ -88,17 +88,17 @@ fun scrape() {
     val hour = current.hour
     println("$current $hour")
 
-//    if(hour in 10..15) {
-//        println("noon")
-//        noonBatch(driver)
-//    } else if (hour in 16..22) {
-//        println("pm")
-//        pmBatch(driver)
-//    } else {
-//        println("all")
-//        runAll(driver)
-//    }
-    runAll(driver)
+    if(hour in 10..15) {
+        println("noon")
+        noonBatch(driver)
+    } else if (hour in 16..22) {
+        println("pm")
+        pmBatch(driver)
+    } else {
+        println("all")
+        runAll(driver)
+    }
+//    runAll(driver)
 }
 
 fun runAll(driver: ChromeDriver) {
@@ -1696,9 +1696,23 @@ fun birdsNowIN(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
-    val birdsNowINPricing: HashMap<Int,Int> = hashMapOf(1250 to 556208)
+    val birdsIN: IntArray = intArrayOf(558546,558547,558548,558549,558550,558551,558552,558553,558554,558555,558556,558557,558558,558559,558560,558561,
+        558562,558563,558565,558566,558567,558568,558569,558570,558571,558573,558575,558576,558577,558578,558579,558580,558582,558583,556208,558584,
+        558585,558586,558588,558589)
 
-    val birdsIN: IntArray = intArrayOf(556208)
+    val birdsNowINPricing: HashMap<Int,Int> = hashMapOf(594 to 558546, 298 to 558547, 609 to 558548,
+        435 to 558549, 1171 to 558550, 252 to 558551, 1169 to 558552,
+        778 to 558553, 604 to 558554, 439 to 558555, 458 to 558556,
+        87 to 558557, 144 to 558558, 1157 to 558559,
+        777 to 558560, 89 to 558561, 776 to 558562,
+        804 to 558563, 96 to 558565, 557 to 558566, 120 to 558567,
+        274 to 558568, 546 to 558569, 456 to 558570,
+        820 to 558571, 86 to 558573, 81 to 558575,
+        131 to 558576, 142 to 558577, 1271 to 558578,
+        441 to 558579, 1168 to 558580,
+        541 to 558582, 1156 to 558583, 1250 to 556208, 139 to 558584,
+        525 to 558585, 250 to 558586, 257 to 558588, 115 to 558589)
+
     println("birdNowIN: " + birdsIN.size)
 
     for (i in 0..birdsIN.size-1) {
