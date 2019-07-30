@@ -102,7 +102,7 @@ fun scrape() {
 }
 
 fun runAll(driver: ChromeDriver) {
-    //runBirdsWA(driver)
+    runBirdsWA(driver)
     runBirdsCA(driver)
     runBirdsAZ(driver)
     runBirdsFL(driver)
