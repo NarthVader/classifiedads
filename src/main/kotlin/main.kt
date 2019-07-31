@@ -87,19 +87,22 @@ fun scrape() {
     val current = LocalDateTime.now()
     val hour = current.hour
     println("$current $hour")
-//
-//    if(hour in 10..15) {
-//        println("noon")
-//        noonBatch(driver)
-//    } else if (hour in 16..22) {
-//        println("pm")
-//        pmBatch(driver)
-//    } else {
-//        println("all")
-//        runAll(driver)
-//    }
+
+    if(hour in 10..15) {
+        println("noon")
+        noonBatch(driver)
+    } else if (hour in 16..22) {
+        println("pm")
+        pmBatch(driver)
+    } else {
+        println("all")
+        runAll(driver)
+    }
     runAll(driver)
+    //viewCount(driver)
 }
+
+
 
 fun runAll(driver: ChromeDriver) {
     runBirdsWA(driver)
@@ -1654,6 +1657,10 @@ fun birdsNowPA(driver: ChromeDriver) {
 
     Thread.sleep(3000)
 
+    val birdsPA: IntArray = intArrayOf(555861,555890,555888,555859,555867,555865,555880,555898,555903,555860,555877,555897,555886,555901,555862,555864,555858,
+        555882,555894,555883,555879,555857,555900,555866,555902,555781,555891,555887,555895,555881,555893,555889,
+        559073,559074,559076,559088,559089,559090,559092,559093)
+
     val birdsNowPAPricing: HashMap<Int,Int> = hashMapOf(594 to 555861, 609 to 555890, 435 to 555888, 778 to 555859,
         604 to 555867, 528 to 555865, 458 to 555880, 87 to 555898, 144 to 555903, 777 to 555860,
         606 to 555877, 89 to 555897, 557 to 555886, 1161 to 555901,
@@ -1661,10 +1668,11 @@ fun birdsNowPA(driver: ChromeDriver) {
         274 to 555864, 546 to 555858, 820 to 555882, 86 to 555894, 81 to 555883,
         131 to 555879, 142 to 555857, 441 to 555900, 541 to 555866, 1156 to 555902,
         1250 to 555781, 139 to 555891,
-        525 to 555887, 419 to 555889, 250 to 555895, 257 to 555881, 115 to 555893)
+        525 to 555887, 419 to 555889, 250 to 555895, 257 to 555881, 115 to 555893,
+        298 to 559073, 1157 to 559074, 776 to 559076,
+        804 to 559088, 96 to 559089, 456 to 559090, 1271 to 559092,
+        1168 to 559093)
 
-    val birdsPA: IntArray = intArrayOf(555861,555890,555888,555859,555867,555865,555880,555898,555903,555860,555877,555897,555886,555901,555862,555864,555858,
-        555882,555894,555883,555879,555857,555900,555866,555902,555781,555891,555887,555895,555881,555893,555889)
     println("birdNowPA: " + birdsPA.size)
 
     for (i in 0..birdsPA.size-1) {
