@@ -98,7 +98,7 @@ fun scrape() {
         println("all")
         runAll(driver)
     }
-    runAll(driver)
+    //runAll(driver)
     //viewCount(driver)
     driver.quit()
 }
