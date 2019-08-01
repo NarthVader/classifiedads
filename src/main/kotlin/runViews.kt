@@ -291,7 +291,7 @@ fun runViewsDL(driver: ChromeDriver) {
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
-        MAViews(driver)
+        DLViews(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
