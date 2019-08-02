@@ -360,4 +360,33 @@ fun DLViews(driver: ChromeDriver) {
     Thread.sleep(3000)
 }
 
+fun DCViews(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsDC: IntArray = intArrayOf(558815,559153,559154,559155,559156,559157,559159,559161,559163,559164,559165,559166,559169,559170,559171,559173,
+        559174,559175,559176,559177,559178,559208,559210,559212,559215,559216,559217,559218,559219,559220,559222,559223,559224,559225,559226,559227,559228,
+        559229,559231,559232)
+
+    var stateTotal = 0
+
+    for (i in 0..birdsDC.size-1) {
+        val index = birdsDC[i]
+        driver.get("https://www.birdsnow.com/bird-ad-$index")
+
+        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
+        val ptext = parent.text
+        val length = ptext.length
+        var substring = ptext.substring(17,length)
+        val re = Regex("[^A-Za-z0-9 ]")
+        substring = re.replace(substring, "")
+        stateTotal += substring.toInt()
+        Thread.sleep(3000)
+    }
+
+    println("DC total views: $stateTotal")
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
 

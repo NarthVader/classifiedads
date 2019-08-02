@@ -304,3 +304,28 @@ fun runViewsDL(driver: ChromeDriver) {
         println("Other Exceptions: $o")
     }
 }
+
+fun runViewsDC(driver: ChromeDriver) {
+
+    val usrBirdsDC = "supportwashingtondc@thefinchfarm.com"
+    val pwBirdsDC = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsDC")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsDC")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        DCViews(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}

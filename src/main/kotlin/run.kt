@@ -286,16 +286,41 @@ fun runBirdsMA(driver: ChromeDriver) {
 
 fun runBirdsDL(driver: ChromeDriver) {
 
-    val usrBirdsMA = "supportdallas@thefinchfarm.com"
-    val pwBirdsMA = "TFF2019!"
+    val usrBirdsDL = "supportdallas@thefinchfarm.com"
+    val pwBirdsDL = "TFF2019!"
 
     try {
         driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsDL")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsDL")
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
         birdsNowDL(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun runBirdsDC(driver: ChromeDriver) {
+
+    val usrBirdsDC = "supportwashingtondc@thefinchfarm.com"
+    val pwBirdsDC = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsDC")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsDC")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowDC(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")

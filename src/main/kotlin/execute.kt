@@ -394,6 +394,40 @@ fun birdsNowDL(driver: ChromeDriver) {
     Thread.sleep(3000)
 }
 
+fun birdsNowDC(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsDC: IntArray = intArrayOf(558815,559153,559154,559155,559156,559157,559159,559161,559163,559164,559165,559166,559169,559170,559171,559173,
+        559174,559175,559176,559177,559178,559208,559210,559212,559215,559216,559217,559218,559219,559220,559222,559223,559224,559225,559226,559227,559228,
+        559229,559231,559232)
+
+    val birdsNowDCPricing: HashMap<Int, Int> = hashMapOf(594 to 558815, 298 to 559153, 609 to 559154,
+        435 to 559155, 1171 to 559156, 252 to 559157, 1169 to 559159,
+        778 to 559161, 604 to 559163, 439 to 559164, 458 to 559165,
+        87 to 559166, 144 to 559169, 1157 to 559170,
+        777 to 559171, 89 to 559173, 776 to 559174,
+        804 to 559175, 96 to 559176, 557 to 559177, 120 to 559178,
+        274 to 559208, 546 to 559210, 456 to 559212,
+        820 to 559215, 86 to 559216, 81 to 559217,
+        131 to 559218, 142 to 559219, 1271 to 559220,
+        441 to 559222, 1168 to 559223,
+        541 to 559224, 1156 to 559225, 1250 to 559226, 139 to 559227,
+        525 to 559228, 250 to 559229, 257 to 559231, 115 to 559232)
+
+    println("birdNowDC: " + birdsDC.size)
+
+    for (i in 0..birdsDC.size-1) {
+        val index = birdsDC[i]
+        println("$i: " + index)
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.findElement(By.name("doContinue")).click()
+        Thread.sleep(3000)
+    }
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
 fun catsNow(driver: ChromeDriver) {
 
     Thread.sleep(3000)
