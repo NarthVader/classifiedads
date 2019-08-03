@@ -27,45 +27,58 @@ fun scrape() {
     val hour = current.hour
     println("$current $hour")
 
-    if(hour in 10..15) {
-        println("noon")
-        noonBatch(driver)
-    } else if (hour in 16..22) {
-        println("pm")
-        pmBatch(driver)
-    } else {
-        println("all")
-        runAll(driver)
-    }
-    //runAll(driver)
-    //viewCount(driver)
+//    if(hour in 10..15) {
+//        println("noon")
+//        noonBatch(driver)
+//    } else if (hour in 16..22) {
+//        println("pm")
+//        pmBatch(driver)
+//    } else {
+//        println("all")
+//        runAll(driver)
+//    }
+    runAll(driver)
+    viewCount(driver)
     //driver.quit()
 }
 
 
 
 fun runAll(driver: ChromeDriver) {
-//    runBirdsWA(driver)
-//    runBirdsCA(driver)
-//    runBirdsAZ(driver)
-//    runBirdsFL(driver)
-//    runBirdsTX(driver)
-//    runBirdsNY(driver)
-//    runBirdsIL(driver)
-//    runBirdsPA(driver)
-//    runBirdsOH(driver)
-//    runBirdsIN(driver)
-//    runBirdsMA(driver)
-//    runBirdsDL(driver)
+    runBirdsNow(driver)
+    runClassifieds(driver)
+    runOtherNowPets(driver)
+    runAllHoobly(driver)
+}
+
+fun runBirdsNow(driver: ChromeDriver) {
+    runBirdsWA(driver)
+    runBirdsCA(driver)
+    runBirdsAZ(driver)
+    runBirdsFL(driver)
+    runBirdsTX(driver)
+    runBirdsNY(driver)
+    runBirdsIL(driver)
+    runBirdsPA(driver)
+    runBirdsOH(driver)
+    runBirdsIN(driver)
+    runBirdsMA(driver)
+    runBirdsDL(driver)
     runBirdsDC(driver)
-//    runCats(driver)
-//    runReps(driver)
-//    runDogs(driver)
-//    runClassifieds(driver)
-//    runHooblyWA(driver)
-//    runHooblyFL(driver)
-//    runHooblyAZ(driver)
-//    runHooblyCA(driver)
+    runBirdsAT(driver)
+}
+
+fun runOtherNowPets(driver: ChromeDriver) {
+    runCats(driver)
+    runReps(driver)
+    runDogs(driver)
+}
+
+fun runAllHoobly(driver: ChromeDriver) {
+    runHooblyWA(driver)
+    runHooblyFL(driver)
+    runHooblyAZ(driver)
+    runHooblyCA(driver)
 }
 
 fun noonBatch(driver: ChromeDriver) {

@@ -334,6 +334,31 @@ fun runBirdsDC(driver: ChromeDriver) {
     }
 }
 
+fun runBirdsAT(driver: ChromeDriver) {
+
+    val usrBirdsAT = "supportatlanta@thefinchfarm.com"
+    val pwBirdsAT = "TFF2019!"
+
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsAT")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsAT")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+        birdsNowAT(driver)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
 fun runCats(driver: ChromeDriver) {
 
     val usrCats = "support@thefinchfarm.zendesk.com"
