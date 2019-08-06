@@ -23,4 +23,5 @@ fun viewCount(driver: ChromeDriver) {
     runViewsDL(driver)
     runViewsDC(driver)
     runViewsAT(driver)
+    runViewsDT(driver)
 }

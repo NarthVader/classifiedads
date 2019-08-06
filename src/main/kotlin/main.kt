@@ -38,8 +38,8 @@ fun scrape() {
 //        runAll(driver)
 //    }
     runAll(driver)
-    viewCount(driver)
-    //driver.quit()
+    //viewCount(driver)
+     driver.quit()
 }
 
 
@@ -66,6 +66,7 @@ fun runBirdsNow(driver: ChromeDriver) {
     runBirdsDL(driver)
     runBirdsDC(driver)
     runBirdsAT(driver)
+    runBirdsDT(driver)
 }
 
 fun runOtherNowPets(driver: ChromeDriver) {
