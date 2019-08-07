@@ -2,6 +2,7 @@ package com.pinnsights
 
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
+import org.openqa.selenium.support.ui.*
 import org.openqa.selenium.chrome.ChromeDriver
 import java.util.HashMap
 
@@ -1295,4 +1296,31 @@ fun hooblyCAPM(driver: ChromeDriver) {
     }
     driver.findElement(By.xpath("//a[@href='/c/logout']")).click()
     Thread.sleep(3000)
+}
+
+fun createBirds(driver: ChromeDriver) {
+    createAfricanGrey(driver)
+}
+
+fun createAfricanGrey(driver: ChromeDriver) {
+    Thread.sleep(3000)
+    println("creating African Grey")
+    driver.get("https://www.birdsnow.com/place_ad-adType-p")
+    Thread.sleep(1000)
+    driver.findElement(By.cssSelector("#title")).sendKeys("African Grey Parrot")
+    Select(driver.findElement(By.name("type1"))).selectByValue("afr")
+    Thread.sleep(3000)
+    Select(driver.findElement(By.name("type2"))).selectByValue("con")
+    Thread.sleep(1000)
+    Select(driver.findElement(By.name("age"))).selectByValue("you")
+    driver.findElement(By.cssSelector("#price")).sendKeys("4484.99")
+    driver.findElement(By.cssSelector("#comments")).sendKeys("We Ship Safely Nationwide! We use a patented safety travel box that’s climate controlled, comfortable, and meets the bird's nutritional needs! OUR BIRDS ARE VET CERTIFIED WITH A LIVE ARRIVAL GUARANTEE AND AN OPTIONAL EXTENDED WARRANTY! ")
+    driver.findElement(By.cssSelector("#price")).sendKeys("4484.99")
+    driver.findElement(By.cssSelector("#name")).sendKeys("African Grey Parrot")
+    Select(driver.findElement(By.name("adkind"))).selectByValue("for")
+    Select(driver.findElement(By.name("sex"))).selectByValue("un")
+    driver.findElement(By.xpath("//input[@value='gr1']")).click()
+    Thread.sleep(3000)
+
+
 }

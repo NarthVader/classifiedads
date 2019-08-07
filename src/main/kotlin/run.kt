@@ -6,6 +6,32 @@ import org.openqa.selenium.TimeoutException
 import org.openqa.selenium.UnhandledAlertException
 import org.openqa.selenium.chrome.ChromeDriver
 
+fun birdsNowLogin(driver: ChromeDriver, login: String, pass: String) {
+    try {
+        driver.get("https://www.birdsnow.com/login.htm")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$login")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
+        driver.findElement(By.name("doLogin")).click()
+        Thread.sleep(3000)
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+        birdsNowWA(driver)
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
+fun birdsNowLogout(driver: ChromeDriver) {
+    driver.get("https://www.birdsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
+
 fun runBirdsWA(driver: ChromeDriver) {
 
     val usrBirdsWA = "customersupport@thefinchfarm.com"

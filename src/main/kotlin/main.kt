@@ -25,7 +25,6 @@ fun scrape() {
 
     val current = LocalDateTime.now()
     val hour = current.hour
-    println("$current $hour")
 
 //    if(hour in 10..15) {
 //        println("noon")
@@ -37,12 +36,20 @@ fun scrape() {
 //        println("all")
 //        runAll(driver)
 //    }
-    runAll(driver)
-    //viewCount(driver)
-     driver.quit()
+
+    val autoLogin = "customersupport@thefinchfarm.com"
+    val autoPassword = "TFF2020!"
+    autoPost(driver, autoLogin, autoPassword)
+//    runAll(driver)
+//    viewCount(driver)
+    driver.quit()
 }
 
-
+fun autoPost(driver: ChromeDriver, login: String, pass: String) {
+    birdsNowLogin(driver, login, pass)
+    createBirds(driver)
+    birdsNowLogout(driver)
+}
 
 fun runAll(driver: ChromeDriver) {
     runBirdsNow(driver)
