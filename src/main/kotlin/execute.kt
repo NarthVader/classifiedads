@@ -1320,7 +1320,22 @@ fun createAfricanGrey(driver: ChromeDriver) {
     Select(driver.findElement(By.name("adkind"))).selectByValue("for")
     Select(driver.findElement(By.name("sex"))).selectByValue("un")
     driver.findElement(By.xpath("//input[@value='gr1']")).click()
-    Thread.sleep(3000)
+    Select(driver.findElement(By.name("size"))).selectByValue("large")
+    driver.findElement(By.cssSelector("#marking")).sendKeys("Phone #: 877-527-5656")
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("http://www.thefinchfarm.com/african-grey-parrots/")
+    driver.findElement(By.xpath("//input[@value='exo']")).click()
+    driver.findElement(By.xpath("//input[@value='fan']")).click()
+    driver.findElement(By.xpath("//input[@value='com']")).click()
+    driver.findElement(By.xpath("//input[@value='pet']")).click()
+    driver.findElement(By.xpath("//input[@value='rar']")).click()
+    driver.findElement(By.xpath("//input[@value='tal']")).click()
+    driver.findElement(By.xpath("//input[@value='cut']")).click()
+    driver.findElement(By.xpath("//input[@value='pla']")).click()
+    driver.findElement(By.name("shipping")).sendKeys("We Ship Safely Nationwide! We use a patented safety travel box that’s climate controlled, comfortable, and meets the bird's nutritional needs! OUR BIRDS ARE VET CERTIFIED WITH A LIVE ARRIVAL GUARANTEE AND AN OPTIONAL EXTENDED WARRANTY!")
+    driver.findElement(By.cssSelector("#tags")).sendKeys("african grey parrots for sale")
+
+
+    Thread.sleep(10000)
 
 
 }
