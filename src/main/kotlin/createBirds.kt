@@ -14,7 +14,9 @@ fun createBirds(driver: ChromeDriver) {
     //createAlbinoCocaktiel(driver)
     //createBlackMaskedLovebird(driver)
     //createBGMacaw(driver)
-    createBlueLadyFinch(driver)
+    //createBlueLadyFinch(driver)
+    //createBlueConure(driver)
+    //createBlueRingneck(driver)
 }
 
 fun createAfricanRingneck(driver: ChromeDriver) {
@@ -156,6 +158,49 @@ fun createBlueLadyFinch(driver: ChromeDriver) {
     saveAndContinue(driver)
 }
 
+fun createBlueConure(driver: ChromeDriver) {
+    val title = "Blue Crowned Conure"
+    val species = "con"
+    val subspecies = "blu"
+    val price = "1199.99"
+    val size = medium
+    val searchTags = "bluecrownedconure, blue crowned conure"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    blue(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createBlueRingneck(driver: ChromeDriver) {
+    val title = "Blue Indian Ringneck Parakeet"
+    val species = "pa1"
+    val subspecies = "rin"
+    val price = "494.99"
+    val size = medium
+    val searchTags = "blue indian ringneck parakeets for sale, indian ringneck parakeets for sale, parakeets for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    blue(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
 //colors
 fun albino(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='alb']")).click()
@@ -246,6 +291,11 @@ fun forAllBirds(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='cut']")).click()
     driver.findElement(By.xpath("//input[@value='pla']")).click()
     driver.findElement(By.name("shipping")).sendKeys(comment)
+}
+
+fun forRareBirds(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='rar']")).click()
+    driver.findElement(By.xpath("//input[@value='tal']")).click()
 }
 
 
