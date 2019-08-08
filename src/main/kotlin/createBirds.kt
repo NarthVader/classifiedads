@@ -17,6 +17,9 @@ fun createBirds(driver: ChromeDriver) {
     //createBlueLadyFinch(driver)
     //createBlueConure(driver)
     //createBlueRingneck(driver)
+    //createBlueParrotlet(driver)
+    //createBourkesParrot(driver)
+    //createCockatiel(driver)
 }
 
 fun createAfricanRingneck(driver: ChromeDriver) {
@@ -197,6 +200,73 @@ fun createBlueRingneck(driver: ChromeDriver) {
     birdSize(driver,size)
     forAllBirds(driver)
     forRareBirds(driver)
+    forTalkingBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createBlueParrotlet(driver: ChromeDriver) {
+    val title = "Blue Parrotlet"
+    val species = "pa2"
+    val subspecies = "none"
+    val price = "199.99"
+    val size = small
+    val searchTags = "blue parrotlets for sale, parrotlets for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    blue(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createBourkesParrot(driver: ChromeDriver) {
+    val title = "Bourke's Parrot"
+    val species = "pa1"
+    val subspecies = "bou"
+    val price = "173.99"
+    val size = medium
+    val searchTags = "bourke's parrot bourke's parakeet bourkesparrot bourkesparakeet"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    brown(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createCockatiel(driver: ChromeDriver) {
+    val title = "Cockatiel"
+    val species = "coc"
+    val subspecies = "none"
+    val price = "177.99"
+    val size = medium
+    val searchTags = "cockatiels for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    grey(driver)
+    yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
 }
@@ -214,6 +284,10 @@ fun blue(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='blu']")).click()
 }
 
+fun brown(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='bro']")).click()
+}
+
 fun grey(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='gr1']")).click()
 }
@@ -224,6 +298,10 @@ fun gold(driver: ChromeDriver) {
 
 fun green(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='gre']")).click()
+}
+
+fun yellow(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='yel']")).click()
 }
 
 fun white(driver: ChromeDriver) {
@@ -262,7 +340,9 @@ fun birdTitle(driver: ChromeDriver, title: String) {
 
 fun birdPrice(driver: ChromeDriver, price: String) {
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
+    Thread.sleep(1000)
     driver.findElement(By.cssSelector("#comments")).sendKeys(comment)
+    Thread.sleep(1000)
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
 }
 
@@ -295,6 +375,9 @@ fun forAllBirds(driver: ChromeDriver) {
 
 fun forRareBirds(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='rar']")).click()
+}
+
+fun forTalkingBirds(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='tal']")).click()
 }
 
