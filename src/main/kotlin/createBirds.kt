@@ -20,6 +20,7 @@ fun createBirds(driver: ChromeDriver) {
     //createBlueParrotlet(driver)
     //createBourkesParrot(driver)
     //createCockatiel(driver)
+    createGoldWaxbill(driver)
 }
 
 fun createAfricanRingneck(driver: ChromeDriver) {
@@ -263,6 +264,28 @@ fun createCockatiel(driver: ChromeDriver) {
     //color//
     grey(driver)
     yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createGoldWaxbill(driver: ChromeDriver) {
+    val title = "Gold Breasted Waxbill"
+    val species = "fin"
+    val subspecies = "wax"
+    val price = "56.99"
+    val size = small
+    val searchTags = "gold breasted waxbills for sale, waxbills for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    gold(driver)
     /////////
     birdSize(driver,size)
     forAllBirds(driver)
