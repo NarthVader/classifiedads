@@ -40,8 +40,8 @@ fun scrape() {
     val autoLogin = "customersupport@thefinchfarm.com"
     val autoPassword = "TFF2020!"
     autoPost(driver, autoLogin, autoPassword)
-//    runAll(driver)
-//    viewCount(driver)
+    //runAll(driver)
+    //viewCount(driver)
     driver.quit()
 }
 
