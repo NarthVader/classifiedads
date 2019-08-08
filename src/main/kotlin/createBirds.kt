@@ -30,6 +30,7 @@ fun createBirds(driver: ChromeDriver) {
     createKakarikis(driver)
     createLavenderWaxbill(driver)
     createLutinoCockatiel(driver)
+    createOwlFinch(driver)
 }
 
 fun createAfricanRingneck(driver: ChromeDriver) {
@@ -473,6 +474,30 @@ fun createLutinoCockatiel(driver: ChromeDriver) {
     /////////
     birdSize(driver,size)
     forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createOwlFinch(driver: ChromeDriver) {
+    val title = "Owl Finch"
+    val species = "fin"
+    val subspecies = "oth"
+    val price = "153.99"
+    val size = small
+    val searchTags = "owl finches for sale, finches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    brown(driver)
+    grey(driver)
+    white(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
 }
