@@ -31,6 +31,26 @@ fun createBirds(driver: ChromeDriver) {
     createLavenderWaxbill(driver)
     createLutinoCockatiel(driver)
     createOwlFinch(driver)
+
+    createPeachFacedLove(driver)
+    createPineappleConure(driver)
+    createQuaker(driver)
+    createRedAgate(driver)
+    createRedbilledFinch(driver)
+    createRedCheekedCordonBlue(driver)
+    createRedFacedParrotfinch(driver)
+    createRedFactorCanary(driver)
+    createRedLoredAmazon(driver)
+    createRosyBourke(driver)
+    createChestnutMacaw(driver)
+    createSunConure(driver)
+    createUmbrellaCockatoo(driver)
+    createVioletRingneck(driver)
+    createWhiteCanary(driver)
+    createWhiteFacedCockatiel(driver)
+    createYellowGouldian(driver)
+    createYellowCanary(driver)
+    createZebraFinch(driver)
 }
 
 fun createAfricanRingneck(driver: ChromeDriver) {
@@ -502,6 +522,419 @@ fun createOwlFinch(driver: ChromeDriver) {
     saveAndContinue(driver)
 }
 
+fun createPeachFacedLove(driver: ChromeDriver) {
+    val title = "Peach Faced Lovebird"
+    val species = "lov"
+    val subspecies = "pea"
+    val price = "93.99"
+    val size = small
+    val searchTags = "peach faced lovebirds for sale, lovebirds for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    peach(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createPineappleConure(driver: ChromeDriver) {
+    val title = "Pineapple Green Cheek Conure"
+    val species = "con"
+    val subspecies = "gre"
+    val price = "550.99"
+    val size = medium
+    val searchTags = "pineapple green cheek conures for sale, conures for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    pineapple(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createQuaker(driver: ChromeDriver) {
+    val title = "Quaker Parrot"
+    val species = "qua"
+    val subspecies = "none"
+    val price = "469.00"
+    val size = medium
+    val searchTags = "quakerparrot, quaker parrot"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    green(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedAgate(driver: ChromeDriver) {
+    val title = "Red Agate Canary"
+    val species = "can"
+    val subspecies = "none"
+    val price = "165.99"
+    val size = small
+    val searchTags = "red agate canary for sale, red agate canaries for sale, canaries for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    black(driver)
+    red(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedbilledFinch(driver: ChromeDriver) {
+    val title = "Red Billed Firefinch"
+    val species = "fin"
+    val subspecies = "oth"
+    val price = "75.99"
+    val size = small
+    val searchTags = "red billed firefinches for sale, firefinches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    black(driver)
+    red(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedCheekedCordonBlue(driver: ChromeDriver) {
+    val title = "Red Cheeked Cordon Bleu"
+    val species = "fin"
+    val subspecies = "cor"
+    val price = "73.99"
+    val size = small
+    val searchTags = "red cheeked cordon bleu's for sale, finches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    blue(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedFacedParrotfinch(driver: ChromeDriver) {
+    val title = "Red Faced Parrotfinch"
+    val species = "fin"
+    val subspecies = "oth"
+    val price = "225.99"
+    val size = small
+    val searchTags = "red faced parrotfinches for sale, parrotfinches for sale, finches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    red(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedFactorCanary(driver: ChromeDriver) {
+    val title = "Red Factor Canary"
+    val species = "can"
+    val subspecies = "red"
+    val price = "169.99"
+    val size = small
+    val searchTags = "red factor canary for sale, canaries for sale, red factor canaries for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    red(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRedLoredAmazon(driver: ChromeDriver) {
+    val title = "Red Lored Amazon Parrot"
+    val species = "ama"
+    val subspecies = "re1"
+    val price = "1919.99"
+    val size = large
+    val searchTags = "red lored amazon parrot, redloredamazonparrot"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    green(driver)
+    red(driver)
+    yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    forTalkingBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createRosyBourke(driver: ChromeDriver) {
+    val title = "Rosy Bourke Parakeet"
+    val species = "pa1"
+    val subspecies = "bou"
+    val price = "225.99"
+    val size = medium
+    val searchTags = "rosy bourke parakeets for sale, parakeets for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    rose(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createChestnutMacaw(driver: ChromeDriver) {
+    val title = "Severe Chestnut Fronted Macaw"
+    val species = "mac"
+    val subspecies = "sev"
+    val price = "2799.99"
+    val size = large
+    val searchTags = "severe chestnut fronted macaw, severechestnutfrontedmacaw"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    blue(driver)
+    green(driver)
+    red(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createSunConure(driver: ChromeDriver) {
+    val title = "Sun Conure"
+    val species = "con"
+    val subspecies = "sun"
+    val price = "599.99"
+    val size = medium
+    val searchTags = "sun conures for sale, conures for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createUmbrellaCockatoo(driver: ChromeDriver) {
+    val title = "Umbrella Cockatoo"
+    val species = "co1"
+    val subspecies = "umb"
+    val price = "3989.99"
+    val size = large
+    val searchTags = "umbrella cockatoos for sale, cockatoos for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    white(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createVioletRingneck(driver: ChromeDriver) {
+    val title = "Violet Indian Ringneck Parakeet"
+    val species = "pa1"
+    val subspecies = "rin"
+    val price = "999.99"
+    val size = medium
+    val searchTags = "violet indian ringneck parakeets for sale, parakeets for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    purple(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    forRareBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createWhiteCanary(driver: ChromeDriver) {
+    val title = "White Canary"
+    val species = "can"
+    val subspecies = "none"
+    val price = "147.99"
+    val size = small
+    val searchTags = "white canary for sale, white canaries for sale, canaries for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    white(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createWhiteFacedCockatiel(driver: ChromeDriver) {
+    val title = "White Faced Cockatiel"
+    val species = "coc"
+    val subspecies = "none"
+    val price = "177.99"
+    val size = medium
+    val searchTags = "white faced cockatiels for sale, cockatiels for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    white(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createYellowGouldian(driver: ChromeDriver) {
+    val title = "Yellow Back Lady Gouldian"
+    val species = "fin"
+    val subspecies = "lad"
+    val price = "173.99"
+    val size = small
+    val searchTags = "yellow back lady gouldians for sale, lady gouldians for sale, finches for sale, rainbow finches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createYellowCanary(driver: ChromeDriver) {
+    val title = "Yellow Canary"
+    val species = "can"
+    val subspecies = "none"
+    val price = "142.99"
+    val size = small
+    val searchTags = "yellow canary for sale, yellow canaries for sale, canaries for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    yellow(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
+fun createZebraFinch(driver: ChromeDriver) {
+    val title = "Zebra Finch"
+    val species = "fin"
+    val subspecies = "zeb"
+    val price = "24.99"
+    val size = small
+    val searchTags = "zebra finches for sale, finches for sale"
+
+    birdCreationStart(driver,title)
+    birdTitle(driver,title)
+    birdSpecies(driver,species,subspecies)
+    birdPrice(driver,price)
+    //color//
+    black(driver)
+    grey(driver)
+    /////////
+    birdSize(driver,size)
+    forAllBirds(driver)
+    birdTags(driver,searchTags)
+    saveAndContinue(driver)
+}
+
 //colors
 fun albino(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='alb']")).click()
@@ -541,6 +974,26 @@ fun lilac(driver: ChromeDriver) {
 
 fun lutino(driver: ChromeDriver) {
     driver.findElement(By.xpath("//input[@value='lut']")).click()
+}
+
+fun peach(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='pea']")).click()
+}
+
+fun pineapple(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='pin']")).click()
+}
+
+fun purple(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='pur']")).click()
+}
+
+fun red(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='red']")).click()
+}
+
+fun rose(driver: ChromeDriver) {
+    driver.findElement(By.xpath("//input[@value='ros']")).click()
 }
 
 fun yellow(driver: ChromeDriver) {
