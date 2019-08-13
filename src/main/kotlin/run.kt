@@ -288,17 +288,22 @@ fun repsLogin(driver: ChromeDriver,user: String,pass: String) {
     }
 }
 
-fun runDogs(driver: ChromeDriver) {
+fun runDogs(driver: ChromeDriver,i: Int) {
 
     val usrDog = "customersupport@thefinchfarm.com"
     val pwDog = "Dogdelight2019!"
+    dogLogin(driver,usrDog,pwDog)
+    dogsNow(driver,i)
+}
+
+fun dogLogin(driver: ChromeDriver,user: String,pass: String) {
     try {
         driver.get("https://www.dogsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrDog")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwDog")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$user")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
-        dogsNow(driver)
+
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")

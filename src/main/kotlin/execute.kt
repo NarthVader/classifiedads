@@ -530,22 +530,37 @@ fun executeRepsPartial(driver: ChromeDriver, reps: IntArray, startIndex: Int) {
     Thread.sleep(3000)
 }
 
-fun dogsNow(driver: ChromeDriver) {
+fun dogsNow(driver: ChromeDriver,i: Int) {
 
     Thread.sleep(3000)
     val dogs: IntArray = intArrayOf(240926,240929,240948,241035,241243,241363,241501,241508,
         241509,242112,242113,242114,242115,242118,242125,242126,242127,242190,242192,242195,
         242198,242201,242202,242208,242215,242218)
     println("Dogs Now: " + dogs.size)
+    executeDogsPartial(driver,dogs,i)
+    driver.get("https://www.dogsnow.com/main-logout-now")
+    Thread.sleep(3000)
+}
 
-    for (i in 0..dogs.size-1) {
+fun executeDogsPartial(driver: ChromeDriver,dogs:IntArray,i: Int) {
+    val dogsUpdated = dogs.size/4
+    val dogStart = dogsUpdated*i
+    println(dogsUpdated)
+    println(dogStart)
+    var dogEnd = 0
+    if(i==3) {
+        dogEnd=dogs.size-1
+    } else {
+        dogEnd=(dogStart+dogsUpdated)-1
+    }
+    println(dogEnd)
+    for (i in dogStart..dogEnd) {
         val index = dogs[i]
         println("$i: " + index)
-        driver.get("https://www.dogsnow.com/place_ad-adid-$index")
+        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
         Thread.sleep(3000)
     }
-    driver.get("https://www.dogsnow.com/main-logout-now")
     Thread.sleep(3000)
 }
 
