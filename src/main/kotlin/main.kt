@@ -1,5 +1,6 @@
 package com.pinnsights
 
+import net.sf.cglib.core.Local
 import org.openqa.selenium.*
 import java.util.HashMap
 import org.openqa.selenium.chrome.ChromeDriver
@@ -52,12 +53,18 @@ fun autoPost(driver: ChromeDriver, login: String, pass: String) {
 }
 
 fun run(driver: ChromeDriver) {
+    val start = LocalDateTime.now()
+    val startTime = (start.hour*60) + start.minute
     for(i in 0..3) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
         runClassifieds(driver,i)
         runOtherNowPets(driver,i)
     }
+    val end = LocalDateTime.now()
+    val endTime = (end.hour*60) + end.minute
+    val runTime = endTime - startTime
+    println(runTime)
 }
 
 fun runBirdsNow(driver: ChromeDriver, i: Int) {
