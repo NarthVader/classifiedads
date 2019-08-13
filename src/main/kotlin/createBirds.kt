@@ -24,7 +24,7 @@ fun createBirds(driver: ChromeDriver) {
     //createGoldWaxbill(driver)
     //createGreenLadyFinch(driver)
     //createGreenConure(driver)
-    createGreenRingneck(driver)
+    //createGreenRingneck(driver)
     createGreenSinger(driver)
     createGreyRingneck(driver)
     createKakarikis(driver)
@@ -1051,7 +1051,7 @@ fun saveAndContinue(driver: ChromeDriver) {
     driver.findElement(By.name("doContinue")).click()
     Thread.sleep(3000)
     driver.findElement(By.name("doContinue")).click()
-    Thread.sleep(60000)
+    Thread.sleep(3000)
 }
 
 fun forAllBirds(driver: ChromeDriver) {

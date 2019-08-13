@@ -39,8 +39,8 @@ fun scrape() {
 
     val autoLogin = "customersupport@thefinchfarm.com"
     val autoPassword = "TFF2020!"
-    autoPost(driver, autoLogin, autoPassword)
-    //runAll(driver)
+    //autoPost(driver, autoLogin, autoPassword)
+    run(driver)
     //viewCount(driver)
     driver.quit()
 }
@@ -51,29 +51,32 @@ fun autoPost(driver: ChromeDriver, login: String, pass: String) {
     birdsNowLogout(driver)
 }
 
-fun runAll(driver: ChromeDriver) {
-    runBirdsNow(driver)
-    runClassifieds(driver)
-    runOtherNowPets(driver)
-    runAllHoobly(driver)
+fun run(driver: ChromeDriver) {
+    for(i in 0..3) {
+        runBirdsNow(driver,i)
+        runAllHoobly(driver,i)
+        runClassifieds(driver,i)
+        runOtherNowPets(driver,i)
+    }
 }
 
-fun runBirdsNow(driver: ChromeDriver) {
-    runBirdsWA(driver)
-    runBirdsCA(driver)
-    runBirdsAZ(driver)
-    runBirdsFL(driver)
-    runBirdsTX(driver)
-    runBirdsNY(driver)
-    runBirdsIL(driver)
-    runBirdsPA(driver)
-    runBirdsOH(driver)
-    runBirdsIN(driver)
-    runBirdsMA(driver)
-    runBirdsDL(driver)
-    runBirdsDC(driver)
-    runBirdsAT(driver)
-    runBirdsDT(driver)
+fun runBirdsNow(driver: ChromeDriver, i: Int) {
+    runBirdsWA(driver,i)
+    runBirdsCA(driver,i)
+    runBirdsAZ(driver,i)
+    runBirdsFL(driver,i)
+    runBirdsTX(driver,i)
+    runBirdsNY(driver,i)
+    runBirdsIL(driver,i)
+    runBirdsPA(driver,i)
+    runBirdsOH(driver,i)
+    runBirdsIN(driver,i)
+    runBirdsMA(driver,i)
+    runBirdsDL(driver,i)
+    runBirdsDC(driver,i)
+    runBirdsAT(driver,i)
+    runBirdsDT(driver,i)
+    runBirdsPDX(driver,i)
 }
 
 fun runOtherNowPets(driver: ChromeDriver) {
@@ -82,45 +85,9 @@ fun runOtherNowPets(driver: ChromeDriver) {
     runDogs(driver)
 }
 
-fun runAllHoobly(driver: ChromeDriver) {
-    runHooblyWA(driver)
-    runHooblyFL(driver)
-    runHooblyAZ(driver)
-    runHooblyCA(driver)
-}
-
-fun noonBatch(driver: ChromeDriver) {
-    runBirdsWANoon(driver)
-    runBirdsCANoon(driver)
-    runBirdsAZNoon(driver)
-    runBirdsFLNoon(driver)
-    runBirdsTXNoon(driver)
-    runBirdsNYNoon(driver)
-    runBirdsILNoon(driver)
-    runBirdsPANoon(driver)
-    runBirdsOHNoon(driver)
-    runBirdsINNoon(driver)
-    runBirdsMANoon(driver)
-    runHooblyWANoon(driver)
-    runHooblyFLNoon(driver)
-    runHooblyAZNoon(driver)
-    runHooblyCANoon(driver)
-}
-
-fun pmBatch (driver: ChromeDriver) {
-    runBirdsWAPM(driver)
-    runBirdsCAPM(driver)
-    runBirdsAZPM(driver)
-    runBirdsFLPM(driver)
-    runBirdsTXPM(driver)
-    runBirdsNYPM(driver)
-    runBirdsILPM(driver)
-    runBirdsPAPM(driver)
-    runBirdsOHPM(driver)
-    runBirdsINPM(driver)
-    runBirdsMAPM(driver)
-    runHooblyWAPM(driver)
-    runHooblyFLPM(driver)
-    runHooblyAZPM(driver)
-    runHooblyCAPM(driver)
+fun runAllHoobly(driver: ChromeDriver, i: Int) {
+    runHooblyWA(driver,i)
+    runHooblyFL(driver,i)
+    runHooblyAZ(driver,i)
+    runHooblyCA(driver,i)
 }
