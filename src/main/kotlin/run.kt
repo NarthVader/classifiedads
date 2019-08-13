@@ -230,7 +230,7 @@ fun hooblyLogin(driver: ChromeDriver,user: String,pass: String) {
 }
 
 
-fun runCats(driver: ChromeDriver) {
+fun runCats(driver: ChromeDriver, i: Int) {
 
     val usrCats = "support@thefinchfarm.zendesk.com"
     val pwCats = "Catterydirectory2018!"
@@ -259,17 +259,22 @@ fun catsLogin(driver: ChromeDriver, user: String, pass: String) {
     }
 }
 
-fun runReps(driver: ChromeDriver) {
+fun runReps(driver: ChromeDriver, i: Int) {
 
     val usrRep = "customersupport@thefinchfarm.com"
     val pwRep = "Reptiledirectory2018!"
+
+    repsLogin(driver,usrRep,pwRep)
+    repsNow(driver,i)
+}
+
+fun repsLogin(driver: ChromeDriver,user: String,pass: String) {
     try {
         driver.get("https://www.reptilesnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrRep")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwRep")
+        driver.findElement(By.cssSelector("#username")).sendKeys("$user")
+        driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
         Thread.sleep(3000)
-        repsNow(driver)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")

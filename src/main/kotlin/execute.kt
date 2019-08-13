@@ -497,13 +497,29 @@ fun catsNow(driver: ChromeDriver, i: Int) {
     Thread.sleep(3000)
 }
 
-fun repsNow(driver: ChromeDriver) {
+fun repsNow(driver: ChromeDriver, i: Int) {
 
     Thread.sleep(3000)
     val reps: IntArray = intArrayOf(2405,2414,2415,2417,2418)
     println("Reps Now: " + reps.size)
 
-    for (i in 0..reps.size-1) {
+
+}
+
+fun executeRepsPartial(driver: ChromeDriver, reps: IntArray, startIndex: Int) {
+
+    val repsUpdated = reps.size/4
+    val repStart = repsUpdated*startIndex
+    println(repsUpdated)
+    println(repStart)
+    var repEnd = 0
+    if(startIndex==3) {
+        repEnd=reps.size-1
+    } else {
+        repEnd=(repStart+repsUpdated)-1
+    }
+    println(repEnd)
+    for (i in repStart..repEnd) {
         val index = reps[i]
         println("$i: " + index)
         driver.get("http://www.reptilesnow.com/place_ad-adid-$index")

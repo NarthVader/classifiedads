@@ -79,10 +79,10 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsPDX(driver,i)
 }
 
-fun runOtherNowPets(driver: ChromeDriver) {
-    runCats(driver)
-    runReps(driver)
-    runDogs(driver)
+fun runOtherNowPets(driver: ChromeDriver, i: Int) {
+    runCats(driver,i)
+    runReps(driver,i)
+    runDogs(driver,i)
 }
 
 fun runAllHoobly(driver: ChromeDriver, i: Int) {
