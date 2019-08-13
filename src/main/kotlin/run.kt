@@ -317,17 +317,22 @@ fun dogLogin(driver: ChromeDriver,user: String,pass: String) {
     }
 }
 
-fun runClassifieds(driver: ChromeDriver) {
+fun runClassifieds(driver: ChromeDriver,i: Int) {
 
     val usrAd = "customersupport@thefinchfarm.com"
     val pwAd = "Marketing2019!"
+    adsLogin(driver,usrAd,pwAd)
+    adNow(driver,i)
+}
+
+fun adsLogin(driver: ChromeDriver,user: String,pass: String) {
     try {
         driver.get("https://www.classifiedads.com/login.php")
-        driver.findElement(By.name("login_email")).sendKeys("$usrAd")
-        driver.findElement(By.name("login_password")).sendKeys("$pwAd")
+        driver.findElement(By.name("login_email")).sendKeys("$user")
+        driver.findElement(By.name("login_password")).sendKeys("$pass")
         driver.findElement(By.xpath("//input[@value='Log in']")).click()
         Thread.sleep(1000)
-        adNow(driver)
+
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
