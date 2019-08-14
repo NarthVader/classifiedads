@@ -32,9 +32,9 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-//    autoLogin = "customersupport@thefinchfarm.com"
-//    autoPassword = "TFF2020!"
-//    post = true
+    autoLogin = "supportminneapolis@thefinchfarm.com"
+    autoPassword = "TFF2019!"
+    post = true
 
     //////////////////////////////////////////////////
     /////// JORDAN VALUES AND UNCOMMENT //////////////
