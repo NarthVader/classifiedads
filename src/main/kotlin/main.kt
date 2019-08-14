@@ -9,6 +9,10 @@ import org.openqa.selenium.remote.CapabilityType
 import org.openqa.selenium.remote.DesiredCapabilities
 import java.time.LocalDateTime
 
+var post = false
+var autoLogin = ""
+var autoPassword = ""
+
 fun main(args: Array<String>) {
     scrape()
 }
@@ -24,24 +28,24 @@ fun scrape() {
     val driver = ChromeDriver(cap)
 
 
-    val current = LocalDateTime.now()
-    val hour = current.hour
+    //////////////////////////////////////////////////
+    /////// JORDAN VALUES AND UNCOMMENT //////////////
+    //////////////////////////////////////////////////
 
-//    if(hour in 10..15) {
-//        println("noon")
-//        noonBatch(driver)
-//    } else if (hour in 16..22) {
-//        println("pm")
-//        pmBatch(driver)
-//    } else {
-//        println("all")
-//        runAll(driver)
-//    }
+//    autoLogin = "customersupport@thefinchfarm.com"
+//    autoPassword = "TFF2020!"
+//    post = true
 
-    val autoLogin = "customersupport@thefinchfarm.com"
-    val autoPassword = "TFF2020!"
-    //autoPost(driver, autoLogin, autoPassword)
-    run(driver)
+    //////////////////////////////////////////////////
+    /////// JORDAN VALUES AND UNCOMMENT //////////////
+    //////////////////////////////////////////////////
+
+
+    if(post) {
+        autoPost(driver, autoLogin, autoPassword)
+    } else {
+        run(driver)
+    }
     //viewCount(driver)
     driver.quit()
 }

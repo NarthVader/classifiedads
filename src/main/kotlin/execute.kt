@@ -494,7 +494,7 @@ fun repsNow(driver: ChromeDriver, i: Int) {
     Thread.sleep(3000)
     val reps: IntArray = intArrayOf(2405,2414,2415,2417,2418)
     println("Reps Now: " + reps.size)
-
+    executeRepsPartial(driver,reps,i)
 
 }
 
@@ -549,7 +549,7 @@ fun executeDogsPartial(driver: ChromeDriver,dogs:IntArray,i: Int) {
     for (i in dogStart..dogEnd) {
         val index = dogs[i]
         println("$i: " + index)
-        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+        driver.get("https://www.dogsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
         Thread.sleep(3000)
     }
@@ -653,10 +653,13 @@ fun executeAdsPartial(driver: ChromeDriver,ads:IntArray,i:Int) {
         val index = ads[i]
         println("$i: " + index)
         driver.get("https://www.classifiedads.com/post.php?$index")
+        Thread.sleep(1000)
         driver.findElement(By.xpath("//a[@class='flat']")).click()
         Thread.sleep(1000)
     }
-    driver.findElement(By.xpath("//a[@class='nomob']")).click()
+    driver.get("https://www.classifiedads.com/account.php?notice=loggedin")
+    Thread.sleep(1000)
+    driver.findElement(By.xpath("//a[@href='/logout.php']")).click()
     Thread.sleep(1000)
 }
 

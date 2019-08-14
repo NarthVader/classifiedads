@@ -83,6 +83,7 @@ fun createAfricanRingneck(driver: ChromeDriver) {
     green(driver)
     //size
     Select(driver.findElement(By.name("size"))).selectByValue(size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/african-ring-necked-parakeets/")
     forAllBirds(driver)
     //tag words
     driver.findElement(By.cssSelector("#tags")).sendKeys(searchTags)
@@ -122,6 +123,7 @@ fun createAlbinoCocaktiel(driver: ChromeDriver) {
     white(driver)
     //size
     Select(driver.findElement(By.name("size"))).selectByValue(size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/cockatiel-albino/")
     forAllBirds(driver)
     //tag words
     driver.findElement(By.cssSelector("#tags")).sendKeys(searchTags)
@@ -144,6 +146,7 @@ fun createBlackMaskedLovebird(driver: ChromeDriver) {
     black(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lovebirds-black-masked/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -166,6 +169,7 @@ fun createBGMacaw(driver: ChromeDriver) {
     gold(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/blue-and-gold-macaw/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -187,6 +191,7 @@ fun createBlueLadyFinch(driver: ChromeDriver) {
     blue(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lady-gouldian-finch-blue-back/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -208,6 +213,7 @@ fun createBlueConure(driver: ChromeDriver) {
     blue(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/blue-crowned-conure/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -229,6 +235,7 @@ fun createBlueRingneck(driver: ChromeDriver) {
     blue(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/blue-indian-ringneck-parakeet/")
     forAllBirds(driver)
     forRareBirds(driver)
     forTalkingBirds(driver)
@@ -252,6 +259,7 @@ fun createBlueParrotlet(driver: ChromeDriver) {
     blue(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/parrotlet-blue/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -274,6 +282,7 @@ fun createBourkesParrot(driver: ChromeDriver) {
     brown(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/bourkes-parrot/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -296,6 +305,7 @@ fun createCockatiel(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/cockatiel/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -318,6 +328,7 @@ fun createGoldWaxbill(driver: ChromeDriver) {
     gold(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/gold-breasted-waxbill/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -340,6 +351,7 @@ fun createGreenLadyFinch(driver: ChromeDriver) {
     green(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lady-gouldian-green-back-normal/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -362,6 +374,7 @@ fun createGreenConure(driver: ChromeDriver) {
     green(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/green-cheek-conure-normal/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -384,6 +397,7 @@ fun createGreenRingneck(driver: ChromeDriver) {
     green(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/green-indian-ringneck-parakeet/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -407,6 +421,7 @@ fun createGreenSinger(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/green-singer-yellow-fronted-canary/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -430,6 +445,7 @@ fun createGreyRingneck(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/grey-indian-ringneck-parakeet/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -451,6 +467,7 @@ fun createKakarikis(driver: ChromeDriver) {
     cinnamon(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/kakarikis-cinnamon-parakeet/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -472,6 +489,7 @@ fun createLavenderWaxbill(driver: ChromeDriver) {
     lilac(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lavender-waxbill/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -493,6 +511,7 @@ fun createLutinoCockatiel(driver: ChromeDriver) {
     lutino(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/cockatiel-lutino/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -516,6 +535,7 @@ fun createOwlFinch(driver: ChromeDriver) {
     white(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/owl-finch/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -538,6 +558,7 @@ fun createPeachFacedLove(driver: ChromeDriver) {
     peach(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lovebirds-peach-faced/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -560,6 +581,7 @@ fun createPineappleConure(driver: ChromeDriver) {
     pineapple(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/conure-pineapple-green-cheeked/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -582,6 +604,7 @@ fun createQuaker(driver: ChromeDriver) {
     green(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/quaker-parrot-monk-parakeet/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -604,6 +627,7 @@ fun createRedAgate(driver: ChromeDriver) {
     red(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-agate-canary/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -627,6 +651,7 @@ fun createRedbilledFinch(driver: ChromeDriver) {
     red(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-billed-firefinch/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -648,6 +673,7 @@ fun createRedCheekedCordonBlue(driver: ChromeDriver) {
     blue(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-cheeked-cordon-bleu-finch/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -670,6 +696,7 @@ fun createRedFacedParrotfinch(driver: ChromeDriver) {
     red(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-faced-parrotfinch/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -691,6 +718,7 @@ fun createRedFactorCanary(driver: ChromeDriver) {
     red(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-factor-canary/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -714,6 +742,7 @@ fun createRedLoredAmazon(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/red-lored-amazon/")
     forAllBirds(driver)
     forRareBirds(driver)
     forTalkingBirds(driver)
@@ -737,6 +766,7 @@ fun createRosyBourke(driver: ChromeDriver) {
     rose(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/rosy-bourkes-parakeets/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -760,6 +790,7 @@ fun createChestnutMacaw(driver: ChromeDriver) {
     red(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/severe-chestnut-fronted-macaw/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -781,6 +812,7 @@ fun createSunConure(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/conure-sun/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -802,6 +834,7 @@ fun createUmbrellaCockatoo(driver: ChromeDriver) {
     white(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/umbrella-cockatoo/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -823,6 +856,7 @@ fun createVioletRingneck(driver: ChromeDriver) {
     purple(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/violet-indian-ringneck/")
     forAllBirds(driver)
     forRareBirds(driver)
     birdTags(driver,searchTags)
@@ -845,6 +879,7 @@ fun createWhiteCanary(driver: ChromeDriver) {
     white(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/white-canary/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -866,6 +901,7 @@ fun createWhiteFacedCockatiel(driver: ChromeDriver) {
     white(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/cockatiel-white-faced/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -887,6 +923,7 @@ fun createYellowGouldian(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/lady-gouldian-finch-yellow-back/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -908,6 +945,7 @@ fun createYellowCanary(driver: ChromeDriver) {
     yellow(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/yellow-canary/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -930,6 +968,7 @@ fun createZebraFinch(driver: ChromeDriver) {
     grey(driver)
     /////////
     birdSize(driver,size)
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("https://thefinchfarm.com/zebra-finch-normal/")
     forAllBirds(driver)
     birdTags(driver,searchTags)
     saveAndContinue(driver)
@@ -1059,7 +1098,7 @@ fun forAllBirds(driver: ChromeDriver) {
     Select(driver.findElement(By.name("adkind"))).selectByValue("for")
     Select(driver.findElement(By.name("sex"))).selectByValue("un")
     driver.findElement(By.cssSelector("#marking")).sendKeys("Phone #: 877-527-5656")
-    driver.findElement(By.xpath("//input[@name='url']")).sendKeys("http://www.thefinchfarm.com/african-grey-parrots/")
+
     driver.findElement(By.xpath("//input[@value='exo']")).click()
     driver.findElement(By.xpath("//input[@value='fan']")).click()
     driver.findElement(By.xpath("//input[@value='com']")).click()
