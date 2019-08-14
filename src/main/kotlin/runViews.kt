@@ -12,72 +12,26 @@ fun runViewsWA(driver: ChromeDriver) {
     val usrBirdsWA = "customersupport@thefinchfarm.com"
     val pwBirdsWA = "TFF2020!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsWA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsWA")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        WAViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsWA,pwBirdsWA)
+    WAViews(driver)
 }
 
 fun runViewsCA(driver: ChromeDriver) {
 
     val usrBirdsCA = "CustomersupportCA@thefinchfarm.com"
     val pwBirdsCA = "2019!Birds"
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsCA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsCA")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        CAViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+
+    birdsNowLogin(driver,usrBirdsCA,pwBirdsCA)
+    CAViews(driver)
 }
 
 fun runViewsAZ(driver: ChromeDriver) {
 
     val usrBirdsAZ = "customersupportAZ@thefinchfarm.com"
     val pwBirdsAZ = "TFF2019!"
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsAZ")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsAZ")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        AZViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+
+    birdsNowLogin(driver,usrBirdsAZ,pwBirdsAZ)
+    AZViews(driver)
 }
 
 fun runViewsFL(driver: ChromeDriver) {
@@ -85,24 +39,8 @@ fun runViewsFL(driver: ChromeDriver) {
     val usrBirdsFL = "customersupportFL@thefinchfarm.com"
     val pwBirdsFL = "TFF2019!!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsFL")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsFL")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        FLViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsFL,pwBirdsFL)
+    FLViews(driver)
 }
 
 fun runViewsTX(driver: ChromeDriver) {
@@ -110,24 +48,8 @@ fun runViewsTX(driver: ChromeDriver) {
     val usrBirdsTX = "customersupportTX@thefinchfarm.com"
     val pwBirdsTX = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsTX")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsTX")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        TXViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsTX,pwBirdsTX)
+    TXViews(driver)
 }
 
 fun runViewsNY(driver: ChromeDriver) {
@@ -135,24 +57,8 @@ fun runViewsNY(driver: ChromeDriver) {
     val usrBirdsNY = "customersupportNY@thefinchfarm.com"
     val pwBirdsNY = "SELL2020!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsNY")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsNY")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        NYViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsNY,pwBirdsNY)
+    NYViews(driver)
 }
 
 fun runViewsIL(driver: ChromeDriver) {
@@ -160,24 +66,8 @@ fun runViewsIL(driver: ChromeDriver) {
     val usrBirdsIL = "customersupportIL@thefinchfarm.com"
     val pwBirdsIL = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIL")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIL")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        ILViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsIL,pwBirdsIL)
+    ILViews(driver)
 }
 
 fun runViewsPA(driver: ChromeDriver) {
@@ -185,24 +75,8 @@ fun runViewsPA(driver: ChromeDriver) {
     val usrBirdsPA = "customersupportPA@thefinchfarm.com"
     val pwBirdsPA = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsPA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsPA")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        PAViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsPA,pwBirdsPA)
+    PAViews(driver)
 }
 
 fun runViewsOH(driver: ChromeDriver) {
@@ -210,24 +84,8 @@ fun runViewsOH(driver: ChromeDriver) {
     val usrBirdsOH = "customersupportOH@thefinchfarm.com"
     val pwBirdsOH = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsOH")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsOH")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        OHViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsOH,pwBirdsOH)
+    OHViews(driver)
 }
 
 fun runViewsIN(driver: ChromeDriver) {
@@ -235,24 +93,8 @@ fun runViewsIN(driver: ChromeDriver) {
     val usrBirdsIN = "customersupportIN@thefinchfarm.com"
     val pwBirdsIN = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsIN")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsIN")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        INViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsIN,pwBirdsIN)
+    INViews(driver)
 }
 
 fun runViewsMA(driver: ChromeDriver) {
@@ -260,24 +102,8 @@ fun runViewsMA(driver: ChromeDriver) {
     val usrBirdsMA = "customersupportMA@thefinchfarm.com"
     val pwBirdsMA = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        MAViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsMA,pwBirdsMA)
+    MAViews(driver)
 }
 
 fun runViewsDL(driver: ChromeDriver) {
@@ -285,24 +111,8 @@ fun runViewsDL(driver: ChromeDriver) {
     val usrBirdsMA = "supportdallas@thefinchfarm.com"
     val pwBirdsMA = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsMA")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsMA")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        DLViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsMA,pwBirdsMA)
+    DLViews(driver)
 }
 
 fun runViewsDC(driver: ChromeDriver) {
@@ -310,24 +120,8 @@ fun runViewsDC(driver: ChromeDriver) {
     val usrBirdsDC = "supportwashingtondc@thefinchfarm.com"
     val pwBirdsDC = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsDC")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsDC")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        DCViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsDC,pwBirdsDC)
+    DCViews(driver)
 }
 
 fun runViewsAT(driver: ChromeDriver) {
@@ -335,24 +129,8 @@ fun runViewsAT(driver: ChromeDriver) {
     val usrBirdsAT = "supportatlanta@thefinchfarm.com"
     val pwBirdsAT = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsAT")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsAT")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        ATViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsAT,pwBirdsAT)
+    ATViews(driver)
 }
 
 fun runViewsDT(driver: ChromeDriver) {
@@ -360,22 +138,42 @@ fun runViewsDT(driver: ChromeDriver) {
     val usrBirdsDT = "supportdetroit@thefinchfarm.com"
     val pwBirdsDT = "TFF2019!"
 
-    try {
-        driver.get("https://www.birdsnow.com/login.htm")
-        driver.findElement(By.cssSelector("#username")).sendKeys("$usrBirdsDT")
-        driver.findElement(By.cssSelector("#pass")).sendKeys("$pwBirdsDT")
-        driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
-        DTViews(driver)
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
+    birdsNowLogin(driver,usrBirdsDT,pwBirdsDT)
+    DTViews(driver)
+}
+
+fun runViewsPDX(driver: ChromeDriver) {
+
+    val usrBirdsPDX = "supportportland@thefinchfarm.com"
+    val pwBirdsPDX = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsPDX,pwBirdsPDX)
+    PDXViews(driver)
+}
+
+fun runViewsMIN(driver: ChromeDriver) {
+
+    val usrBirdsMIN = "supportminneapolis@thefinchfarm.com"
+    val pwBirdsMIN = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsMIN,pwBirdsMIN)
+    MINViews(driver)
+}
+
+fun runViewsLA(driver: ChromeDriver) {
+
+    val usrBirdsLA = "supportlosangeles@thefinchfarm.com"
+    val pwBirdsLA = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsLA,pwBirdsLA)
+    LAViews(driver)
+}
+
+fun runViewsSAN(driver: ChromeDriver) {
+
+    val usrBirdsSAN = "supportsandiego@thefinchfarm.com"
+    val pwBirdsSAN = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsSAN,pwBirdsSAN)
+    SANViews(driver)
 }

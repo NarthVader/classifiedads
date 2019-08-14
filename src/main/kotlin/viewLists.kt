@@ -20,27 +20,19 @@ fun WAViews(driver: ChromeDriver) {
         545946,545947,546949,546952,547028,547111,547160,547210,547215,547217,547366,
         547409,547410,547510,547615,547616,547687,547810,547812,547814,547815,547816)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsWA.size-1) {
-        val index = birdsWA[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    val stateTotal = countViews(driver,birdsWA)
     println("WA total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
+fun PDXViews(driver: ChromeDriver) {
+
+    val birdsPDX: IntArray = intArrayOf(559666,559667,559668,559669,559670,559671,559672,559674,559675,559676,559677,559678,559679,559680,559681,559682,
+        559684,559685,559686,559687,559688,559689,559690,559691,559692,559693,559694,559695,559696,559697,559715,559716,559717,559718,559719,559720,
+        559721,559723,559724,559725)
+
+    val stateTotal = countViews(driver,birdsPDX)
+    println("PDX total views: $stateTotal")
+}
 
 fun CAViews(driver: ChromeDriver) {
 
@@ -53,25 +45,8 @@ fun CAViews(driver: ChromeDriver) {
         550583,550585,550587,
         554834,554835,554836,554837,554838,554839,554840,554846,554847,554848,554849,554850,554842,554844,554845,554841,556355)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsCA.size-1) {
-        val index = birdsCA[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsCA)
     println("CA total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun AZViews(driver: ChromeDriver) {
@@ -81,25 +56,8 @@ fun AZViews(driver: ChromeDriver) {
         550458,550511,550512,550513,550514,550515,550516,550517,550518,
         554865,554867,554868,554869,554870,554872,554873,554876,554877,554878,554880,554881,554882,554884,554885,554886,554871,554541)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsAZ.size-1) {
-        val index = birdsAZ[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsAZ)
     println("AZ total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun FLViews(driver: ChromeDriver) {
@@ -110,25 +68,8 @@ fun FLViews(driver: ChromeDriver) {
         554664,554669,554575,554668,554670,554660,554647,554662,554654,554658,554667,554651,554661,554665,554657,554663,554666,554671,554577,
         558840,558841,558842,558853,558844,558845,558846,558847,558849,558851,558852)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsFL.size-1) {
-        val index = birdsFL[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsFL)
     println("FL total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun TXViews(driver: ChromeDriver) {
@@ -138,25 +79,8 @@ fun TXViews(driver: ChromeDriver) {
     val birdsTX: IntArray = intArrayOf(558962,558964,558966,558968,558969,558970,558973,558978,558979,
         555365,555350,555346,555310,555307,555314,555337,555358,555348,555311,555327,555357,555343,555362,555312,555313,555309,555339,555354,555342,555336,555306,555360,555316,555366,555266,555351,555344,555356,555338,555353)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsTX.size-1) {
-        val index = birdsTX[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsTX)
     println("TX total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun NYViews(driver: ChromeDriver) {
@@ -166,25 +90,8 @@ fun NYViews(driver: ChromeDriver) {
     val birdsNY: IntArray = intArrayOf(551369,555636,555633,550797,550527,555622,555626,555127,555635,555619,555627,555643,550605,555631,555620,555621,555617,555629,555640,555630,555624,555615,555644,550796,555616,555638,555632,555641,555628,555639,
         558989,559001,558991,558992,558993,558994,558995,559002,558996,558997)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsNY.size-1) {
-        val index = birdsNY[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
-    println("NY total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
+    var stateTotal = countViews(driver,birdsNY)
+    println("NU total views: $stateTotal")
 }
 
 fun ILViews(driver: ChromeDriver) {
@@ -194,25 +101,8 @@ fun ILViews(driver: ChromeDriver) {
     val birdsIL: IntArray = intArrayOf(555468,555763,555761,555466,555479,555476,555647,555769,555762,555467,555768,555469,555759,555474,555475,555461,555650,555766,555758,555646,555453,555770,555477,555771,555393,555764,555760,555767,555649,555765,
         559016,559003,559004,559006,559007,559008,559009,559010,559011,559013)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsIL.size-1) {
-        val index = birdsIL[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsIL)
     println("IL total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun PAViews(driver: ChromeDriver) {
@@ -223,25 +113,8 @@ fun PAViews(driver: ChromeDriver) {
         555882,555894,555883,555879,555857,555900,555866,555902,555781,555891,555887,555895,555881,555893,555889,
         559073,559074,559076,559088,559089,559090,559092,559093)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsPA.size-1) {
-        val index = birdsPA[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsPA)
     println("PA total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun OHViews(driver: ChromeDriver) {
@@ -252,25 +125,8 @@ fun OHViews(driver: ChromeDriver) {
         558308,558309,558310,558501,558505,558493,558312,558313,558314,558315,558503,558316,558317,558318,558319,558321,558492,558324,558508,
         558325,558326,556209,558328,558329,558330,558331,558332)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsOH.size-1) {
-        val index = birdsOH[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsOH)
     println("OH total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun INViews(driver: ChromeDriver) {
@@ -281,25 +137,8 @@ fun INViews(driver: ChromeDriver) {
         558562,558563,558565,558566,558567,558568,558569,558570,558571,558573,558575,558576,558577,558578,558579,558580,558582,558583,556208,558584,
         558585,558586,558588,558589)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsIN.size-1) {
-        val index = birdsIN[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsIN)
     println("IN total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun MAViews(driver: ChromeDriver) {
@@ -310,25 +149,8 @@ fun MAViews(driver: ChromeDriver) {
         558738,558739,558740,558742,558743,558745,558746,558720,558721,558722,558723,558724,558725,558726,558727,558728,558730,558731,558732,558733,558734,
         558735,558736)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsMA.size-1) {
-        val index = birdsMA[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsMA)
     println("MA total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun DLViews(driver: ChromeDriver) {
@@ -339,25 +161,8 @@ fun DLViews(driver: ChromeDriver) {
         559109,559110,559111,559112,559113,559114,559115,559116,559117,559118,559119,559120,559121,559122,559123,559124,559125,559126,559127,559128,559129,
         559130,559131,559132)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsDL.size-1) {
-        val index = birdsDL[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsDL)
     println("DL total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun DCViews(driver: ChromeDriver) {
@@ -368,25 +173,8 @@ fun DCViews(driver: ChromeDriver) {
         559174,559175,559176,559177,559178,559208,559210,559212,559215,559216,559217,559218,559219,559220,559222,559223,559224,559225,559226,559227,559228,
         559229,559231,559232)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsDC.size-1) {
-        val index = birdsDC[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsDC)
     println("DC total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun ATViews(driver: ChromeDriver) {
@@ -397,25 +185,8 @@ fun ATViews(driver: ChromeDriver) {
         559301,559302,559303,559304,559305,559306,559307,559308,559309,559310,559311,559312,559313,559314,559315,559316,559317,559318,559319,559320,559321,559327,
         559322)
 
-    var stateTotal = 0
-
-    for (i in 0..birdsAT.size-1) {
-        val index = birdsAT[i]
-        driver.get("https://www.birdsnow.com/bird-ad-$index")
-
-        val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
-        val ptext = parent.text
-        val length = ptext.length
-        var substring = ptext.substring(17,length)
-        val re = Regex("[^A-Za-z0-9 ]")
-        substring = re.replace(substring, "")
-        stateTotal += substring.toInt()
-        Thread.sleep(3000)
-    }
-
+    var stateTotal = countViews(driver,birdsAT)
     println("AT total views: $stateTotal")
-    driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
 }
 
 fun DTViews(driver: ChromeDriver) {
@@ -426,10 +197,51 @@ fun DTViews(driver: ChromeDriver) {
         559497,559498,559499,559500,559501,559502,559503,559504,559505,559506,559507,559508,559509,559510,559512,559513,559515,559516,559517,559519,559520,559521,
         559522)
 
+    var stateTotal = countViews(driver,birdsDT)
+    println("DT total views: $stateTotal")
+}
+
+fun MINViews(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsMIN: IntArray = intArrayOf(559291,560145,560146,560147,560148,560149,560150,560151,560152,560153,560154,560155,560156,560157,560158,560159,560160,
+        560161,560162,560163,560164,560165,560166,560167,560168,560169,560170,560171,560172,560173,560174,560175,560176,560177,560178,560179,560180,560181,
+        560182,560183)
+
+    var stateTotal = countViews(driver,birdsMIN)
+    println("MIN total views: $stateTotal")
+}
+
+fun LAViews(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsLA: IntArray = intArrayOf(558628,560282,560283,560284,560285,560286,560287,560288,560289,560290,560291,560292,560293,560294,560295,560296,560297,
+        560298,560299,560300,560301,560302,560303,560305,560306,560307,560308,560309,560310,560311,560312,560313,560314,560315,560316,560317,560318,560319,
+        560320,560321)
+
+    var stateTotal = countViews(driver,birdsLA)
+    println("LA total views: $stateTotal")
+}
+
+fun SANViews(driver: ChromeDriver) {
+
+    Thread.sleep(3000)
+
+    val birdsSAN: IntArray = intArrayOf(559483,560243,560244,560245,560246,560247,560322,560249,560250,560251,560252,560253,560254,560255,560256,560257,560258,
+        560259,560260,560261,560262,560263,560264,560265,560266,560267,560268,560269,560270,560271,560272,560273,560274,560275,560276,560277,560278,560279,
+        560280,560281)
+
+    var stateTotal = countViews(driver,birdsSAN)
+    println("SAN total views: $stateTotal")
+}
+
+fun countViews(driver: ChromeDriver, birds: IntArray): Int {
     var stateTotal = 0
 
-    for (i in 0..birdsDT.size-1) {
-        val index = birdsDT[i]
+    for (i in 0..birds.size-1) {
+        val index = birds[i]
         driver.get("https://www.birdsnow.com/bird-ad-$index")
 
         val parent = driver.findElement(By.xpath("//li[.//b[text()='Number of Views:']]"))
@@ -442,11 +254,10 @@ fun DTViews(driver: ChromeDriver) {
         Thread.sleep(3000)
     }
 
-    println("DT total views: $stateTotal")
     driver.get("https://www.birdsnow.com/main-logout-now")
     Thread.sleep(3000)
+    return stateTotal
 }
-
 
 
 

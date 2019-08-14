@@ -14,6 +14,30 @@ fun runBirdsPDX(driver: ChromeDriver, i: Int) {
     birdsNowLogout(driver)
 }
 
+fun runBirdsMIN(driver: ChromeDriver, i: Int) {
+    val usrBirdsMIN = "supportminneapolis@thefinchfarm.com"
+    val pwBirdsMIN = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMIN,pwBirdsMIN)
+    birdsNowMIN(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsLA(driver: ChromeDriver, i: Int) {
+    val usrBirdsLA = "supportlosangeles@thefinchfarm.com"
+    val pwBirdsLA = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsLA,pwBirdsLA)
+    birdsNowLA(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsSAN(driver: ChromeDriver, i: Int) {
+    val usrBirdsSAN = "supportsandiego@thefinchfarm.com"
+    val pwBirdsSAN = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSAN,pwBirdsSAN)
+    birdsNowSAN(driver,i)
+    birdsNowLogout(driver)
+}
+
 fun runBirdsWA(driver: ChromeDriver, i: Int) {
 
     val usrBirdsWA = "customersupport@thefinchfarm.com"

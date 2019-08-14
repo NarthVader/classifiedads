@@ -32,14 +32,13 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-    autoLogin = "supportminneapolis@thefinchfarm.com"
-    autoPassword = "TFF2019!"
-    post = true
+//    autoLogin = "supportminneapolis@thefinchfarm.com"
+//    autoPassword = "TFF2019!"
+//    post = true
 
     //////////////////////////////////////////////////
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
-
 
     if(post) {
         autoPost(driver, autoLogin, autoPassword)
@@ -88,6 +87,9 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsAT(driver,i)
     runBirdsDT(driver,i)
     runBirdsPDX(driver,i)
+    runBirdsMIN(driver,i)
+    runBirdsLA(driver,i)
+    runBirdsSAN(driver,i)
 }
 
 fun runOtherNowPets(driver: ChromeDriver, i: Int) {
