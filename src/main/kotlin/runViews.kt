@@ -177,3 +177,39 @@ fun runViewsSAN(driver: ChromeDriver) {
     birdsNowLogin(driver,usrBirdsSAN,pwBirdsSAN)
     SANViews(driver)
 }
+
+fun runViewsBAL(driver: ChromeDriver) {
+
+    val usrBirdsBAL = "supportbaltimore@thefinchfarm.com"
+    val pwBirdsBAL = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsBAL,pwBirdsBAL)
+    BALViews(driver)
+}
+
+fun runViewsSTL(driver: ChromeDriver) {
+
+    val usrBirdsSTL = "supportstlouis@thefinchfarm.com"
+    val pwBirdsSTL = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsSTL,pwBirdsSTL)
+    STLViews(driver)
+}
+
+fun runViewsTMP(driver: ChromeDriver) {
+
+    val usrBirdsTMP = "supporttampa@thefinchfarm.com"
+    val pwBirdsTMP = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsTMP,pwBirdsTMP)
+    TMPViews(driver)
+}
+
+fun runViewsDEN(driver: ChromeDriver) {
+
+    val usrBirdsDEN = "supportdenver@thefinchfarm.com"
+    val pwBirdsDEN = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsDEN,pwBirdsDEN)
+    DENViews(driver)
+}

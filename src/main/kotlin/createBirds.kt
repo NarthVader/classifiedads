@@ -61,7 +61,7 @@ fun createAfricanRingneck(driver: ChromeDriver) {
     val searchTags = "african ringneck parakeet, africanringneckparakeet"
     val size = medium
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     println("creating $title")
     driver.get("https://www.birdsnow.com/place_ad-adType-p")
     Thread.sleep(1000)
@@ -69,7 +69,7 @@ fun createAfricanRingneck(driver: ChromeDriver) {
     driver.findElement(By.cssSelector("#title")).sendKeys(title)
     //type dropdown
     Select(driver.findElement(By.name("type1"))).selectByValue(species)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     Select(driver.findElement(By.name("type2"))).selectByValue(subspecies)
     Thread.sleep(1000)
 
@@ -98,7 +98,7 @@ fun createAlbinoCocaktiel(driver: ChromeDriver) {
     val searchTags = "albino cockatiels for sale, cockatiels for sale"
     val size = medium
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     println("creating $title")
     driver.get("https://www.birdsnow.com/place_ad-adType-p")
     Thread.sleep(1000)
@@ -106,7 +106,7 @@ fun createAlbinoCocaktiel(driver: ChromeDriver) {
     driver.findElement(By.cssSelector("#title")).sendKeys(title)
     //type dropdown
     Select(driver.findElement(By.name("type1"))).selectByValue(species)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     if(subspecies!="none") {
         Select(driver.findElement(By.name("type2"))).selectByValue(subspecies)
     }
@@ -1045,7 +1045,7 @@ fun white(driver: ChromeDriver) {
 
 //helper functions
 fun birdCreationStart(driver: ChromeDriver, title: String) {
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     println("creating $title")
     driver.get("https://www.birdsnow.com/place_ad-adType-p")
     Thread.sleep(1000)
@@ -1054,7 +1054,7 @@ fun birdCreationStart(driver: ChromeDriver, title: String) {
 fun birdSpecies(driver: ChromeDriver, species: String, subspecies: String) {
     //type dropdown
     Select(driver.findElement(By.name("type1"))).selectByValue(species)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     if(subspecies!="none") {
         Select(driver.findElement(By.name("type2"))).selectByValue(subspecies)
     }
@@ -1088,9 +1088,9 @@ fun birdTags(driver: ChromeDriver, searchTags: String) {
 
 fun saveAndContinue(driver: ChromeDriver) {
     driver.findElement(By.name("doContinue")).click()
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     driver.findElement(By.name("doContinue")).click()
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun forAllBirds(driver: ChromeDriver) {
@@ -1118,13 +1118,13 @@ fun forTalkingBirds(driver: ChromeDriver) {
 
 
 fun createAfricanGrey(driver: ChromeDriver) {
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     println("creating African Grey")
     driver.get("https://www.birdsnow.com/place_ad-adType-p")
     Thread.sleep(1000)
     driver.findElement(By.cssSelector("#title")).sendKeys("African Grey Parrot")
     Select(driver.findElement(By.name("type1"))).selectByValue("afr")
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     Select(driver.findElement(By.name("type2"))).selectByValue("con")
     Thread.sleep(1000)
     Select(driver.findElement(By.name("age"))).selectByValue("you")
@@ -1149,5 +1149,5 @@ fun createAfricanGrey(driver: ChromeDriver) {
     driver.findElement(By.name("shipping")).sendKeys(comment)
     driver.findElement(By.cssSelector("#tags")).sendKeys("african grey parrots for sale")
     driver.findElement(By.name("doContinue")).click()
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }

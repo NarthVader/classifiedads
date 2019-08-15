@@ -30,12 +30,12 @@ fun birdsNowWA(driver: ChromeDriver, pass: Int) {
 
     println("birdNowWA: " + birdsWA.size)
     executeBNPartial(driver,birdsWA,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowCA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowCAPricing: HashMap<Int, Int> = hashMapOf(594 to 549550, 298 to 556355, 609 to 554844, 435 to 550215, 778 to 549549,
         458 to 550026, 87 to 554849, 777 to 549657, 89 to 554848,
@@ -53,12 +53,12 @@ fun birdsNowCA(driver: ChromeDriver, pass: Int) {
 
     println("birdNowCA: " + birdsCA.size)
     executeBNPartial(driver,birdsCA,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowAZ(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowAZPricing: HashMap<Int, Int> = hashMapOf(1156 to 558832, 1168 to 558831, 1271 to 558830, 456 to 558829, 96 to 558828, 804 to 558827, 776 to 558826, 1157 to 558825, 439 to 558824, 1169 to 558822, 252 to 558821, 1171 to 558820, 298 to 558819, 594 to 550513, 609 to 554876, 435 to 554873, 778 to 550458, 604 to 550511, 458 to 554541, 87 to 554885,
         777 to 550512, 89 to 554884, 114 to 550515, 557 to 554871, 120 to 550516, 274 to 550517, 546 to 554868, 820 to 554869, 86 to 554881, 81 to 554870, 131 to 554865,
@@ -69,12 +69,12 @@ fun birdsNowAZ(driver: ChromeDriver, pass: Int) {
 
     println("birdNowAZ: " + birdsAZ.size)
     executeBNPartial(driver,birdsAZ,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowFL(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowFLPrice: HashMap<Int, Int> = hashMapOf(594 to 550502, 609 to 554663, 477 to 554661, 778 to 550500, 604 to 550466, 528 to 554575, 87 to 554670, 1157 to 554662,
         776 to 550501, 606 to 550509, 89 to 554669, 144 to 550504, 557 to 554658, 120 to 550505, 274 to 550506, 546 to 554651, 820 to 554654, 86 to 554667, 81 to 554657, 131 to 554577,
@@ -88,12 +88,12 @@ fun birdsNowFL(driver: ChromeDriver, pass: Int) {
 
     println("birdNowFL: " + birdsFL.size)
     executeBNPartial(driver,birdsFL,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowTX(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowTXPrice: HashMap<Int, Int> = hashMapOf(594 to 555365, 609 to 555350, 435 to 555346, 778 to 555310, 604 to 555307, 528 to 555314, 458 to 555337,
         87 to 555358, 1157 to 555348, 777 to 555311, 606 to 555327, 89 to 555357, 557 to 555343, 1161 to 555362,120 to 555312,
@@ -107,12 +107,12 @@ fun birdsNowTX(driver: ChromeDriver, pass: Int) {
 
     println("birdNowTX: " + birdsTX.size)
     executeBNPartial(driver,birdsTX,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowNY(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNY: IntArray = intArrayOf(551369,555636,555633,550797,550527,555622,555626,555127,555635,555619,555627,555643,550605,555631,555620,555621,555617,555629,555640,555630,555624,555615,555644,550796,555616,555638,555632,555641,555628,555639,
         558989,559001,558991,558992,558993,558994,558995,559002,558996,558997)
@@ -131,12 +131,12 @@ fun birdsNowNY(driver: ChromeDriver, pass: Int) {
 
     println("birdNowNY: " + birdsNY.size)
     executeBNPartial(driver,birdsNY,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowIL(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsIL: IntArray = intArrayOf(555468,555763,555761,555466,555479,555476,555647,555769,555762,555467,555768,555469,555759,555474,555475,555461,555650,555766,555758,555646,555453,555770,555477,555771,555393,555764,555760,555767,555649,555765,
         559016,559003,559004,559006,559007,559008,559009,559010,559011,559013)
@@ -155,12 +155,12 @@ fun birdsNowIL(driver: ChromeDriver, pass: Int) {
 
     println("birdNowIL: " + birdsIL.size)
     executeBNPartial(driver,birdsIL,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowPA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsPA: IntArray = intArrayOf(555861,555890,555888,555859,555867,555865,555880,555898,555903,555860,555877,555897,555886,555901,555862,555864,555858,
         555882,555894,555883,555879,555857,555900,555866,555902,555781,555891,555887,555895,555881,555893,555889,
@@ -179,12 +179,12 @@ fun birdsNowPA(driver: ChromeDriver, pass: Int) {
 
     println("birdNowPA: " + birdsPA.size)
     executeBNPartial(driver,birdsPA,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowOH(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowOHPricing: HashMap<Int, Int> = hashMapOf(594 to 558297, 298 to 558502, 609 to 558299,
         435 to 558300, 1171 to 558499, 252 to 558504, 1169 to 558497,
@@ -204,12 +204,12 @@ fun birdsNowOH(driver: ChromeDriver, pass: Int) {
 
     println("birdNowOH: " + birdsOH.size)
     executeBNPartial(driver,birdsOH,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowIN(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsIN: IntArray = intArrayOf(558546,558547,558548,558549,558550,558551,558552,558553,558554,558555,558556,558557,558558,558559,558560,558561,
         558562,558563,558565,558566,558567,558568,558569,558570,558571,558573,558575,558576,558577,558578,558579,558580,558582,558583,556208,558584,
@@ -229,12 +229,12 @@ fun birdsNowIN(driver: ChromeDriver, pass: Int) {
 
     println("birdNowIN: " + birdsIN.size)
     executeBNPartial(driver,birdsIN,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowMA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsNowMAPricing: HashMap<Int, Int> = hashMapOf(594 to 556314, 778 to 556312, 777 to 556313,
         120 to 556315,
@@ -259,12 +259,12 @@ fun birdsNowMA(driver: ChromeDriver, pass: Int) {
 
     println("birdNowMA: " + birdsMA.size)
     executeBNPartial(driver,birdsMA,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowDL(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsDL: IntArray = intArrayOf(558717,559094,559095,559096,559097,559098,559099,559100,559101,559102,559103,559104,559105,559106,559107,559108,
         559109,559110,559111,559112,559113,559114,559115,559116,559117,559118,559119,559120,559121,559122,559123,559124,559125,559126,559127,559128,559129,
@@ -284,12 +284,12 @@ fun birdsNowDL(driver: ChromeDriver, pass: Int) {
 
     println("birdNowDL: " + birdsDL.size)
     executeBNPartial(driver,birdsDL,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowDC(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsDC: IntArray = intArrayOf(558815,559153,559154,559155,559156,559157,559159,559161,559163,559164,559165,559166,559169,559170,559171,559173,
         559174,559175,559176,559177,559178,559208,559210,559212,559215,559216,559217,559218,559219,559220,559222,559223,559224,559225,559226,559227,559228,
@@ -309,12 +309,12 @@ fun birdsNowDC(driver: ChromeDriver, pass: Int) {
 
     println("birdNowDC: " + birdsDC.size)
     executeBNPartial(driver,birdsDC,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowAT(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsAT: IntArray = intArrayOf(558958,559239,559240,559241,559242,559243,559245,559292,559293,559294,559295,559296,559298,559299,559300,559325,559326,
         559301,559302,559303,559304,559305,559306,559307,559308,559309,559310,559311,559312,559313,559314,559315,559316,559317,559318,559319,559320,559321,559327,
@@ -334,12 +334,12 @@ fun birdsNowAT(driver: ChromeDriver, pass: Int) {
 
     println("birdNowAT: " + birdsAT.size)
     executeBNPartial(driver,birdsAT,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowDT(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsDT: IntArray = intArrayOf(559150,559330,559331,559334,559335,559485,559486,559487,559488,559489,559490,559491,559492,559493,559494,559495,559496,
         559497,559498,559499,559500,559501,559502,559503,559504,559505,559506,559507,559508,559509,559510,559512,559513,559515,559516,559517,559519,559520,559521,
@@ -359,12 +359,12 @@ fun birdsNowDT(driver: ChromeDriver, pass: Int) {
 
     println("birdNowDT: " + birdsDT.size)
     executeBNPartial(driver,birdsDT,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowPDX(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsPDX: IntArray = intArrayOf(559666,559667,559668,559669,559670,559671,559672,559674,559675,559676,559677,559678,559679,559680,559681,559682,
         559684,559685,559686,559687,559688,559689,559690,559691,559692,559693,559694,559695,559696,559697,559715,559716,559717,559718,559719,559720,
@@ -384,12 +384,12 @@ fun birdsNowPDX(driver: ChromeDriver, pass: Int) {
 
     println("birdNowPDX: " + birdsPDX.size)
     executeBNPartial(driver,birdsPDX,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowMIN(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsMIN: IntArray = intArrayOf(559291,560145,560146,560147,560148,560149,560150,560151,560152,560153,560154,560155,560156,560157,560158,560159,560160,
         560161,560162,560163,560164,560165,560166,560167,560168,560169,560170,560171,560172,560173,560174,560175,560176,560177,560178,560179,560180,560181,
@@ -409,12 +409,12 @@ fun birdsNowMIN(driver: ChromeDriver, pass: Int) {
 
     println("birdNowMIN: " + birdsMIN.size)
     executeBNPartial(driver,birdsMIN,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowLA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsLA: IntArray = intArrayOf(558628,560282,560283,560284,560285,560286,560287,560288,560289,560290,560291,560292,560293,560294,560295,560296,560297,
         560298,560299,560300,560301,560302,560303,560305,560306,560307,560308,560309,560310,560311,560312,560313,560314,560315,560316,560317,560318,560319,
@@ -434,12 +434,12 @@ fun birdsNowLA(driver: ChromeDriver, pass: Int) {
 
     println("birdNowLA: " + birdsLA.size)
     executeBNPartial(driver,birdsLA,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun birdsNowSAN(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val birdsSAN: IntArray = intArrayOf(559483,560243,560244,560245,560246,560247,560322,560249,560250,560251,560252,560253,560254,560255,560256,560257,560258,
         560259,560260,560261,560262,560263,560264,560265,560266,560267,560268,560269,560270,560271,560272,560273,560274,560275,560276,560277,560278,560279,
@@ -459,7 +459,103 @@ fun birdsNowSAN(driver: ChromeDriver, pass: Int) {
 
     println("birdNowSAN: " + birdsSAN.size)
     executeBNPartial(driver,birdsSAN,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
+}
+
+fun birdsNowDEN(driver: ChromeDriver, pass: Int) {
+
+    Thread.sleep(2000)
+
+    val birdsDEN: IntArray = intArrayOf(559653,560403,560448,560405,560406,560407,560408,560409,560410,560411,560412,560413,560414,560415,560416,560417,560418,560449,
+        560420,560421,560422,560423,560424,560425,560426,560427,560428,560429,560430,560431,560432,560433,560434,560435,560436,560437,560438,560439,560440,560441)
+    val birdsNowDENPricing: HashMap<Int, Int> = hashMapOf(594 to 559653, 298 to 560403, 609 to 560448,
+        435 to 560405, 1171 to 560406, 252 to 560407, 1169 to 560408,
+        778 to 560409, 604 to 560410, 439 to 560411, 458 to 560412,
+        87 to 560413, 144 to 560414, 1157 to 560415,
+        777 to 560416, 89 to 560417, 776 to 560418,
+        804 to 560449, 96 to 560420, 557 to 560421, 120 to 560422,
+        274 to 560423, 546 to 560424, 456 to 560425,
+        820 to 560426, 86 to 560427, 81 to 560428,
+        131 to 560429, 142 to 560430, 1271 to 560431,
+        441 to 560432, 1168 to 560433,
+        541 to 560434, 1156 to 560435, 1250 to 560436, 139 to 560437,
+        525 to 560438, 250 to 560439, 257 to 560440, 115 to 560441)
+
+    println("birdNowDEN: " + birdsDEN.size)
+    executeBNPartial(driver,birdsDEN,pass)
+    Thread.sleep(2000)
+}
+
+fun birdsNowBAL(driver: ChromeDriver, pass: Int) {
+
+    Thread.sleep(2000)
+
+    val birdsBAL: IntArray = intArrayOf(559763,560491,560492,560493,560494,560495,560496,560497,560498,560499,560501,560502,560503,560504,560505,560506,560507,560508,
+        560509,560510,560511,560512,560513,560514,560515,560516,560517,560518,560519,560520,560522,560523,560524,560525,560526,560527,560528,560529,560530,560531)
+    val birdsNowBALPricing: HashMap<Int, Int> = hashMapOf(594 to 559763, 298 to 560491, 609 to 560492,
+        435 to 560493, 1171 to 560494, 252 to 560495, 1169 to 560496,
+        778 to 560497, 604 to 560498, 439 to 560499, 458 to 560501,
+        87 to 560502, 144 to 560503, 1157 to 560504,
+        777 to 560505, 89 to 560506, 776 to 560507,
+        804 to 560508, 96 to 560509, 557 to 560510, 120 to 560511,
+        274 to 560512, 546 to 560513, 456 to 560514,
+        820 to 560515, 86 to 560516, 81 to 560517,
+        131 to 560518, 142 to 560519, 1271 to 560520,
+        441 to 560522, 1168 to 560523,
+        541 to 560524, 1156 to 560525, 1250 to 560526, 139 to 560527,
+        525 to 560528, 250 to 560529, 257 to 560530, 115 to 560531)
+
+    println("birdNowBAL: " + birdsBAL.size)
+    executeBNPartial(driver,birdsBAL,pass)
+    Thread.sleep(2000)
+}
+
+fun birdsNowSTL(driver: ChromeDriver, pass: Int) {
+
+    Thread.sleep(2000)
+
+    val birdsSTL: IntArray = intArrayOf(559762,560450,560451,560452,560453,560454,560455,560456,560457,560458,560459,560460,560461,560462,560464,560465,560466,560467,560468,
+        560469,560470,560471,560472,560473,560474,560475,560476,560477,560479,560480,560481,560482,560483,560484,560485,560486,560487,560489,560488,560490)
+    val birdsNowSTLPricing: HashMap<Int, Int> = hashMapOf(594 to 559762, 298 to 560450, 609 to 560451,
+        435 to 560452, 1171 to 560453, 252 to 560454, 1169 to 560455,
+        778 to 560456, 604 to 560457, 439 to 560458, 458 to 560459,
+        87 to 560460, 144 to 560461, 1157 to 560462,
+        777 to 560464, 89 to 560465, 776 to 560466,
+        804 to 560467, 96 to 560468, 557 to 560469, 120 to 560470,
+        274 to 560471, 546 to 560472, 456 to 560473,
+        820 to 560474, 86 to 560475, 81 to 560476,
+        131 to 560477, 142 to 560479, 1271 to 560480,
+        441 to 560481, 1168 to 560482,
+        541 to 560483, 1156 to 560484, 1250 to 560485, 139 to 560486,
+        525 to 560487, 250 to 560488, 257 to 560489, 115 to 560490)
+
+    println("birdNowSTL: " + birdsSTL.size)
+    executeBNPartial(driver,birdsSTL,pass)
+    Thread.sleep(2000)
+}
+
+fun birdsNowTMP(driver: ChromeDriver, pass: Int) {
+
+    Thread.sleep(2000)
+
+    val birdsTMP: IntArray = intArrayOf(559549,560363,560364,560365,560366,560367,560368,560369,560370,560371,560372,560373,560374,560375,560376,560377,560378,560379,560380,
+        560381,560382,560383,560384,560385,560386,560387,560388,560389,560390,560391,560392,560393,560402,560395,560396,560397,560398,560399,560400,560401)
+    val birdsNowTMPPricing: HashMap<Int, Int> = hashMapOf(594 to 559549, 298 to 560363, 609 to 560364,
+        435 to 560365, 1171 to 560366, 252 to 560367, 1169 to 560368,
+        778 to 560369, 604 to 560370, 439 to 560371, 458 to 560372,
+        87 to 560373, 144 to 560374, 1157 to 560375,
+        777 to 560376, 89 to 560377, 776 to 560378,
+        804 to 560379, 96 to 560380, 557 to 560381, 120 to 560382,
+        274 to 560383, 546 to 560384, 456 to 560385,
+        820 to 560386, 86 to 560387, 81 to 560388,
+        131 to 560389, 142 to 560390, 1271 to 560391,
+        441 to 560392, 1168 to 560393,
+        541 to 560402, 1156 to 560395, 1250 to 560396, 139 to 560397,
+        525 to 560398, 250 to 560399, 257 to 560400, 115 to 560401)
+
+    println("birdNowTMP: " + birdsTMP.size)
+    executeBNPartial(driver,birdsTMP,pass)
+    Thread.sleep(2000)
 }
 
 fun adNow(driver: ChromeDriver,i: Int) {
@@ -489,7 +585,7 @@ fun adNow(driver: ChromeDriver,i: Int) {
 
 fun hooblyWA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val hooblyWAPricing: HashMap<Int, String> = hashMapOf(1250 to "hd8r6", 84 to "KNEXh", 86 to "rcUay",458 to "lwUzY", 250 to "vKclC", 479 to "nyuye", 1161 to "i6yGN",
         260 to "QE0y1",783 to "CWfgP", 477 to "vjc07", 419 to "JMQws", 605 to "0dFbB", 132 to "4iTm6", 594 to "FZ0Bm", 572 to "RnbXy", 1161 to "vXqoa", 269 to "HY7My",
@@ -503,12 +599,12 @@ fun hooblyWA(driver: ChromeDriver, pass: Int) {
 
     println("hooblyWA: " + hoobly.size)
     executeHooblyPartial(driver,hoobly,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun hooblyFL(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val hoobly:Array<String> = arrayOf("xyfiT","nuhMi","CUMch","Nc20R","BbiCS","AHedI","zOdc6","zeq08","7rtFO","zXLd6","SQksa","7cQR8","feg87","G5fcU","MDZ3d","0dBFw","gsqLh",
         "xh26W","ohKgb","FPlAs","l6eEy","pi99M","n4Bnq","tewX5","G05ly","cmdyr","flTwp","kF6lh","fkLjz")
@@ -518,12 +614,12 @@ fun hooblyFL(driver: ChromeDriver, pass: Int) {
 
     println("hooblyFL: " + hoobly.size)
     executeHooblyPartial(driver,hoobly,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun hooblyAZ(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     var hooblyAZPricing: HashMap<Int, String> = hashMapOf(546 to "ZNq1T",120 to "nWZFV",274 to "xfSlP",139 to "2FPED",250 to "E9OY6",144 to "ozVSI",86 to "vG7af",131 to "h6POZ",
         477 to "C1xCa",1157 to "QwvUF",777 to "6LgSS",594 to "HhzPl",142 to "mOose",115 to "DLZ32",609 to "1WOeY",419 to "jpSrh",435 to "C4wcl",528 to "egumo",89 to "aNDSk",
@@ -534,12 +630,12 @@ fun hooblyAZ(driver: ChromeDriver, pass: Int) {
 
     println("hooblyAZ: " + hoobly.size)
     executeHooblyPartial(driver,hoobly,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun hooblyCA(driver: ChromeDriver, pass: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val hooblyCAPricing: HashMap<Int, String> = hashMapOf(131 to "lwO0b",81 to "ITYhd",86 to "UXvup",604 to "2HrtL",546 to "N9cro",458 to "RKSUg",419 to "Jmj6h",1250 to "uIvlf",
         144 to "2B7y0",139 to "JpXqh",777 to "4yg3N",528 to "G1H7C",820 to "45bRF",441 to "RVEsv",1258 to "CFCBe",606 to "KNbQg",778 to "9eMkb",594 to "YFSFe",142 to "uEhZb",
@@ -550,23 +646,23 @@ fun hooblyCA(driver: ChromeDriver, pass: Int) {
 
     println("hooblyCA: " + hoobly.size)
     executeHooblyPartial(driver,hoobly,pass)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 
 fun catsNow(driver: ChromeDriver, i: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 
     val cats: IntArray = intArrayOf(2752,2753,2755,2757,2758,2759,2762,2763,2764,2765,2743,2767,2768,2775,2776,2777,2778,2779,2780)
     println("Cats Now: " + cats.size)
     executeCNPartial(driver,cats,i)
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun repsNow(driver: ChromeDriver, i: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     val reps: IntArray = intArrayOf(2405,2414,2415,2417,2418)
     println("Reps Now: " + reps.size)
     executeRepsPartial(driver,reps,i)
@@ -591,22 +687,22 @@ fun executeRepsPartial(driver: ChromeDriver, reps: IntArray, startIndex: Int) {
         println("$i: " + index)
         driver.get("http://www.reptilesnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
     driver.get("https://www.reptilesnow.com/main-logout-now")
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun dogsNow(driver: ChromeDriver,i: Int) {
 
-    Thread.sleep(3000)
+    Thread.sleep(2000)
     val dogs: IntArray = intArrayOf(240926,240929,240948,241035,241243,241363,241501,241508,
         241509,242112,242113,242114,242115,242118,242125,242126,242127,242190,242192,242195,
         242198,242201,242202,242208,242215,242218)
     println("Dogs Now: " + dogs.size)
     executeDogsPartial(driver,dogs,i)
     driver.get("https://www.dogsnow.com/main-logout-now")
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeDogsPartial(driver: ChromeDriver,dogs:IntArray,i: Int) {
@@ -626,9 +722,9 @@ fun executeDogsPartial(driver: ChromeDriver,dogs:IntArray,i: Int) {
         println("$i: " + index)
         driver.get("https://www.dogsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeUpdates(driver: ChromeDriver,birds: IntArray) {
@@ -637,9 +733,9 @@ fun executeUpdates(driver: ChromeDriver,birds: IntArray) {
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
@@ -659,9 +755,9 @@ fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
         println("$i: " + index)
         driver.get("https://www.birdsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeCNPartial(driver: ChromeDriver,cats: IntArray,startIndex: Int) {
@@ -681,10 +777,10 @@ fun executeCNPartial(driver: ChromeDriver,cats: IntArray,startIndex: Int) {
         println("$i: " + index)
         driver.get("https://www.catsnow.com/place_ad-adid-$index")
         driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
     driver.get("https://www.catsnow.com/main-logout-now")
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeHooblyPartial(driver: ChromeDriver,hoobly: Array<String>,startIndex: Int) {
@@ -709,7 +805,7 @@ fun executeHooblyPartial(driver: ChromeDriver,hoobly: Array<String>,startIndex: 
         Thread.sleep(1000)
     }
     driver.findElement(By.xpath("//a[@href='/c/logout']")).click()
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun executeAdsPartial(driver: ChromeDriver,ads:IntArray,i:Int) {

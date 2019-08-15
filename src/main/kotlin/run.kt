@@ -14,6 +14,22 @@ fun runBirdsPDX(driver: ChromeDriver, i: Int) {
     birdsNowLogout(driver)
 }
 
+fun runBirdsBAL(driver: ChromeDriver, i: Int) {
+    val usrBirdsBAL = "supportbaltimore@thefinchfarm.com"
+    val pwBirdsBAL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsBAL,pwBirdsBAL)
+    birdsNowBAL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsDEN(driver: ChromeDriver, i: Int) {
+    val usrBirdsDEN = "supportdenver@thefinchfarm.com"
+    val pwBirdsDEN = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsDEN,pwBirdsDEN)
+    birdsNowDEN(driver,i)
+    birdsNowLogout(driver)
+}
+
 fun runBirdsMIN(driver: ChromeDriver, i: Int) {
     val usrBirdsMIN = "supportminneapolis@thefinchfarm.com"
     val pwBirdsMIN = "TFF2019!"
@@ -173,13 +189,31 @@ fun runBirdsDT(driver: ChromeDriver, i: Int) {
     birdsNowLogout(driver)
 }
 
+fun runBirdsSTL(driver: ChromeDriver, i: Int) {
+
+    val usrBirdsSTL = "supportstlouis@thefinchfarm.com"
+    val pwBirdsSTL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSTL,pwBirdsSTL)
+    birdsNowSTL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsTMP(driver: ChromeDriver, i: Int) {
+
+    val usrBirdsTMP = "supporttampa@thefinchfarm.com"
+    val pwBirdsTMP = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsTMP,pwBirdsTMP)
+    birdsNowTMP(driver,i)
+    birdsNowLogout(driver)
+}
+
 fun birdsNowLogin(driver: ChromeDriver, user: String, pass: String) {
     try {
         driver.get("https://www.birdsnow.com/login.htm")
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -195,7 +229,7 @@ fun birdsNowLogin(driver: ChromeDriver, user: String, pass: String) {
 
 fun birdsNowLogout(driver: ChromeDriver) {
     driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(3000)
+    Thread.sleep(2000)
 }
 
 fun runHooblyWA(driver: ChromeDriver, i: Int) {
@@ -269,7 +303,7 @@ fun catsLogin(driver: ChromeDriver, user: String, pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -298,7 +332,7 @@ fun repsLogin(driver: ChromeDriver,user: String,pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -326,7 +360,7 @@ fun dogLogin(driver: ChromeDriver,user: String,pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(3000)
+        Thread.sleep(2000)
 
     }
     catch (a: UnhandledAlertException) {
