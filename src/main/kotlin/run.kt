@@ -6,6 +6,78 @@ import org.openqa.selenium.TimeoutException
 import org.openqa.selenium.UnhandledAlertException
 import org.openqa.selenium.chrome.ChromeDriver
 
+fun runBirdsORL(driver: ChromeDriver, i: Int) {
+    val usrBirdsORL = "supportorlando@thefinchfarm.com"
+    val pwBirdsORL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsORL,pwBirdsORL)
+    birdsNowORL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsRVR(driver: ChromeDriver, i: Int) {
+    val usrBirdsRVR = "supportriverside@thefinchfarm.com"
+    val pwBirdsRVR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRVR,pwBirdsRVR)
+    birdsNowRVR(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsAUS(driver: ChromeDriver, i: Int) {
+    val usrBirdsAUS = "supportaustin@thefinchfarm.com"
+    val pwBirdsAUS = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsAUS,pwBirdsAUS)
+    birdsNowAUS(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsLVG(driver: ChromeDriver, i: Int) {
+    val usrBirdsLVG = "supportlasvegas@thefinchfarm.com"
+    val pwBirdsLVG = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsLVG,pwBirdsLVG)
+    birdsNowLVG(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsPITT(driver: ChromeDriver, i: Int) {
+    val usrBirdsPITT = "supportpittsburgh@thefinchfarm.com"
+    val pwBirdsPITT = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsPITT,pwBirdsPITT)
+    birdsNowPITT(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsSAC(driver: ChromeDriver, i: Int) {
+    val usrBirdsSAC = "supportsacramento@thefinchfarm.com"
+    val pwBirdsSAC = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSAC,pwBirdsSAC)
+    birdsNowSAC(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsCHAR(driver: ChromeDriver, i: Int) {
+    val usrBirdsCHAR = "supportcharlotte@thefinchfarm.com"
+    val pwBirdsCHAR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsCHAR,pwBirdsCHAR)
+    birdsNowCHAR(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsSANT(driver: ChromeDriver, i: Int) {
+    val usrBirdsSANT = "supportsanantonio@thefinchfarm.com"
+    val pwBirdsSANT = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSANT,pwBirdsSANT)
+    birdsNowSANT(driver,i)
+    birdsNowLogout(driver)
+}
+
+//fun runBirdsKAN(driver: ChromeDriver, i: Int) {
+//    val usrBirdsKAN = "supportkansas@thefinchfarm.com"
+//    val pwBirdsKAN = "TFF2019!"
+//    birdsNowLogin(driver,usrBirdsKAN,pwBirdsKAN)
+//    birdsNowKAN(driver,i)
+//    birdsNowLogout(driver)
+//}
+
 fun runBirdsPDX(driver: ChromeDriver, i: Int) {
     val usrBirdsPDX = "supportportland@thefinchfarm.com"
     val pwBirdsPDX = "TFF2019!"
@@ -213,7 +285,7 @@ fun birdsNowLogin(driver: ChromeDriver, user: String, pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(2000)
+        Thread.sleep(3000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -229,7 +301,7 @@ fun birdsNowLogin(driver: ChromeDriver, user: String, pass: String) {
 
 fun birdsNowLogout(driver: ChromeDriver) {
     driver.get("https://www.birdsnow.com/main-logout-now")
-    Thread.sleep(2000)
+    Thread.sleep(3000)
 }
 
 fun runHooblyWA(driver: ChromeDriver, i: Int) {
@@ -303,7 +375,7 @@ fun catsLogin(driver: ChromeDriver, user: String, pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(2000)
+        Thread.sleep(3000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -332,7 +404,7 @@ fun repsLogin(driver: ChromeDriver,user: String,pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(2000)
+        Thread.sleep(3000)
     }
     catch (a: UnhandledAlertException) {
         println("Alert Exception: $a")
@@ -360,7 +432,7 @@ fun dogLogin(driver: ChromeDriver,user: String,pass: String) {
         driver.findElement(By.cssSelector("#username")).sendKeys("$user")
         driver.findElement(By.cssSelector("#pass")).sendKeys("$pass")
         driver.findElement(By.name("doLogin")).click()
-        Thread.sleep(2000)
+        Thread.sleep(3000)
 
     }
     catch (a: UnhandledAlertException) {

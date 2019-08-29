@@ -169,6 +169,78 @@ fun runViewsLA(driver: ChromeDriver) {
     LAViews(driver)
 }
 
+fun runViewsORL(driver: ChromeDriver) {
+
+    val usrBirdsORL = "supportorlando@thefinchfarm.com"
+    val pwBirdsORL = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsORL,pwBirdsORL)
+    ORLViews(driver)
+}
+
+fun runViewsRVR(driver: ChromeDriver) {
+
+    val usrBirdsRVR = "supportriverside@thefinchfarm.com"
+    val pwBirdsRVR = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsRVR,pwBirdsRVR)
+    RVRViews(driver)
+}
+
+fun runViewsAUS(driver: ChromeDriver) {
+
+    val usrBirdsAUS = "supportaustin@thefinchfarm.com"
+    val pwBirdsAUS = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsAUS,pwBirdsAUS)
+    AUSViews(driver)
+}
+
+fun runViewsLVG(driver: ChromeDriver) {
+
+    val usrBirdsLVG = "supportlasvegas@thefinchfarm.com"
+    val pwBirdsLVG = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsLVG,pwBirdsLVG)
+    LVGViews(driver)
+}
+
+fun runViewsPITT(driver: ChromeDriver) {
+
+    val usrBirdsPITT = "supportpittsburgh@thefinchfarm.com"
+    val pwBirdsPITT = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsPITT,pwBirdsPITT)
+    PITTViews(driver)
+}
+
+fun runViewsSAC(driver: ChromeDriver) {
+
+    val usrBirdsSAC = "supportsacramento@thefinchfarm.com"
+    val pwBirdsSAC = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsSAC,pwBirdsSAC)
+    SACViews(driver)
+}
+
+fun runViewsCHAR(driver: ChromeDriver) {
+
+    val usrBirdsCHAR = "supportcharlotte@thefinchfarm.com"
+    val pwBirdsCHAR = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsCHAR,pwBirdsCHAR)
+    CHARViews(driver)
+}
+
+fun runViewsSANT(driver: ChromeDriver) {
+
+    val usrBirdsSANT = "supportsanantonio@thefinchfarm.com"
+    val pwBirdsSANT = "TFF2019!"
+
+    birdsNowLogin(driver,usrBirdsSANT,pwBirdsSANT)
+    SANTViews(driver)
+}
+
 fun runViewsSAN(driver: ChromeDriver) {
 
     val usrBirdsSAN = "supportsandiego@thefinchfarm.com"

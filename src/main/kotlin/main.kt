@@ -45,7 +45,7 @@ fun scrape() {
     } else {
         run(driver)
     }
-    viewCount(driver)
+    //viewCount(driver)
     driver.quit()
 }
 
@@ -60,9 +60,9 @@ fun run(driver: ChromeDriver) {
     val startTime = (start.hour*60) + start.minute
     for(i in 0..3) {
         runBirdsNow(driver,i)
-//        runAllHoobly(driver,i)
-//        runClassifieds(driver,i)
-//        runOtherNowPets(driver,i)
+        runAllHoobly(driver,i)
+        runClassifieds(driver,i)
+        runOtherNowPets(driver,i)
     }
     val end = LocalDateTime.now()
     val endTime = (end.hour*60) + end.minute
@@ -71,29 +71,38 @@ fun run(driver: ChromeDriver) {
 }
 
 fun runBirdsNow(driver: ChromeDriver, i: Int) {
-//    runBirdsWA(driver,i)
-//    runBirdsCA(driver,i)
-//    runBirdsAZ(driver,i)
-//    runBirdsFL(driver,i)
-//    runBirdsTX(driver,i)
-//    runBirdsNY(driver,i)
-//    runBirdsIL(driver,i)
-//    runBirdsPA(driver,i)
-//    runBirdsOH(driver,i)
-//    runBirdsIN(driver,i)
-//    runBirdsMA(driver,i)
-//    runBirdsDL(driver,i)
-//    runBirdsDC(driver,i)
-//    runBirdsAT(driver,i)
-//    runBirdsDT(driver,i)
-//    runBirdsPDX(driver,i)
-//    runBirdsMIN(driver,i)
-//    runBirdsLA(driver,i)
-//    runBirdsSAN(driver,i)
-//    runBirdsDEN(driver,i)
-//    runBirdsBAL(driver,i)
+    runBirdsWA(driver,i)
+    runBirdsCA(driver,i)
+    runBirdsAZ(driver,i)
+    runBirdsFL(driver,i)
+    runBirdsTX(driver,i)
+    runBirdsNY(driver,i)
+    runBirdsIL(driver,i)
+    runBirdsPA(driver,i)
+    runBirdsOH(driver,i)
+    runBirdsIN(driver,i)
+    runBirdsMA(driver,i)
+    runBirdsDL(driver,i)
+    runBirdsDC(driver,i)
+    runBirdsAT(driver,i)
+    runBirdsDT(driver,i)
+    runBirdsPDX(driver,i)
+    runBirdsMIN(driver,i)
+    runBirdsLA(driver,i)
+    runBirdsSAN(driver,i)
+    runBirdsDEN(driver,i)
+    runBirdsBAL(driver,i)
     runBirdsSTL(driver,i)
     runBirdsTMP(driver,i)
+    runBirdsORL(driver,i)
+    runBirdsRVR(driver,i)
+    // NEED TO FIX KANSASrunBirdsKAN(driver,i)
+    runBirdsAUS(driver,i)
+    runBirdsLVG(driver,i)
+    runBirdsPITT(driver,i)
+    runBirdsSAC(driver,i)
+    runBirdsCHAR(driver,i)
+    runBirdsSANT(driver,i)
 }
 
 fun runOtherNowPets(driver: ChromeDriver, i: Int) {
