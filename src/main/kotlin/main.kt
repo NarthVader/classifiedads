@@ -45,7 +45,7 @@ fun scrape() {
     } else {
         run(driver)
     }
-    //viewCount(driver)
+//    viewCount(driver)
     driver.quit()
 }
 
@@ -58,6 +58,7 @@ fun autoPost(driver: ChromeDriver, login: String, pass: String) {
 fun run(driver: ChromeDriver) {
     val start = LocalDateTime.now()
     val startTime = (start.hour*60) + start.minute
+    println(start)
     for(i in 0..3) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
