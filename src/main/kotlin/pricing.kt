@@ -14,10 +14,11 @@ fun priceChange(driver: ChromeDriver,birdName: String, birdPrice: String) {
 }
 
 fun birdPriceUpdate(driver: ChromeDriver,price: String) {
+    Thread.sleep(1000)
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
     Thread.sleep(1000)
     driver.findElement(By.cssSelector("#comments")).sendKeys("")
-    Thread.sleep(1000)
+    Thread.sleep(2000)
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
 }
 
@@ -203,9 +204,9 @@ fun birdsNowNYPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
 
 fun birdsNowILPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
     Thread.sleep(3000)
-    val usrBirdsNY = "customersupportNY@thefinchfarm.com"
-    val pwBirdsNY = "SELL2020!"
-    birdsNowLogin(driver,usrBirdsNY,pwBirdsNY)
+    val usrBirdsIL = "customersupportIL@thefinchfarm.com"
+    val pwBirdsIL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsIL,pwBirdsIL)
     val birdsNowILPricing: HashMap<Int, Int> = hashMapOf(594 to 555468, 609 to 555763, 435 to 555761, 778 to 555466,
         604 to 555479, 528 to 555476, 458 to 555647, 87 to 555769, 1157 to 555762, 777 to 555467,
         89 to 555768, 144 to 555469, 557 to 555759,
@@ -295,9 +296,9 @@ fun birdsNowINPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
 
 fun birdsNowMAPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
     Thread.sleep(3000)
-    val usrBirdsIN = "customersupportIN@thefinchfarm.com"
-    val pwBirdsIN = "TFF2019!"
-    birdsNowLogin(driver, usrBirdsIN, pwBirdsIN)
+    val usrBirdsMA = "customersupportMA@thefinchfarm.com"
+    val pwBirdsMA = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMA,pwBirdsMA)
     val birdsNowMAPricing: HashMap<Int, Int> = hashMapOf(594 to 556314, 778 to 556312, 777 to 556313,
         120 to 556315,
         546 to 556311,

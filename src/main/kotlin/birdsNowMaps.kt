@@ -63,7 +63,7 @@ val top40template: HashMap<Int, String> = hashMapOf(594 to "African Grey Parrot"
     541 to "Conure - Sun", 1156 to "Umbrella Cockatoo", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
     525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
 
-val top40map: HashMap<String, Int> = hashMapOf("African Grey Parrots" to 594, "African Ring-necked Parakeets" to 298, "Cockatiel - Albino" to 609,
+val top40map: HashMap<String, Int> = hashMapOf("African Grey Parrot" to 594, "African Ring-necked Parakeets" to 298, "Cockatiel - Albino" to 609,
     "Lovebirds - Black Masked" to 435, "Blue and Gold Macaw" to 1171, "Lady Gouldian Finch - Blue-back" to 252, "Blue Crowned Conure" to 1169,
     "Blue Indian Ringneck Parakeet" to 778, "Parrotlet - Blue" to 604, "Bourke's Parrot" to 439, "Cockatiel" to 458,
     "Gold Breasted Waxbill" to 87, "Lady Gouldian Green Back Normal" to 144, "Green Cheek Conure Normal" to 1157,
