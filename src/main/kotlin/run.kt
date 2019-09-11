@@ -363,7 +363,7 @@ fun hooblyLogin(driver: ChromeDriver,user: String,pass: String) {
 fun runCats(driver: ChromeDriver, i: Int) {
 
     val usrCats = "support@thefinchfarm.zendesk.com"
-    val pwCats = "Catterydirectory2018!"
+    val pwCats = "TFF2019!"
     catsLogin(driver,usrCats,pwCats)
     catsNow(driver,i)
 

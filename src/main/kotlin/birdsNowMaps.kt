@@ -50,7 +50,7 @@ val bigCommerce: HashMap<Int, String> = hashMapOf(594 to "African Grey Parrots",
     143 to "Mosaic Canary", 120 to "Owl Finch", 604 to "Parrotlet - Blue", 274 to "Lovebirds - Peach-faced", 81 to "Red Cheeked Cordon Bleu Finch", 264 to "Scotch Fancy Canary",
     139 to "White Canary", 525 to "Cockatiel - White-faced", 115 to "Zebra Finch - Normal")
 
-val top40template: HashMap<Int, String> = hashMapOf(594 to "African Grey Parrots", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
+val top40template: HashMap<Int, String> = hashMapOf(594 to "African Grey Parrot", 298 to "African Ring-necked Parakeets", 609 to "Cockatiel - Albino",
     435 to "Lovebirds - Black Masked", 1171 to "Blue and Gold Macaw", 252 to "Lady Gouldian Finch - Blue-back", 1169 to "Blue Crowned Conure",
     778 to "Blue Indian Ringneck Parakeet", 604 to "Parrotlet - Blue", 439 to "Bourke's Parrot", 458 to "Cockatiel",
     87 to "Gold Breasted Waxbill", 144 to "Lady Gouldian Green Back Normal", 1157 to "Green Cheek Conure Normal",
@@ -62,3 +62,16 @@ val top40template: HashMap<Int, String> = hashMapOf(594 to "African Grey Parrots
     441 to "Rosy Bourke's Parakeets", 1168 to "Severe Chestnut Fronted Macaw",
     541 to "Conure - Sun", 1156 to "Umbrella Cockatoo", 1250 to "Violet Indian Ringneck", 139 to "White Canary",
     525 to "Cockatiel - White-faced", 250 to "Lady Gouldian Finch - Yellow-back", 257 to "Yellow Canary", 115 to "Zebra Finch - Normal")
+
+val top40map: HashMap<String, Int> = hashMapOf("African Grey Parrots" to 594, "African Ring-necked Parakeets" to 298, "Cockatiel - Albino" to 609,
+    "Lovebirds - Black Masked" to 435, "Blue and Gold Macaw" to 1171, "Lady Gouldian Finch - Blue-back" to 252, "Blue Crowned Conure" to 1169,
+    "Blue Indian Ringneck Parakeet" to 778, "Parrotlet - Blue" to 604, "Bourke's Parrot" to 439, "Cockatiel" to 458,
+    "Gold Breasted Waxbill" to 87, "Lady Gouldian Green Back Normal" to 144, "Green Cheek Conure Normal" to 1157,
+    "Green Indian Ringneck Parakeet" to 777, "Green Singer (Yellow fronted canary)" to 89, "Grey Indian Ringneck Parakeet" to 776,
+    "Kakarikis Cinnamon Parakeet" to 804, "Lavender Waxbill" to 96, "Cockatiel - Lutino" to 557, "Owl Finch" to 120,
+    "Lovebirds - Peach-faced" to 274, "Conure - Pineapple Green-Cheeked" to 546, "Quaker Parrot (Monk Parakeet)" to 456,
+    "Red Agate Canary" to 820, "Red-Billed Firefinch" to 86, "Red Cheeked Cordon Bleu Finch" to 81,
+    "Red-faced Parrotfinch" to 131, "Red Factor Canary" to 142, "Red-Lored Amazon" to 1271,
+    "Rosy Bourke's Parakeets" to 441, "Severe Chestnut Fronted Macaw" to 1168,
+    "Conure - Sun" to 541, "Umbrella Cockatoo" to 1156, "Violet Indian Ringneck" to 1250, "White Canary" to 139,
+    "Cockatiel - White-faced" to 525, "Lady Gouldian Finch - Yellow-back" to 250, "Yellow Canary" to 257, "Zebra Finch - Normal" to 115)

@@ -40,11 +40,17 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-    if(post) {
-        autoPost(driver, autoLogin, autoPassword)
-    } else {
-        run(driver)
-    }
+    var birdName = "African Grey Parrot"
+    var newPrice = "4484.99"
+
+    priceChange(driver,birdName,newPrice)
+
+
+//    if(post) {
+//        autoPost(driver, autoLogin, autoPassword)
+//    } else {
+//        run(driver)
+//    }
 //    viewCount(driver)
     driver.quit()
 }
@@ -63,7 +69,7 @@ fun run(driver: ChromeDriver) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
         runClassifieds(driver,i)
-        runOtherNowPets(driver,i)
+        //runOtherNowPets(driver,i)
     }
     val end = LocalDateTime.now()
     val endTime = (end.hour*60) + end.minute
