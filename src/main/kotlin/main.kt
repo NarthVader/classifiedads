@@ -10,8 +10,11 @@ import org.openqa.selenium.remote.DesiredCapabilities
 import java.time.LocalDateTime
 
 var post = false
+var price = false
 var autoLogin = ""
 var autoPassword = ""
+var birdName = ""
+var newPrice = ""
 
 fun main(args: Array<String>) {
     scrape()
@@ -40,18 +43,23 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-    var birdName = "African Grey Parrot"
-    var newPrice = "4484.99"
+//    birdName = "African Grey Parrot"
+//    newPrice = "4484.99"
+//    post = true
+    
+    //////////////////////////////////////////////////
+    //////// ABOVE FOR PRICE CHANGE APP //////////////
+    //////////////////////////////////////////////////
 
-    priceChange(driver,birdName,newPrice)
 
-
-//    if(post) {
-//        autoPost(driver, autoLogin, autoPassword)
-//    } else {
-//        run(driver)
-//    }
-//    viewCount(driver)
+    if(post) {
+        autoPost(driver, autoLogin, autoPassword)
+    } else if (price) {
+        priceChange(driver,birdName,newPrice)
+    } else {
+        run(driver)
+    }
+    //viewCount(driver)
     driver.quit()
 }
 
@@ -69,7 +77,7 @@ fun run(driver: ChromeDriver) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
         runClassifieds(driver,i)
-        //runOtherNowPets(driver,i)
+        runOtherNowPets(driver,i)
     }
     val end = LocalDateTime.now()
     val endTime = (end.hour*60) + end.minute
