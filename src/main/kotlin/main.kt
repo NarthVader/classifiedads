@@ -43,9 +43,9 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-//    birdName = "African Grey Parrot"
-//    newPrice = "4484.99"
-//    post = true
+    birdName = "Blue Crowned Conure"
+    newPrice = "924.99"
+    price = true
 
     //////////////////////////////////////////////////
     //////// ABOVE FOR PRICE CHANGE APP //////////////

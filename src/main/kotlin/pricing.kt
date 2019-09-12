@@ -5,8 +5,10 @@ import org.openqa.selenium.chrome.ChromeDriver
 import java.util.HashMap
 
 fun priceChange(driver: ChromeDriver,birdName: String, birdPrice: String) {
+
     if(top40template.containsValue(birdName)) {
         val index = top40map.get(birdName)
+        println(index)
         executionSuite(driver,index,birdPrice)
     } else {
         println("this isn't in the template. check spelling!")
@@ -86,7 +88,11 @@ fun birdsNowWAPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
     val index = birdsNowWAPricing.get(birdIndex)
 
     println("Price Change for BNWA " + top40template.get(birdIndex) + " at index " + index)
-    priceChangeExecution(driver,index,price)
+    if(birdsNowWAPricing.containsKey(birdIndex)){
+        priceChangeExecution(driver,index,price)
+    } else {
+        birdsNowLogout(driver)
+    }
 }
 
 fun birdsNowCAPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
