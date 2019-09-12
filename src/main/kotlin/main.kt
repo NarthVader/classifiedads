@@ -46,7 +46,7 @@ fun scrape() {
 //    birdName = "African Grey Parrot"
 //    newPrice = "4484.99"
 //    post = true
-    
+
     //////////////////////////////////////////////////
     //////// ABOVE FOR PRICE CHANGE APP //////////////
     //////////////////////////////////////////////////
@@ -73,7 +73,7 @@ fun run(driver: ChromeDriver) {
     val start = LocalDateTime.now()
     val startTime = (start.hour*60) + start.minute
     println(start)
-    for(i in 0..3) {
+    for(i in 1..3) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
         runClassifieds(driver,i)
