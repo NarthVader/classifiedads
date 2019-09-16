@@ -16,11 +16,11 @@ fun priceChange(driver: ChromeDriver,birdName: String, birdPrice: String) {
 }
 
 fun birdPriceUpdate(driver: ChromeDriver,price: String) {
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.cssSelector("#comments")).sendKeys("")
-    Thread.sleep(2000)
+    Thread.sleep(3000)
     driver.findElement(By.cssSelector("#price")).sendKeys(price)
 }
 
@@ -201,7 +201,7 @@ fun birdsNowNYPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
         525 to 555632, 250 to 555641, 257 to 555628, 115 to 555639, 439 to 558989, 1157 to 559001,
         776 to 558991,
         804 to 558992, 96 to 558993, 456 to 558994, 1271 to 558995,
-        441 to 559002, 1168 to 558996, 1156 to 558997)
+        1169 to 559002, 1168 to 558996, 1156 to 558997)
     val index = birdsNowNYPricing.get(birdIndex)
 
     println("Price Change for BNNY " + top40template.get(birdIndex) + " at index " + index)
@@ -242,7 +242,7 @@ fun birdsNowPAPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
         274 to 555864, 546 to 555858, 820 to 555882, 86 to 555894, 81 to 555883,
         131 to 555879, 142 to 555857, 441 to 555900, 541 to 555866, 1156 to 555902,
         1250 to 555781, 139 to 555891,
-        525 to 555887, 419 to 555889, 250 to 555895, 257 to 555881, 115 to 555893,
+        525 to 555887, 1169 to 555889, 250 to 555895, 257 to 555881, 115 to 555893,
         298 to 559073, 1157 to 559074, 776 to 559076,
         804 to 559088, 96 to 559089, 456 to 559090, 1271 to 559092,
         1168 to 559093)

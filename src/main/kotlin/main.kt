@@ -43,9 +43,9 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-    birdName = "Blue Crowned Conure"
-    newPrice = "924.99"
-    price = true
+//    birdName = "Violet Indian Ringneck"
+//    newPrice = "736.99"
+//    price = true
 
     //////////////////////////////////////////////////
     //////// ABOVE FOR PRICE CHANGE APP //////////////
@@ -59,7 +59,7 @@ fun scrape() {
     } else {
         run(driver)
     }
-    //viewCount(driver)
+//    viewCount(driver)
     driver.quit()
 }
 
@@ -73,7 +73,7 @@ fun run(driver: ChromeDriver) {
     val start = LocalDateTime.now()
     val startTime = (start.hour*60) + start.minute
     println(start)
-    for(i in 1..3) {
+    for(i in 0..3) {
         runBirdsNow(driver,i)
         runAllHoobly(driver,i)
         runClassifieds(driver,i)
