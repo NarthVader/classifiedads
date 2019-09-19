@@ -111,7 +111,7 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsTMP(driver,i)
     runBirdsORL(driver,i)
     runBirdsRVR(driver,i)
-    // NEED TO FIX KANSASrunBirdsKAN(driver,i)
+    runBirdsKAN(driver,i)
     runBirdsAUS(driver,i)
     runBirdsLVG(driver,i)
     runBirdsPITT(driver,i)

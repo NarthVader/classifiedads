@@ -214,13 +214,13 @@ fun runBirdsSANT(driver: ChromeDriver, i: Int) {
     birdsNowLogout(driver)
 }
 
-//fun runBirdsKAN(driver: ChromeDriver, i: Int) {
-//    val usrBirdsKAN = "supportkansas@thefinchfarm.com"
-//    val pwBirdsKAN = "TFF2019!"
-//    birdsNowLogin(driver,usrBirdsKAN,pwBirdsKAN)
-//    birdsNowKAN(driver,i)
-//    birdsNowLogout(driver)
-//}
+fun runBirdsKAN(driver: ChromeDriver, i: Int) {
+    val usrBirdsKAN = "supportkansas@thefinchfarm.com"
+    val pwBirdsKAN = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsKAN,pwBirdsKAN)
+    birdsNowKAN(driver,i)
+    birdsNowLogout(driver)
+}
 
 fun runBirdsPDX(driver: ChromeDriver, i: Int) {
     val usrBirdsPDX = "supportportland@thefinchfarm.com"

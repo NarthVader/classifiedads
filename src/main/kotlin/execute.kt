@@ -78,29 +78,17 @@ fun birdsNowRVR(driver: ChromeDriver, pass: Int) {
     Thread.sleep(3000)
 }
 
-//fun birdsNowKAN(driver: ChromeDriver, pass: Int) {
-//
-//    Thread.sleep(3000)
-//
-//    val birdsKAN: IntArray = intArrayOf(560094,560911,560912,560913,560914,560915,560916,560917,560918,560919,560920,560921,560922,560923,560924,560925,560926,560927,
-//        560889,560929,560930,560931,560932,560933,560934,560935,560936,560898,560899,560900,560901,560902,560903,560943,560905,560906,560907,560909,560910)
-//    val birdsNowKANPricing: HashMap<Int, Int> = hashMapOf(594 to 560094, 298 to 560911, 609 to 560912,
-//        435 to 560913, 1171 to 560914, 252 to 560915, 1169 to 560916,
-//        778 to 560917, 604 to 560918, 439 to 560919, 458 to 560920,
-//        87 to 560921, 144 to 560922, 1157 to 560923,
-//        777 to 560924, 89 to 560925, 776 to 560926,
-//        804 to 560927, 96 to 560889, 96 to 560928, 557 to 560929, 120 to 560930,
-//        274 to 560931, 546 to 560932, 456 to 560933,
-//        820 to 560934, 86 to 560935, 81 to 560936,
-//        131 to 560898, 142 to 560899, 1271 to 560900,
-//        441 to 560901, 1168 to 560902,
-//        541 to 560903, 1156 to 560943, 1250 to 560905, 139 to 560906,
-//        525 to 560907, 250 to "Lady Gouldian Finch - Yellow-back", 257 to 560909, 115 to 560910)
-//
-//    println("birdNowKAN: " + birdsKAN.size)
-//    executeBNPartial(driver,birdsKAN,pass)
-//    Thread.sleep(3000)
-//}
+fun birdsNowKAN(driver: ChromeDriver, pass: Int) {
+
+    Thread.sleep(3000)
+
+    val birdsKAN: IntArray = intArrayOf(560094,560911,560912,560913,560914,560915,560916,560917,560918,560919,560920,560921,560922,560923,560924,560925,560926,560927,
+        560889,560929,560930,560931,560932,560933,560934,560935,560936,560898,560899,560900,560901,560902,560903,560943,560905,560906,560907,560909,560910,560928)
+
+    println("birdNowKAN: " + birdsKAN.size)
+    executeBNPartial(driver,birdsKAN,pass)
+    Thread.sleep(3000)
+}
 
 fun birdsNowFL(driver: ChromeDriver, pass: Int) {
 
