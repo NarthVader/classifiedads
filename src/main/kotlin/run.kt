@@ -6,6 +6,134 @@ import org.openqa.selenium.TimeoutException
 import org.openqa.selenium.UnhandledAlertException
 import org.openqa.selenium.chrome.ChromeDriver
 
+fun runBirdsNASH(driver: ChromeDriver, i: Int) {
+    val usrBirdsNASH = "supportnashville@thefinchfarm.com"
+    val pwBirdsNASH = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsNASH,pwBirdsNASH)
+    birdsNowNASH(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsOKC(driver: ChromeDriver, i: Int) {
+    val usrBirdsOKC = "supportoklahomacity@thefinchfarm.com"
+    val pwBirdsOKC = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsOKC,pwBirdsOKC)
+    birdsNowOKC(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsMIL(driver: ChromeDriver, i: Int) {
+    val usrBirdsMIL = "supportmilwaukee@thefinchfarm.com"
+    val pwBirdsMIL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMIL,pwBirdsMIL)
+    birdsNowMIL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsPRO(driver: ChromeDriver, i: Int) {
+    val usrBirdsPRO = "supportprovidence@thefinchfarm.com"
+    val pwBirdsPRO = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsPRO,pwBirdsPRO)
+    birdsNowPRO(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsVIR(driver: ChromeDriver, i: Int) {
+    val usrBirdsVIR = "supportvirginia@thefinchfarm.com"
+    val pwBirdsVIR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsVIR,pwBirdsVIR)
+    birdsNowVIR(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsRICH(driver: ChromeDriver, i: Int) {
+    val usrBirdsRICH = "supportrichmond@thefinchfarm.com"
+    val pwBirdsRICH = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRICH,pwBirdsRICH)
+    birdsNowRICH(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsRAL(driver: ChromeDriver, i: Int) {
+    val usrBirdsRAL = "supportraleigh@thefinchfarm.com"
+    val pwBirdsRAL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRAL,pwBirdsRAL)
+    birdsNowRAL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsMEM(driver: ChromeDriver, i: Int) {
+    val usrBirdsMEM = "supportmemphis@thefinchfarm.com"
+    val pwBirdsMEM = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMEM,pwBirdsMEM)
+    birdsNowMEM(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsSLC(driver: ChromeDriver, i: Int) {
+    val usrBirdsSLC = "supportsaltlake@thefinchfarm.com"
+    val pwBirdsSLC = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSLC,pwBirdsSLC)
+    birdsNowSLC(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsNO(driver: ChromeDriver, i: Int) {
+    val usrBirdsNO = "supportneworleans@thefinchfarm.com"
+    val pwBirdsNO = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsNO,pwBirdsNO)
+    birdsNowNO(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsLOU(driver: ChromeDriver, i: Int) {
+    val usrBirdsLOU = "supportlouisville@thefinchfarm.com"
+    val pwBirdsLOU = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsLOU,pwBirdsLOU)
+    birdsNowLOU(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsJACK(driver: ChromeDriver, i: Int) {
+    val usrBirdsJACK = "supportjacksonville@thefinchfarm.com"
+    val pwBirdsJACK = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsJACK,pwBirdsJACK)
+    birdsNowJACK(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsCLV(driver: ChromeDriver, i: Int) {
+    val usrBirdsCLV = "supportcleveland@thefinchfarm.com"
+    val pwBirdsCLV = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsCLV,pwBirdsCLV)
+    birdsNowCLV(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsCOL(driver: ChromeDriver, i: Int) {
+    val usrBirdsCOL = "supportcolumbus@thefinchfarm.com"
+    val pwBirdsCOL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsCOL,pwBirdsCOL)
+    birdsNowCOL(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsBUF(driver: ChromeDriver, i: Int) {
+    val usrBirdsBUF = "supportbuffalo@thefinchfarm.com"
+    val pwBirdsBUF = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsBUF,pwBirdsBUF)
+    birdsNowBUF(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsSJ(driver: ChromeDriver, i: Int) {
+    val usrBirdsSJ = "supportsanjose@thefinchfarm.com"
+    val pwBirdsSJ = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSJ,pwBirdsSJ)
+    birdsNowSJ(driver,i)
+    birdsNowLogout(driver)
+}
+
 fun runBirdsORL(driver: ChromeDriver, i: Int) {
     val usrBirdsORL = "supportorlando@thefinchfarm.com"
     val pwBirdsORL = "TFF2019!"
@@ -43,6 +171,22 @@ fun runBirdsPITT(driver: ChromeDriver, i: Int) {
     val pwBirdsPITT = "TFF2019!"
     birdsNowLogin(driver,usrBirdsPITT,pwBirdsPITT)
     birdsNowPITT(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsBIR(driver: ChromeDriver, i: Int) {
+    val usrBirdsBIR = "supportbirmingham@thefinchfarm.com"
+    val pwBirdsBIR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsBIR,pwBirdsBIR)
+    birdsNowBIR(driver,i)
+    birdsNowLogout(driver)
+}
+
+fun runBirdsHAR(driver: ChromeDriver, i: Int) {
+    val usrBirdsHAR = "supporthartford@thefinchfarm.com"
+    val pwBirdsHAR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsHAR,pwBirdsHAR)
+    birdsNowHAR(driver,i)
     birdsNowLogout(driver)
 }
 

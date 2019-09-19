@@ -118,6 +118,26 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsSAC(driver,i)
     runBirdsCHAR(driver,i)
     runBirdsSANT(driver,i)
+
+    //no lavendar waxbill 96 to "Lavender Waxbill",
+    runBirdsSJ(driver,i)
+    runBirdsNASH(driver,i)
+    runBirdsJACK(driver,i)
+    runBirdsCLV(driver,i)
+    runBirdsCOL(driver,i)
+    runBirdsBUF(driver,i)
+    runBirdsBIR(driver,i)
+    runBirdsHAR(driver,i)
+    runBirdsSLC(driver,i)
+    runBirdsNO(driver,i)
+    runBirdsLOU(driver,i)
+    runBirdsRICH(driver,i)
+    runBirdsMEM(driver,i)
+    runBirdsRAL(driver,i)
+    runBirdsOKC(driver,i)
+    runBirdsMIL(driver,i)
+    runBirdsPRO(driver,i)
+    runBirdsVIR(driver,i)
 }
 
 fun runOtherNowPets(driver: ChromeDriver, i: Int) {

@@ -70,6 +70,371 @@ fun executionSuite(driver: ChromeDriver,birdIndex:Int?,birdPrice: String) {
     birdsNowSACPricing(driver,birdIndex,birdPrice)
     birdsNowCHARPricing(driver,birdIndex,birdPrice)
     birdsNowSANTPricing(driver,birdIndex,birdPrice)
+
+    birdsNowSJPricing(driver,birdIndex,birdPrice)
+    birdsNowNASHPricing(driver,birdIndex,birdPrice)
+    birdsNowJACKPricing(driver,birdIndex,birdPrice)
+    birdsNowCLVPricing(driver,birdIndex,birdPrice)
+    birdsNowCOLPricing(driver,birdIndex,birdPrice)
+    birdsNowBUFPricing(driver,birdIndex,birdPrice)
+    birdsNowBIRPricing(driver,birdIndex,birdPrice)
+    birdsNowHARPricing(driver,birdIndex,birdPrice)
+    birdsNowSLCPricing(driver,birdIndex,birdPrice)
+    birdsNowNOPricing(driver,birdIndex,birdPrice)
+    birdsNowLOUPricing(driver,birdIndex,birdPrice)
+    birdsNowRICHPricing(driver,birdIndex,birdPrice)
+    birdsNowMEMPricing(driver,birdIndex,birdPrice)
+    birdsNowRALPricing(driver,birdIndex,birdPrice)
+    birdsNowOKCPricing(driver,birdIndex,birdPrice)
+    birdsNowMILPricing(driver,birdIndex,birdPrice)
+    birdsNowPROPricing(driver,birdIndex,birdPrice)
+    birdsNowVIRPricing(driver,birdIndex,birdPrice)
+    birdsNowRVRPricing(driver,birdIndex,birdPrice)
+}
+
+fun birdsNowRVRPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsRVR = "supportriverside@thefinchfarm.com"
+    val pwBirdsRVR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRVR,pwBirdsRVR)
+    val birdsNowRVRPricing: HashMap<Int, Int> = hashMapOf(594 to 559072, 298 to 560323, 609 to 560324,
+        435 to 560325, 1171 to 560326, 252 to 560327, 1169 to 560328,
+        778 to 560329, 604 to 560330, 439 to 560331, 458 to 560332,
+        87 to 560333, 144 to 560334, 1157 to 560335,
+        777 to 560336, 89 to 560337, 776 to 560338,
+        804 to 560339, 96 to 560340, 557 to 560341, 120 to 560342,
+        274 to 560343, 546 to 560344, 456 to 560345,
+        820 to 560346, 86 to 560347, 81 to 560348,
+        131 to 560349, 142 to 560350, 1271 to 560351,
+        441 to 560352, 1168 to 560353,
+        541 to 560354, 1156 to 560355, 1250 to 560356, 139 to 560357,
+        525 to 560358, 250 to 560359, 257 to 560360, 115 to 560362)
+    val index = birdsNowRVRPricing.get(birdIndex)
+
+    println("Price Change for BNRVR " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowVIRPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsVIR = "supportvirginia@thefinchfarm.com"
+    val pwBirdsVIR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsVIR,pwBirdsVIR)
+    val birdsNowVIRPricing: HashMap<Int, Int> = hashMapOf(594 to 560101, 298 to 561746, 609 to 561747,
+        778 to 561794, 604 to 561753, 439 to 561754, 458 to 561797,
+        435 to 561748, 1171 to 561749, 252 to 561750, 1169 to 561751,
+        87 to 561756, 144 to 561757, 1157 to 561758,
+        777 to 561760, 89 to 561761, 776 to 561762,
+        804 to 561763, 96 to 561764, 557 to 561765, 120 to 561766,
+        274 to 561767, 546 to 561768, 456 to 561769,
+        820 to 561770, 86 to 561771, 81 to 561772,
+        131 to 561773, 142 to 561774, 1271 to 561775,
+        441 to 561776, 1168 to 561777,
+        541 to 561778, 1156 to 561779, 1250 to 561780, 139 to 561781,
+        525 to 561782, 250 to 561783, 257 to 561826, 115 to 561785)
+    val index = birdsNowVIRPricing.get(birdIndex)
+
+    println("Price Change for BNPRO " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowPROPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsPRO = "supportprovidence@thefinchfarm.com"
+    val pwBirdsPRO = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsPRO,pwBirdsPRO)
+    val birdsNowPROPricing: HashMap<Int, Int> = hashMapOf(594 to 560102, 298 to 561880, 609 to 561881,
+        435 to 561883, 1171 to 561884, 252 to 561885, 1169 to 561886,
+        778 to 561887, 604 to 561888, 439 to 561889, 458 to 561890,
+        87 to 561891, 144 to 561892, 1157 to 561893,
+        777 to 561894, 89 to 561895, 776 to 561897,
+        804 to 561898, 96 to 561899, 557 to 561900, 120 to 561901,
+        274 to 561902, 546 to 561903, 456 to 561904,
+        820 to 561951, 86 to 561952, 81 to 561907,
+        131 to 561908, 142 to 561955, 1271 to 561910,
+        441 to 561911, 1168 to 561912,
+        541 to 561913, 1156 to 561914, 1250 to 562087, 139 to 561916,
+        525 to 561917, 250 to 561918, 257 to 561919, 115 to 562092)
+    val index = birdsNowPROPricing.get(birdIndex)
+
+    println("Price Change for BNPRO " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowMILPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsMIL = "supportmilwuakie@thefinchfarm.com"
+    val pwBirdsMIL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMIL,pwBirdsMIL)
+    val birdsNowMILPricing: HashMap<Int, Int> = hashMapOf(594 to 560103, 298 to 561968, 609 to 561969,
+        435 to 561970, 1171 to 561971, 252 to 561972, 1169 to 561973,
+        778 to 561974, 604 to 561976, 439 to 561977, 458 to 561978,
+        87 to 561979, 144 to 561980, 1157 to 561981,
+        777 to 561983, 89 to 561984, 776 to 561985,
+        804 to 561986, 96 to 562029, 557 to 561988, 120 to 561989,
+        274 to 561990, 546 to 561992, 456 to 561993,
+        820 to 561994, 86 to 561995, 81 to 561996,
+        131 to 561997, 142 to 561998, 1271 to 561999,
+        441 to 562000, 1168 to 562002,
+        541 to 562003, 1156 to 562004, 1250 to 562005, 139 to 562006,
+        525 to 562007, 250 to 562009, 257 to 562010, 115 to 562050)
+    val index = birdsNowMILPricing.get(birdIndex)
+
+    println("Price Change for BNMIL " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowOKCPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsOKC = "supportoklahomacity@thefinchfarm.com"
+    val pwBirdsOKC = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsOKC,pwBirdsOKC)
+    val birdsNowOKCPricing: HashMap<Int, Int> = hashMapOf(594 to 560141, 298 to 562199, 609 to 562200,
+        435 to 562201, 1171 to 562202, 252 to 562203, 1169 to 562204,
+        778 to 562205, 604 to 562206, 439 to 562207, 458 to 562208,
+        87 to 562209, 144 to 562210, 1157 to 562211,
+        777 to 562253, 89 to 562213, 776 to 562214,
+        804 to 562215, 96 to 562257, 557 to 562217, 120 to 562218,
+        274 to 562219, 546 to 562220, 456 to 562221,
+        820 to 562263, 86 to 562223, 81 to 562224,
+        131 to 562225, 142 to 562226, 1271 to 562227,
+        441 to 562228, 1168 to 562229,
+        541 to 562230, 1156 to 562231, 1250 to 562233, 139 to 562234,
+        525 to 562236, 250 to 562237, 257 to 562238, 115 to 562239)
+    val index = birdsNowOKCPricing.get(birdIndex)
+
+    println("Price Change for BNOKC " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowRALPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsRAL = "supportraleigh@thefinchfarm.com"
+    val pwBirdsRAL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRAL,pwBirdsRAL)
+    val birdsNowRALPricing: HashMap<Int, Int> = hashMapOf(594 to 561930, 298 to 562516, 609 to 562517,
+        435 to 562518, 1171 to 562519, 252 to 562521, 1169 to 562522,
+        778 to 562523, 604 to 562525, 439 to 562526, 458 to 562527,
+        87 to 562528, 144 to 562529, 1157 to 562530,
+        777 to 562700, 89 to 562532, 776 to 562533,
+        804 to 562534, 96 to 562536, 557 to 562537, 120 to 562538,
+        274 to 562539, 546 to 562540, 456 to 562542,
+        820 to 562543, 86 to 562544, 81 to 562545,
+        131 to 562546, 142 to 562547, 1271 to 562548,
+        441 to 562549, 1168 to 562550,
+        541 to 562551, 1156 to 562552, 1250 to 562554, 139 to 562555,
+        525 to 562556, 250 to 562557, 257 to 562558, 115 to 562559)
+    val index = birdsNowRALPricing.get(birdIndex)
+
+    println("Price Change for BNRAL " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowMEMPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsMEM = "supportmemphis@thefinchfarm.com"
+    val pwBirdsMEM = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsMEM,pwBirdsMEM)
+    val birdsNowMEMPricing: HashMap<Int, Int> = hashMapOf(594 to 561939, 298 to 563009, 609 to 563010,
+        435 to 563011, 1171 to 563012, 252 to 563013, 1169 to 562974,
+        778 to 563015, 604 to 563373, 439 to 563017, 458 to 563018,
+        87 to 563019, 144 to 563020, 1157 to 563021,
+        777 to 563022, 89 to 563023, 776 to 562984,
+        804 to 563383, 96 to 563026, 557 to 563027, 120 to 563028,
+        274 to 563029, 546 to 563030, 456 to 563031,
+        820 to 562993, 86 to 563033, 81 to 563034,
+        131 to 563035, 142 to 563036, 1271 to 563037,
+        441 to 563038, 1168 to 563039,
+        541 to 563001, 1156 to 563041, 1250 to 563003, 139 to 563004,
+        525 to 563044, 250 to 563006, 257 to 563046, 115 to 563008)
+    val index = birdsNowMEMPricing.get(birdIndex)
+
+    println("Price Change for BNMEM " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowRICHPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsRICH = "supportrichmond@thefinchfarm.com"
+    val pwBirdsRICH = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsRICH,pwBirdsRICH)
+    val birdsNowRICHPricing: HashMap<Int, Int> = hashMapOf(594 to 561948, 298 to 563193, 609 to 563194,
+        435 to 563195, 1171 to 563196, 252 to 563197, 1169 to 563198,
+        778 to 563199, 604 to 563200, 439 to 563201, 458 to 563202,
+        87 to 563203, 144 to 563204, 1157 to 563205,
+        777 to 563206, 89 to 563207, 776 to 563208,
+        804 to 563064, 96 to 563210, 557 to 563211, 120 to 563212,
+        274 to 563213, 546 to 563111, 456 to 563215,
+        820 to 563216, 86 to 563217, 81 to 563218,
+        131 to 563075, 142 to 563076, 1271 to 563077,
+        441 to 563222, 1168 to 563223,
+        541 to 563224, 1156 to 563225, 1250 to 563082, 139 to 563124,
+        525 to 563084, 250 to 563229, 257 to 563230, 115 to 563231)
+    val index = birdsNowRICHPricing.get(birdIndex)
+
+    println("Price Change for BNRICH " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowLOUPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsLOU = "supportlouisville@thefinchfarm.com"
+    val pwBirdsLOU = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsLOU,pwBirdsLOU)
+    val birdsNowLOUPricing: HashMap<Int, Int> = hashMapOf(594 to 561967, 298 to 563280, 609 to 563242,
+        435 to 563282, 1171 to 563244, 252 to 563284, 1169 to 563246,
+        778 to 563247, 604 to 563248, 439 to 563249, 458 to 563250,
+        87 to 563251, 144 to 563252, 1157 to 563253,
+        777 to 563254, 89 to 563255, 776 to 563338,
+        804 to 563257, 96 to 563258, 557 to 563259, 120 to 563260,
+        274 to 563261, 546 to 563262, 456 to 563263,
+        820 to 563264, 86 to 563265, 81 to 563266,
+        131 to 563308, 142 to 563268, 1271 to 563269,
+        441 to 563270, 1168 to 563271,
+        541 to 563272, 1156 to 563273, 1250 to 563359, 139 to 563275,
+        525 to 563276, 250 to 563362, 257 to 563278, 115 to 563279)
+    val index = birdsNowLOUPricing.get(birdIndex)
+
+    println("Price Change for BNLOU " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowNOPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsNO = "supportneworleans@thefinchfarm.com"
+    val pwBirdsNO = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsNO,pwBirdsNO)
+    val birdsNowNOPricing: HashMap<Int, Int> = hashMapOf(594 to 561975, 298 to 563477, 609 to 563409,
+        435 to 563437, 1171 to 563411, 252 to 563481, 1169 to 563440,
+        778 to 563414, 604 to 563415, 439 to 563443, 458 to 563444,
+        87 to 563418, 144 to 563419, 1157 to 563420,
+        777 to 563448, 89 to 563449, 776 to 563492,
+        804 to 563424, 96 to 563425, 557 to 563426, 120 to 563427,
+        274 to 563428, 546 to 563429, 456 to 563430,
+        820 to 563459, 86 to 563501, 81 to 563433,
+        131 to 563434, 142 to 563504, 1271 to 563465,
+        441 to 563506, 1168 to 563467,
+        541 to 563468, 1156 to 563469, 1250 to 563510, 139 to 563511,
+        525 to 563472, 250 to 563473, 257 to 563514, 115 to 563475)
+    val index = birdsNowNOPricing.get(birdIndex)
+
+    println("Price Change for BNNO " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowBUFPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsBUF = "supportbuffalo@thefinchfarm.com"
+    val pwBirdsBUF = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsBUF,pwBirdsBUF)
+    val birdsNowBUFPricing: HashMap<Int, Int> = hashMapOf(594 to 562008, 298 to 563916, 609 to 563917,
+        435 to 563918, 1171 to 563919, 252 to 563920, 1169 to 563961,
+        778 to 563922, 604 to 564089, 439 to 563924, 458 to 563925,
+        87 to 564004, 144 to 563927, 1157 to 563928,
+        777 to 563929, 89 to 563930, 776 to 563931,
+        804 to 564014, 96 to 563933, 557 to 564016, 120 to 563936,
+        274 to 564102, 546 to 563938, 456 to 563978,
+        820 to 563940, 86 to 564022, 81 to 563942,
+        131 to 563943, 142 to 563944, 1271 to 563945,
+        441 to 563946, 1168 to 563947,
+        541 to 563948, 1156 to 563949, 1250 to 563950, 139 to 563951,
+        525 to 563922, 250 to 563953, 257 to 563954, 115 to 564036)
+    val index = birdsNowBUFPricing.get(birdIndex)
+
+    println("Price Change for BNBUF " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowSLCPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsSLC = "supportsaltlake@thefinchfarm.com"
+    val pwBirdsSLC = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSLC,pwBirdsSLC)
+    val birdsNowSLCPricing: HashMap<Int, Int> = hashMapOf(594 to 561982, 298 to 563560, 609 to 563561,
+        435 to 563601, 1171 to 563563, 252 to 563643, 1169 to 563604,
+        778 to 563566, 604 to 563567, 439 to 563568, 458 to 563569,
+        87 to 563570, 144 to 563571, 1157 to 563572,
+        777 to 563573, 89 to 563613, 776 to 563575,
+        804 to 563576, 96 to 563577, 557 to 563578, 120 to 563618,
+        274 to 563619, 546 to 563581, 456 to 563582,
+        820 to 563583, 86 to 563584, 81 to 563624,
+        131 to 563586, 142 to 563587, 1271 to 563588,
+        441 to 563589, 1168 to 563590,
+        541 to 563591, 1156 to 563592, 1250 to 563632, 139 to 563594,
+        525 to 563595, 250 to 563596, 257 to 563597, 115 to 563598)
+    val index = birdsNowSLCPricing.get(birdIndex)
+
+    println("Price Change for BNSLC " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowCOLPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsCOL = "supportcolumbus@thefinchfarm.com"
+    val pwBirdsCOL = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsCOL,pwBirdsCOL)
+    val birdsNowCOLPricing: HashMap<Int, Int> = hashMapOf(594 to 560098, 298 to 560962, 609 to 561021,
+        435 to 561022, 1171 to 560965, 252 to 560966, 1169 to 560967,
+        778 to 560968, 604 to 560970, 439 to 560971, 458 to 560972,
+        87 to 560973, 144 to 560975, 1157 to 560976,
+        777 to 560977, 89 to 560978, 776 to 560979,
+        804 to 560980, 96 to 560981, 557 to 560982, 120 to 560984,
+        274 to 560985, 546 to 560986, 456 to 560987,
+        820 to 560988, 86 to 560989, 81 to 560990,
+        131 to 560991, 142 to 560992, 1271 to 560993,
+        441 to 560994, 1168 to 560995,
+        541 to 561083, 1156 to 560997, 1250 to 560998, 139 to 560999,
+        525 to 561000, 250 to 561001, 257 to 561093, 115 to 561003)
+    val index = birdsNowCOLPricing.get(birdIndex)
+
+    println("Price Change for BNCOL " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowCLVPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsCLV = "supportcleveland@thefinchfarm.com"
+    val pwBirdsCLV = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsCLV,pwBirdsCLV)
+    val birdsNowCLVPricing: HashMap<Int, Int> = hashMapOf(594 to 560119, 298 to 561278, 609 to 561281,
+        435 to 561282, 1171 to 561283, 252 to 561284, 1169 to 561285,
+        778 to 561286, 604 to 561288, 439 to 561289, 458 to 561290,
+        87 to 561291, 144 to 561292, 1157 to 561293,
+        777 to 561294, 89 to 561295, 776 to 561296,
+        804 to 561297, 557 to 561299, 120 to 561300,
+        274 to 561302, 546 to 561303, 456 to 561304,
+        820 to 561306, 86 to 561307, 81 to 561308,
+        131 to 561627, 142 to 561310, 1271 to 561311,
+        441 to 561625, 1168 to 561313,
+        541 to 561314, 1156 to 561315, 1250 to 561316, 139 to 561317,
+        525 to 561318, 250 to 561319, 257 to 561320, 115 to 561321)
+    val index = birdsNowCLVPricing.get(birdIndex)
+
+    println("Price Change for BNCLV " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowJACKPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsJACK = "supportjacksonville@thefinchfarm.com"
+    val pwBirdsJACK = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsJACK,pwBirdsJACK)
+    val birdsNowJACKPricing: HashMap<Int, Int> = hashMapOf(594 to 560104, 298 to 562108, 609 to 562156,
+        435 to 562110, 1171 to 562112, 252 to 562159, 1169 to 562114,
+        778 to 562115, 604 to 562116, 439 to 562117, 458 to 562118,
+        87 to 562119, 144 to 562120, 1157 to 562121,
+        777 to 562122, 89 to 562123, 776 to 562124,
+        804 to 562125, 96 to 562126, 557 to 562127, 120 to 562128,
+        274 to 562129, 546 to 562130, 456 to 562131,
+        820 to 562132, 86 to 562133, 81 to 562134,
+        131 to 562135, 142 to 562136, 1271 to 562137,
+        441 to 562138, 1168 to 562140,
+        541 to 562142, 1156 to 562143, 1250 to 562144, 139 to 562145,
+        525 to 562146, 250 to 562147, 257 to 562149, 115 to 562150)
+    val index = birdsNowJACKPricing.get(birdIndex)
+
+    println("Price Change for BNJACK " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
 }
 
 fun birdsNowWAPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
@@ -124,6 +489,98 @@ fun birdsNowAZPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
     val index = birdsNowAZPricing.get(birdIndex)
 
     println("Price Change for BNAZ " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowNASHPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsNASH = "supportnashville@thefinchfarm.com"
+    val pwBirdsNASH = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsNASH,pwBirdsNASH)
+    val birdsNowNASHPricing: HashMap<Int, Int> = hashMapOf(594 to 560099, 298 to 561657, 609 to 561716,
+        435 to 561647, 1171 to 561648, 252 to 561649, 1169 to 561650,
+        778 to 561651, 604 to 561652, 439 to 561653, 458 to 561654,
+        87 to 561667, 144 to 561668, 1157 to 561669,
+        777 to 561670, 89 to 561672, 776 to 561673,
+        804 to 561674, 96 to 561675, 557 to 561676, 120 to 561677,
+        274 to 561678, 546 to 561679, 456 to 561681,
+        820 to 561682, 86 to 561683, 81 to 561684,
+        131 to 561685, 142 to 561686, 1271 to 561687,
+        441 to 561688, 1168 to 561689,
+        541 to 561690, 1156 to 561691, 1250 to 561692, 139 to 561693,
+        525 to 561694, 250 to 561695, 257 to 561696, 115 to 561697)
+    val index = birdsNowNASHPricing.get(birdIndex)
+
+    println("Price Change for BNNASH " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowBIRPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsBIR = "supportbirmingham@thefinchfarm.com"
+    val pwBirdsBIR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsBIR,pwBirdsBIR)
+    val birdsNowBIRPricing: HashMap<Int, Int> = hashMapOf(594 to 562001, 298 to 563798, 609 to 563799,
+        435 to 563800, 1171 to 563801, 252 to 563802, 1169 to 563803,
+        778 to 563804, 604 to 563805, 439 to 563806, 458 to 563807,
+        87 to 563808, 144 to 563809, 1157 to 563849,
+        777 to 563811, 89 to 563812, 776 to 563813,
+        804 to 563814, 96 to 563815, 557 to 563816, 120 to 563817,
+        274 to 563818, 546 to 563819, 456 to 563820,
+        820 to 563821, 86 to 563861, 81 to 563823,
+        131 to 563824, 142 to 563825, 1271 to 563826,
+        441 to 563827, 1168 to 563828,
+        541 to 563829, 1156 to 563830, 1250 to 563831, 139 to 563832,
+        525 to 563833, 250 to 563834, 257 to 563875, 115 to 563836)
+    val index = birdsNowBIRPricing.get(birdIndex)
+
+    println("Price Change for BNBIR " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowHARPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsHAR = "supporthartford@thefinchfarm.com"
+    val pwBirdsHAR = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsHAR,pwBirdsHAR)
+    val birdsNowHARPricing: HashMap<Int, Int> = hashMapOf(594 to 561991, 298 to 563756, 609 to 563757,
+        435 to 563758, 1171 to 563759, 252 to 563760, 1169 to 563761,
+        778 to 563684, 604 to 563763, 439 to 563764, 458 to 563687,
+        87 to 563688, 144 to 563767, 1157 to 563768,
+        777 to 563769, 89 to 563770, 776 to 563771,
+        804 to 563772, 96 to 563773, 557 to 563774, 120 to 563775,
+        274 to 563737, 546 to 563699, 456 to 563778,
+        820 to 563779, 86 to 563702, 81 to 563781,
+        131 to 563782, 142 to 563783, 1271 to 563784,
+        441 to 563786, 1168 to 563787,
+        541 to 563709, 1156 to 563789, 1250 to 563790, 139 to 563791,
+        525 to 563792, 250 to 563793, 257 to 563794, 115 to 563795)
+    val index = birdsNowHARPricing.get(birdIndex)
+
+    println("Price Change for BNHAR " + top40template.get(birdIndex) + " at index " + index)
+    priceChangeExecution(driver,index,price)
+}
+
+fun birdsNowSJPricing(driver: ChromeDriver,birdIndex: Int?, price: String) {
+    Thread.sleep(3000)
+    val usrBirdsSJ = "supportsanjose@thefinchfarm.com"
+    val pwBirdsSJ = "TFF2019!"
+    birdsNowLogin(driver,usrBirdsSJ,pwBirdsSJ)
+    val birdsNowSJPricing: HashMap<Int, Int> = hashMapOf(594 to 560120, 298 to 561602, 609 to 561603,
+        435 to 561604, 1171 to 561605, 252 to 561606, 1169 to 561607,
+        778 to 561608, 604 to 561610, 439 to 561611, 458 to 561612,
+        87 to 561613, 144 to 561614, 1157 to 561615,
+        777 to 561616, 89 to 561617, 776 to 561618,
+        804 to 561619, 96 to 561620, 557 to 561621, 120 to 561622,
+        274 to 561623, 546 to 561624, 456 to 561626,
+        820 to 561628, 86 to 561743, 81 to 561630,
+        131 to 561631, 142 to 561632, 1271 to 561633,
+        441 to 561634, 1168 to 561745,
+        541 to 561636, 1156 to 561744, 1250 to 561638, 139 to 561639,
+        525 to 561640, 250 to 561641, 257 to 561642, 115 to 561643)
+    val index = birdsNowSJPricing.get(birdIndex)
+
+    println("Price Change for BNSJ " + top40template.get(birdIndex) + " at index " + index)
     priceChangeExecution(driver,index,price)
 }
 
