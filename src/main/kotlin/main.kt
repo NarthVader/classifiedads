@@ -119,7 +119,6 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsCHAR(driver,i)
     runBirdsSANT(driver,i)
 
-    //no lavendar waxbill 96 to "Lavender Waxbill",
     runBirdsSJ(driver,i)
     runBirdsNASH(driver,i)
     runBirdsJACK(driver,i)
