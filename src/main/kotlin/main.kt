@@ -75,7 +75,7 @@ fun run(driver: ChromeDriver) {
     println(start)
     for(i in 0..3) {
         runBirdsNow(driver,i)
-        runAllHoobly(driver,i)
+//        runAllHoobly(driver,i)
         runClassifieds(driver,i)
         runOtherNowPets(driver,i)
     }
@@ -142,7 +142,7 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
 fun runOtherNowPets(driver: ChromeDriver, i: Int) {
     runCats(driver,i)
     runReps(driver,i)
-    runDogs(driver,i)
+//    runDogs(driver,i)
 }
 
 fun runAllHoobly(driver: ChromeDriver, i: Int) {
