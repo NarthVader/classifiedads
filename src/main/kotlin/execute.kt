@@ -2,6 +2,9 @@ package com.pinnsights
 
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
+import org.openqa.selenium.NoSuchElementException
+import org.openqa.selenium.TimeoutException
+import org.openqa.selenium.UnhandledAlertException
 import org.openqa.selenium.support.ui.*
 import org.openqa.selenium.chrome.ChromeDriver
 import java.util.HashMap
@@ -811,11 +814,23 @@ fun executeBNPartial(driver: ChromeDriver,birds: IntArray,startIndex: Int) {
     }
     println(birdEnd)
     for (i in birdStart..birdEnd) {
-        val index = birds[i]
-        println("$i: " + index)
-        driver.get("https://www.birdsnow.com/place_ad-adid-$index")
-        driver.findElement(By.name("doContinue")).click()
-        Thread.sleep(3000)
+        try {
+            val index = birds[i]
+            println("$i: " + index)
+            driver.get("https://www.birdsnow.com/place_ad-adid-$index")
+            driver.findElement(By.name("doContinue")).click()
+            Thread.sleep(3000)
+        }
+        catch (a: UnhandledAlertException) {
+            println("Alert Exception: $a")
+            driver.switchTo().alert().accept()
+        } catch (t: TimeoutException) {
+            println("Timeout Exception: $t")
+        } catch (n: NoSuchElementException) {
+            println("No Such Element Exception: $n")
+        } catch (o: Exception) {
+            println("Other Exceptions: $o")
+        }
     }
     Thread.sleep(3000)
 }

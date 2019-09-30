@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.CapabilityType
 import org.openqa.selenium.remote.DesiredCapabilities
 import java.time.LocalDateTime
 
+
 var post = false
 var price = false
 var autoLogin = ""
@@ -59,7 +60,7 @@ fun scrape() {
     } else {
         run(driver)
     }
-//    viewCount(driver)
+    //viewCount(driver)
     driver.quit()
 }
 

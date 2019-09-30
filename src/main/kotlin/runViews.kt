@@ -286,133 +286,133 @@ fun runViewsDEN(driver: ChromeDriver) {
     DENViews(driver)
 }
 
-fun runViewsNASH(driver: ChromeDriver, i: Int) {
+fun runViewsNASH(driver: ChromeDriver) {
     val usrBirdsNASH = "supportnashville@thefinchfarm.com"
     val pwBirdsNASH = "TFF2019!"
     birdsNowLogin(driver,usrBirdsNASH,pwBirdsNASH)
     NASHViews(driver)
 }
 
-fun runViewsOKC(driver: ChromeDriver, i: Int) {
+fun runViewsOKC(driver: ChromeDriver) {
     val usrBirdsOKC = "supportoklahomacity@thefinchfarm.com"
     val pwBirdsOKC = "TFF2019!"
     birdsNowLogin(driver,usrBirdsOKC,pwBirdsOKC)
     OKCViews(driver)
 }
 
-fun runViewsMIL(driver: ChromeDriver, i: Int) {
+fun runViewsMIL(driver: ChromeDriver) {
     val usrBirdsMIL = "supportmilwaukee@thefinchfarm.com"
     val pwBirdsMIL = "TFF2019!"
     birdsNowLogin(driver,usrBirdsMIL,pwBirdsMIL)
     MILViews(driver)
 }
 
-fun runViewsPRO(driver: ChromeDriver, i: Int) {
+fun runViewsPRO(driver: ChromeDriver) {
     val usrBirdsPRO = "supportprovidence@thefinchfarm.com"
     val pwBirdsPRO = "TFF2019!"
     birdsNowLogin(driver,usrBirdsPRO,pwBirdsPRO)
     PROViews(driver)
 }
 
-fun runViewsVIR(driver: ChromeDriver, i: Int) {
+fun runViewsVIR(driver: ChromeDriver) {
     val usrBirdsVIR = "supportvirginia@thefinchfarm.com"
     val pwBirdsVIR = "TFF2019!"
     birdsNowLogin(driver,usrBirdsVIR,pwBirdsVIR)
     VIRViews(driver)
 }
 
-fun runViewsRICH(driver: ChromeDriver, i: Int) {
+fun runViewsRICH(driver: ChromeDriver) {
     val usrBirdsRICH = "supportrichmond@thefinchfarm.com"
     val pwBirdsRICH = "TFF2019!"
     birdsNowLogin(driver,usrBirdsRICH,pwBirdsRICH)
     RICHViews(driver)
 }
 
-fun runViewsRAL(driver: ChromeDriver, i: Int) {
+fun runViewsRAL(driver: ChromeDriver) {
     val usrBirdsRAL = "supportraleigh@thefinchfarm.com"
     val pwBirdsRAL = "TFF2019!"
     birdsNowLogin(driver,usrBirdsRAL,pwBirdsRAL)
     RALViews(driver)
 }
 
-fun runViewsMEM(driver: ChromeDriver, i: Int) {
+fun runViewsMEM(driver: ChromeDriver) {
     val usrBirdsMEM = "supportmemphis@thefinchfarm.com"
     val pwBirdsMEM = "TFF2019!"
     birdsNowLogin(driver,usrBirdsMEM,pwBirdsMEM)
     MEMViews(driver)
 }
 
-fun runViewsSLC(driver: ChromeDriver, i: Int) {
+fun runViewsSLC(driver: ChromeDriver) {
     val usrBirdsSLC = "supportsaltlake@thefinchfarm.com"
     val pwBirdsSLC = "TFF2019!"
     birdsNowLogin(driver,usrBirdsSLC,pwBirdsSLC)
     SLCViews(driver)
 }
 
-fun runViewsNO(driver: ChromeDriver, i: Int) {
+fun runViewsNO(driver: ChromeDriver) {
     val usrBirdsNO = "supportneworleans@thefinchfarm.com"
     val pwBirdsNO = "TFF2019!"
     birdsNowLogin(driver,usrBirdsNO,pwBirdsNO)
     NOViews(driver)
 }
 
-fun runViewsLOU(driver: ChromeDriver, i: Int) {
+fun runViewsLOU(driver: ChromeDriver) {
     val usrBirdsLOU = "supportlouisville@thefinchfarm.com"
     val pwBirdsLOU = "TFF2019!"
     birdsNowLogin(driver,usrBirdsLOU,pwBirdsLOU)
     LOUViews(driver)
 }
 
-fun runViewsJACK(driver: ChromeDriver, i: Int) {
+fun runViewsJACK(driver: ChromeDriver) {
     val usrBirdsJACK = "supportjacksonville@thefinchfarm.com"
     val pwBirdsJACK = "TFF2019!"
     birdsNowLogin(driver,usrBirdsJACK,pwBirdsJACK)
     JACKViews(driver)
 }
 
-fun runViewsCLV(driver: ChromeDriver, i: Int) {
+fun runViewsCLV(driver: ChromeDriver) {
     val usrBirdsCLV = "supportcleveland@thefinchfarm.com"
     val pwBirdsCLV = "TFF2019!"
     birdsNowLogin(driver,usrBirdsCLV,pwBirdsCLV)
     CLVViews(driver)
 }
 
-fun runViewsCOL(driver: ChromeDriver, i: Int) {
+fun runViewsCOL(driver: ChromeDriver) {
     val usrBirdsCOL = "supportcolumbus@thefinchfarm.com"
     val pwBirdsCOL = "TFF2019!"
     birdsNowLogin(driver,usrBirdsCOL,pwBirdsCOL)
     COLViews(driver)
 }
 
-fun runViewsBUF(driver: ChromeDriver, i: Int) {
+fun runViewsBUF(driver: ChromeDriver) {
     val usrBirdsBUF = "supportbuffalo@thefinchfarm.com"
     val pwBirdsBUF = "TFF2019!"
     birdsNowLogin(driver,usrBirdsBUF,pwBirdsBUF)
     BUFViews(driver)
 }
 
-fun runViewsSJ(driver: ChromeDriver, i: Int) {
+fun runViewsSJ(driver: ChromeDriver) {
     val usrBirdsSJ = "supportsanjose@thefinchfarm.com"
     val pwBirdsSJ = "TFF2019!"
     birdsNowLogin(driver,usrBirdsSJ,pwBirdsSJ)
     SJViews(driver)
 }
 
-fun runViewsHAR(driver: ChromeDriver, i: Int) {
+fun runViewsHAR(driver: ChromeDriver) {
     val usrBirdsHAR = "supporthartford@thefinchfarm.com"
     val pwBirdsHAR = "TFF2019!"
     birdsNowLogin(driver,usrBirdsHAR,pwBirdsHAR)
     HARViews(driver)
 }
 
-fun runViewsBIR(driver: ChromeDriver, i: Int) {
+fun runViewsBIR(driver: ChromeDriver) {
     val usrBirdsBIR = "supportbirmingham@thefinchfarm.com"
     val pwBirdsBIR = "TFF2019!"
     birdsNowLogin(driver,usrBirdsBIR,pwBirdsBIR)
     BIRViews(driver)
 }
 
-fun runViewsKAN(driver: ChromeDriver, i: Int) {
+fun runViewsKAN(driver: ChromeDriver) {
     val usrBirdsKAN = "supportkansas@thefinchfarm.com"
     val pwBirdsKAN = "TFF2019!"
     birdsNowLogin(driver,usrBirdsKAN,pwBirdsKAN)
