@@ -55,16 +55,13 @@ fun scrape() {
     //////// ABOVE FOR PRICE CHANGE APP //////////////
     //////////////////////////////////////////////////
 
-    autoDogLogin = "customersupport@thefinchfarm.com"
+    autoDogLogin = "customersupportNY@thefinchfarm.com"
     autoDogPassword = "TFF2019!"
     dogPost = true
 
     //////////////////////////////////////////////////
     /////// JORDAN BIRD POST ABOVE //// //////////////
     //////////////////////////////////////////////////
-
-
-
 
     if(birdPost) {
         autoBirdPost(driver, autoBirdLogin, autoBirdPassword)
@@ -87,9 +84,7 @@ fun autoBirdPost(driver: ChromeDriver, login: String, pass: String) {
 }
 
 fun autoDogPost(driver: ChromeDriver, login: String, pass: String) {
-    val usrDog = "customersupport@thefinchfarm.com"
-    val pwDog = "TFF2019!"
-    dogLogin(driver, usrDog, pwDog)
+    dogLogin(driver, login, pass)
     Thread.sleep(5000)
     createDogs(driver)
     dogLogout(driver)
