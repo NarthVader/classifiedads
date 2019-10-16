@@ -591,6 +591,24 @@ fun dogLogin(driver: ChromeDriver,user: String,pass: String) {
     }
 }
 
+fun dogLogout(driver: ChromeDriver) {
+    try {
+        driver.get("https://www.dogsnow.com/main-logout-now")
+        Thread.sleep(3000)
+
+    }
+    catch (a: UnhandledAlertException) {
+        println("Alert Exception: $a")
+        driver.switchTo().alert().accept()
+    } catch (t: TimeoutException) {
+        println("Timeout Exception: $t")
+    } catch (n: NoSuchElementException) {
+        println("No Such Element Exception: $n")
+    } catch (o: Exception) {
+        println("Other Exceptions: $o")
+    }
+}
+
 fun runClassifieds(driver: ChromeDriver,i: Int) {
 
     val usrAd = "customersupport@thefinchfarm.com"

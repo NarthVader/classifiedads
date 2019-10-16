@@ -764,8 +764,7 @@ fun dogsNow(driver: ChromeDriver,i: Int) {
         242198,242201,242202,242208,242215,242218)
     println("Dogs Now: " + dogs.size)
     executeDogsPartial(driver,dogs,i)
-    driver.get("https://www.dogsnow.com/main-logout-now")
-    Thread.sleep(3000)
+    dogLogout(driver)
 }
 
 fun executeDogsPartial(driver: ChromeDriver,dogs:IntArray,i: Int) {

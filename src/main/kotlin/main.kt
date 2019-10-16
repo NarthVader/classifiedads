@@ -10,10 +10,13 @@ import org.openqa.selenium.remote.DesiredCapabilities
 import java.time.LocalDateTime
 
 
-var post = false
+var birdPost = false
+var dogPost = false
 var price = false
-var autoLogin = ""
-var autoPassword = ""
+var autoBirdLogin = ""
+var autoBirdPassword = ""
+var autoDogLogin = ""
+var autoDogPassword = ""
 var birdName = ""
 var newPrice = ""
 
@@ -36,12 +39,12 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-//    autoLogin = "supportminneapolis@thefinchfarm.com"
-//    autoPassword = "TFF2019!"
-//    post = true
+//    autoBirdLogin = "supportminneapolis@thefinchfarm.com"
+//    autoBirdPassword = "TFF2019!"
+//    birdPost = true
 
     //////////////////////////////////////////////////
-    /////// JORDAN VALUES AND UNCOMMENT //////////////
+    /////// JORDAN BIRD POST ABOVE //// //////////////
     //////////////////////////////////////////////////
 
 //    birdName = "Violet Indian Ringneck"
@@ -52,10 +55,23 @@ fun scrape() {
     //////// ABOVE FOR PRICE CHANGE APP //////////////
     //////////////////////////////////////////////////
 
+    autoDogLogin = "customersupport@thefinchfarm.com"
+    autoDogPassword = "TFF2019!"
+    dogPost = true
 
-    if(post) {
-        autoPost(driver, autoLogin, autoPassword)
-    } else if (price) {
+    //////////////////////////////////////////////////
+    /////// JORDAN BIRD POST ABOVE //// //////////////
+    //////////////////////////////////////////////////
+
+
+
+
+    if(birdPost) {
+        autoBirdPost(driver, autoBirdLogin, autoBirdPassword)
+    } else if (dogPost) {
+        autoDogPost(driver, autoDogLogin, autoDogPassword)
+    }
+    else if (price) {
         priceChange(driver,birdName,newPrice)
     } else {
         run(driver)
@@ -64,10 +80,19 @@ fun scrape() {
     driver.quit()
 }
 
-fun autoPost(driver: ChromeDriver, login: String, pass: String) {
+fun autoBirdPost(driver: ChromeDriver, login: String, pass: String) {
     birdsNowLogin(driver, login, pass)
     createBirds(driver)
     birdsNowLogout(driver)
+}
+
+fun autoDogPost(driver: ChromeDriver, login: String, pass: String) {
+    val usrDog = "customersupport@thefinchfarm.com"
+    val pwDog = "TFF2019!"
+    dogLogin(driver, usrDog, pwDog)
+    Thread.sleep(5000)
+    createDogs(driver)
+    dogLogout(driver)
 }
 
 fun run(driver: ChromeDriver) {
