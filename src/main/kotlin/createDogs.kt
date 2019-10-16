@@ -12,14 +12,15 @@ fun createDogs(driver: ChromeDriver) {
     createAffenpinscher(driver)
     createAkita(driver)
     createACD(driver)
+    createAusShep(driver)
     createBassett(driver)
     createBeagle(driver)
     createBichon(driver)
     createBorderCollie(driver)
+    createBoxer(driver)
     createCavalierKing(driver)
     createChihuahau(driver)
     createChow(driver)
-    createChihuahau(driver)
     createCorgi(driver)
     createDalmation(driver)
     createDauchsund(driver)
@@ -119,6 +120,37 @@ fun createACD(driver: ChromeDriver) {
     driver.findElement(By.cssSelector("#title")).sendKeys(title)
     //type dropdown
     driver.findElement(By.id("breed")).sendKeys("Australian Cattle")
+    Thread.sleep(3000)
+    Select(driver.findElement(By.name("sex"))).selectByValue("mi")
+    Thread.sleep(1000)
+
+    //price and comment price again
+    driver.findElement(By.cssSelector("#price")).sendKeys(price)
+    driver.findElement(By.cssSelector("#comments")).sendKeys(dogComment)
+    driver.findElement(By.cssSelector("#price")).sendKeys(price)
+    Thread.sleep(1000)
+    Select(driver.findElement(By.name("age"))).selectByValue("pup")
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys(url)
+
+    //tag words
+    driver.findElement(By.cssSelector("#tags")).sendKeys(searchTags)
+    saveAndContinue(driver)
+}
+
+fun createAusShep(driver: ChromeDriver) {
+    val title = "Australian Shepherd Puppies"
+    val price = "2561.99"
+    val url = "https://www.petpuppiesforsale.com/australian-shepherd-puppies/"
+    val searchTags = "australian shepherd puppies for sale, puppies for sale, australian shepherd  for sale, australian shepherd  for sale, australian shepherd  for sale, australian shepherd  poodle for sale"
+
+    Thread.sleep(3000)
+    println("creating $title")
+    driver.get("https://www.dogsnow.com/place_ad-adType-p")
+    Thread.sleep(1000)
+    //title
+    driver.findElement(By.cssSelector("#title")).sendKeys(title)
+    //type dropdown
+    driver.findElement(By.id("breed")).sendKeys("Australian Shepherd")
     Thread.sleep(3000)
     Select(driver.findElement(By.name("sex"))).selectByValue("mi")
     Thread.sleep(1000)
@@ -255,6 +287,37 @@ fun createBorderCollie(driver: ChromeDriver) {
     Thread.sleep(1000)
     Select(driver.findElement(By.name("age"))).selectByValue("pup")
     Select(driver.findElement(By.name("coat"))).selectByValue("lo")
+    driver.findElement(By.xpath("//input[@name='url']")).sendKeys(url)
+
+    //tag words
+    driver.findElement(By.cssSelector("#tags")).sendKeys(searchTags)
+    saveAndContinue(driver)
+}
+
+fun createBoxer(driver: ChromeDriver) {
+    val title = "Boxer Puppies"
+    val price = "2799.99"
+    val url = "https://www.petpuppiesforsale.com/boxer-puppies/"
+    val searchTags = "boxer puppies for sale, boxer for sale, puppies for sale"
+
+    Thread.sleep(3000)
+    println("creating $title")
+    driver.get("https://www.dogsnow.com/place_ad-adType-p")
+    Thread.sleep(1000)
+    //title
+    driver.findElement(By.cssSelector("#title")).sendKeys(title)
+    //type dropdown
+    driver.findElement(By.id("breed")).sendKeys("Boxer")
+    Thread.sleep(3000)
+    Select(driver.findElement(By.name("sex"))).selectByValue("mi")
+    Thread.sleep(1000)
+
+    //price and comment price again
+    driver.findElement(By.cssSelector("#price")).sendKeys(price)
+    driver.findElement(By.cssSelector("#comments")).sendKeys(dogComment)
+    driver.findElement(By.cssSelector("#price")).sendKeys(price)
+    Thread.sleep(1000)
+    Select(driver.findElement(By.name("age"))).selectByValue("pup")
     driver.findElement(By.xpath("//input[@name='url']")).sendKeys(url)
 
     //tag words
