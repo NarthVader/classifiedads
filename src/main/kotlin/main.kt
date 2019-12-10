@@ -47,17 +47,17 @@ fun scrape() {
     /////// JORDAN BIRD POST ABOVE //// //////////////
     //////////////////////////////////////////////////
 
-//    birdName = "Violet Indian Ringneck"
-//    newPrice = "736.99"
+//    birdName = "Red-Lored Amazon"
+//    newPrice = "2239.99"
 //    price = true
 
     //////////////////////////////////////////////////
     //////// ABOVE FOR PRICE CHANGE APP //////////////
     //////////////////////////////////////////////////
 
-    autoDogLogin = "customersupportNY@thefinchfarm.com"
-    autoDogPassword = "TFF2019!"
-    dogPost = true
+//    autoDogLogin = "customersupportNY@thefinchfarm.com"
+//    autoDogPassword = "TFF2019!"
+//    dogPost = true
 
     //////////////////////////////////////////////////
     /////// JORDAN BIRD POST ABOVE //// //////////////
@@ -73,7 +73,7 @@ fun scrape() {
     } else {
         run(driver)
     }
-    //viewCount(driver)
+//    viewCount(driver)
     driver.quit()
 }
 
@@ -97,7 +97,7 @@ fun run(driver: ChromeDriver) {
     for(i in 0..3) {
         runBirdsNow(driver,i)
 //        runAllHoobly(driver,i)
-        runClassifieds(driver,i)
+//        runClassifieds(driver,i)
         runOtherNowPets(driver,i)
     }
     val end = LocalDateTime.now()
@@ -143,7 +143,7 @@ fun runBirdsNow(driver: ChromeDriver, i: Int) {
     runBirdsSJ(driver,i)
     runBirdsNASH(driver,i)
     runBirdsJACK(driver,i)
-    runBirdsCLV(driver,i)
+//    runBirdsCLV(driver,i)
     runBirdsCOL(driver,i)
     runBirdsBUF(driver,i)
     runBirdsBIR(driver,i)
