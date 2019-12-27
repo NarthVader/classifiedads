@@ -609,12 +609,12 @@ fun dogLogout(driver: ChromeDriver) {
     }
 }
 
-fun runClassifieds(driver: ChromeDriver,i: Int) {
+fun runClassifieds(driver: ChromeDriver) {
 
     val usrAd = "customersupport@thefinchfarm.com"
     val pwAd = "Marketing2019!"
     adsLogin(driver,usrAd,pwAd)
-    adNow(driver,i)
+    adNow(driver)
 }
 
 fun adsLogin(driver: ChromeDriver,user: String,pass: String) {

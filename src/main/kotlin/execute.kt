@@ -635,7 +635,7 @@ fun birdsNowSLC(driver: ChromeDriver, pass: Int) {
     Thread.sleep(3000)
 }
 
-fun adNow(driver: ChromeDriver,i: Int) {
+fun adNow(driver: ChromeDriver) {
 
     Thread.sleep(1000)
     val ads: IntArray = intArrayOf(397197125,397197113,397197102,397197092,397197053,397197032,397196974,397196827,397196756,397195310,
@@ -657,7 +657,7 @@ fun adNow(driver: ChromeDriver,i: Int) {
         396150454,395817366)
 
     //println("Ads Now: " + ads.size)
-    executeAdsPartial(driver,ads,i)
+    executeAds(driver,ads)
 }
 
 fun hooblyWA(driver: ChromeDriver, pass: Int) {
@@ -886,19 +886,10 @@ fun executeHooblyPartial(driver: ChromeDriver,hoobly: Array<String>,startIndex: 
     Thread.sleep(3000)
 }
 
-fun executeAdsPartial(driver: ChromeDriver,ads:IntArray,i:Int) {
-    val adsUpdated = ads.size/4
-    val adStart = adsUpdated*i
-    //println(adsUpdated)
-    //println(adStart)
-    var adEnd = 0
-    if(i==3) {
-        adEnd=ads.size-1
-    } else {
-        adEnd=(adStart+adsUpdated)-1
-    }
+fun executeAds(driver: ChromeDriver,ads:IntArray) {
+
     //println(adEnd)
-    for (i in adStart..adEnd) {
+    for (i in 0..ads.size-1) {
         val index = ads[i]
         //println("$i: " + index)
         driver.get("https://www.classifiedads.com/post.php?$index")
