@@ -10,15 +10,12 @@ import org.openqa.selenium.remote.DesiredCapabilities
 import java.time.LocalDateTime
 
 
-var birdPost = false
+var kittensPost = false
 var dogPost = false
 var price = false
-var autoBirdLogin = ""
-var autoBirdPassword = ""
-var autoDogLogin = ""
-var autoDogPassword = ""
-var birdName = ""
-var newPrice = ""
+var autoPostUser = ""
+var autoPostPass = ""
+var kittenLocation = ""
 
 fun main(args: Array<String>) {
     scrape()
@@ -39,37 +36,16 @@ fun scrape() {
     /////// JORDAN VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-//    autoBirdLogin = "supportminneapolis@thefinchfarm.com"
-//    autoBirdPassword = "TFF2019!"
-//    birdPost = true
+    kittenLocation = "seattle"
+    kittensPost = true
 
-    //////////////////////////////////////////////////
-    /////// JORDAN BIRD POST ABOVE //// //////////////
-    //////////////////////////////////////////////////
-
-//    birdName = "Red-Lored Amazon"
-//    newPrice = "2239.99"
-//    price = true
-
-    //////////////////////////////////////////////////
-    //////// ABOVE FOR PRICE CHANGE APP //////////////
-    //////////////////////////////////////////////////
-
-//    autoDogLogin = "customersupportNY@thefinchfarm.com"
-//    autoDogPassword = "TFF2019!"
-//    dogPost = true
-
-    //////////////////////////////////////////////////
-    /////// JORDAN BIRD POST ABOVE //// //////////////
-    //////////////////////////////////////////////////
-
-    if(birdPost) {
-        autoBirdPost(driver, autoBirdLogin, autoBirdPassword)
+    if(kittensPost) {
+        autoKittenPost(driver, kittenLocation)
     } else if (dogPost) {
-        autoDogPost(driver, autoDogLogin, autoDogPassword)
+        autoDogPost(driver, autoPostUser, autoPostPass)
     }
     else if (price) {
-        priceChange(driver,birdName,newPrice)
+        //priceChange(driver,birdName,newPrice)
     } else {
         //renewBirds(driver)
         run(driver)
@@ -96,12 +72,7 @@ fun run(driver: ChromeDriver) {
     val startTime = (start.hour*60) + start.minute
     println(start)
     runClassifieds(driver)
-    for(i in 0..3) {
-        runBirdsNow(driver,i)
-//        runAllHoobly(driver,i)
 
-        runOtherNowPets(driver,i)
-    }
     val end = LocalDateTime.now()
     val endTime = (end.hour*60) + end.minute
     val runTime = endTime - startTime

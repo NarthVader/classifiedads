@@ -609,31 +609,3 @@ fun dogLogout(driver: ChromeDriver) {
     }
 }
 
-fun runClassifieds(driver: ChromeDriver) {
-
-    val usrAd = "customersupport@thefinchfarm.com"
-    val pwAd = "Marketing2019!"
-    adsLogin(driver,usrAd,pwAd)
-    adNow(driver)
-}
-
-fun adsLogin(driver: ChromeDriver,user: String,pass: String) {
-    try {
-        driver.get("https://www.classifiedads.com/login.php")
-        driver.findElement(By.name("login_email")).sendKeys("$user")
-        driver.findElement(By.name("login_password")).sendKeys("$pass")
-        driver.findElement(By.xpath("//input[@value='Log in']")).click()
-        Thread.sleep(1000)
-
-    }
-    catch (a: UnhandledAlertException) {
-        println("Alert Exception: $a")
-        driver.switchTo().alert().accept()
-    } catch (t: TimeoutException) {
-        println("Timeout Exception: $t")
-    } catch (n: NoSuchElementException) {
-        println("No Such Element Exception: $n")
-    } catch (o: Exception) {
-        println("Other Exceptions: $o")
-    }
-}
