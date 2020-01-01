@@ -6,7 +6,18 @@ import org.openqa.selenium.support.ui.Select
 
 
 fun autoKittenPost(driver: ChromeDriver,location:String) {
-    var user = "$location@petkittensforsale.com"
+    var userLoc = ""
+    if(location=="san diego") {
+        userLoc = "sandiego"
+    } else if(location=="new york") {
+        userLoc = "newyork"
+    } else if(location=="los angeles") {
+        userLoc="la"
+    }
+    else {
+        userLoc = location
+    }
+    var user = "$userLoc@petkittensforsale.com"
     var pass = locPass.getValue(location)
     adsLogin(driver,user,pass)
     postBirman(driver,location)
@@ -47,7 +58,7 @@ fun postBirman(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/birman-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -75,7 +86,7 @@ fun postAbyssian(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/abyssinian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -103,7 +114,7 @@ fun postOcicat(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/ocicat-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -131,7 +142,7 @@ fun postNorweigan(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/norwegian-forest-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -159,7 +170,7 @@ fun postMaine(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/maine-coon-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -187,7 +198,7 @@ fun postJapanese(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/japanese-bobtail-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -215,7 +226,7 @@ fun postHimalayan(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/himalayan-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -243,7 +254,7 @@ fun postBritishShort(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/british-shorthair-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -271,7 +282,7 @@ fun postBengal(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/bengal-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -299,7 +310,7 @@ fun postBalinese(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/balinese-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -327,7 +338,7 @@ fun postBobtail(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/american-bobtail-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -355,7 +366,7 @@ fun postBritishLong(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/british-longhair-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -383,7 +394,7 @@ fun postPersian(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/persian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -411,7 +422,7 @@ fun postRagdoll(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/ragdoll-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -439,7 +450,7 @@ fun postRussian(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/russian-blue-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -467,7 +478,7 @@ fun postScottishFold(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/scottish-fold-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -495,7 +506,7 @@ fun postScottishStraight(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/scottish-straight-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -523,7 +534,7 @@ fun postSiberian(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/siberian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -551,7 +562,7 @@ fun postDwelf(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/dwelf-sphynx-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -579,7 +590,7 @@ fun postSphynx(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/sphynx-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -607,7 +618,7 @@ fun postTurkish(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/turkish-angora/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -635,7 +646,7 @@ fun postTonkinese(driver: ChromeDriver,location: String) {
     Thread.sleep(1000)
     val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
     driver.switchTo().frame(iframe)
-    Thread.sleep(1000)
+    Thread.sleep(3000)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/tonkinese-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -659,7 +670,6 @@ fun kittenDropdowns(driver: ChromeDriver,location: String) {
     Select(driver.findElement(By.id("subcategory"))).selectByValue("290")
     Thread.sleep(3000)
 
-    //send Location
     driver.findElement(By.cssSelector("#location")).sendKeys(location)
     Thread.sleep(3000)
     var locString = locMap.getValue(location)
@@ -668,6 +678,7 @@ fun kittenDropdowns(driver: ChromeDriver,location: String) {
 }
 
 fun captchaLoop(driver: ChromeDriver, location: String) {
+    Thread.sleep(3000)
     var done = false
     var test = driver.findElement(By.name("captchacode"))
     driver.findElement(By.name("captchacode")).sendKeys("test")

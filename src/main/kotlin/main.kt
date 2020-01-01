@@ -33,10 +33,13 @@ fun scrape() {
 
 
     //////////////////////////////////////////////////
-    /////// JORDAN VALUES AND UNCOMMENT //////////////
+    /////// KATIE VALUES AND UNCOMMENT //////////////
     //////////////////////////////////////////////////
 
-    kittenLocation = "seattle"
+//    "seattle" "san diego" "Phoenix" "philadelphia"
+//    "new york" "miami" "los angeles" "houston" "dallas" "chicago"
+
+    kittenLocation = "dallas"
     kittensPost = true
 
     if(kittensPost) {
