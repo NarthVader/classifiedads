@@ -51,14 +51,12 @@ fun postBirman(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownFirst(driver,location)
     driver.findElement(By.name("title")).sendKeys("Birman Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/birman-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -66,6 +64,7 @@ fun postBirman(driver: ChromeDriver,location: String) {
             "Pet Birman Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified ")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -79,14 +78,12 @@ fun postAbyssian(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Abyssinian Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("2187.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/abyssinian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -94,6 +91,7 @@ fun postAbyssian(driver: ChromeDriver,location: String) {
             "Pet Abyssinian Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified ")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -107,14 +105,12 @@ fun postOcicat(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Ocicat Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/ocicat-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -122,6 +118,7 @@ fun postOcicat(driver: ChromeDriver,location: String) {
             "Pet Ocicat Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -135,14 +132,12 @@ fun postNorweigan(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Norwegian Forest Kitten for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1562.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/norwegian-forest-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -150,6 +145,7 @@ fun postNorweigan(driver: ChromeDriver,location: String) {
             "Pet Norwegian Forest Kitten for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -163,14 +159,12 @@ fun postMaine(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Maine Coon Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/maine-coon-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -178,6 +172,7 @@ fun postMaine(driver: ChromeDriver,location: String) {
             "Pet Maine Coon Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -191,14 +186,12 @@ fun postJapanese(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Japanese Bobtail Kitten")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/japanese-bobtail-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -206,6 +199,7 @@ fun postJapanese(driver: ChromeDriver,location: String) {
             "Pet Japanese Bobtail Kitten\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -219,14 +213,12 @@ fun postHimalayan(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Himalayan Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/himalayan-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -234,6 +226,7 @@ fun postHimalayan(driver: ChromeDriver,location: String) {
             "Pet Himalayan Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -247,14 +240,12 @@ fun postBritishShort(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("British Shorthair Kitten For Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1718.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/british-shorthair-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -262,6 +253,7 @@ fun postBritishShort(driver: ChromeDriver,location: String) {
             "Pet British Shorthair Kitten For Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -275,14 +267,12 @@ fun postBengal(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Bengal Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1718.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/bengal-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -290,6 +280,7 @@ fun postBengal(driver: ChromeDriver,location: String) {
             "Pet Bengal Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -303,14 +294,12 @@ fun postBalinese(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Balinese Kittens For Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/balinese-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -318,6 +307,7 @@ fun postBalinese(driver: ChromeDriver,location: String) {
             "Pet Balinese Kittens For Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified ")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -331,14 +321,12 @@ fun postBobtail(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("American Bobtail Kitten For Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/american-bobtail-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -346,6 +334,7 @@ fun postBobtail(driver: ChromeDriver,location: String) {
             "Pet American Bobtail Kitten For Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified ")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -359,14 +348,12 @@ fun postBritishLong(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("British Longhair Kitten For Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/british-longhair-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -374,6 +361,7 @@ fun postBritishLong(driver: ChromeDriver,location: String) {
             "Pet British Longhair Kitten For Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -387,14 +375,12 @@ fun postPersian(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Persian Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/persian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -402,6 +388,7 @@ fun postPersian(driver: ChromeDriver,location: String) {
             "Pet Persian Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -415,14 +402,12 @@ fun postRagdoll(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Ragdoll Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("2343.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/ragdoll-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -430,6 +415,7 @@ fun postRagdoll(driver: ChromeDriver,location: String) {
             "Pet Ragdoll Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -443,14 +429,12 @@ fun postRussian(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Russian Blue Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/russian-blue-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -459,6 +443,7 @@ fun postRussian(driver: ChromeDriver,location: String) {
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
     driver.switchTo().defaultContent()
+    Thread.sleep(3000)
     captchaLoop(driver,location)
     Thread.sleep(3000)
     driver.findElement(By.xpath("//a[@class='flat']")).click()
@@ -471,14 +456,12 @@ fun postScottishFold(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Scottish Fold Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1499.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/pet-kittens-for-sale/scottish-fold-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -486,6 +469,7 @@ fun postScottishFold(driver: ChromeDriver,location: String) {
             "Pet Scottish Fold Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -499,14 +483,12 @@ fun postScottishStraight(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Scottish Straight Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("2343.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/scottish-straight-kittens-for-sale/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -514,6 +496,7 @@ fun postScottishStraight(driver: ChromeDriver,location: String) {
             "Pet Scottish Straight Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -527,14 +510,12 @@ fun postSiberian(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Siberian Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/siberian-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -542,6 +523,7 @@ fun postSiberian(driver: ChromeDriver,location: String) {
             "Pet Siberian Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -555,14 +537,12 @@ fun postDwelf(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Dwelf Sphynx Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("3749.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/dwelf-sphynx-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -570,6 +550,7 @@ fun postDwelf(driver: ChromeDriver,location: String) {
             "Pet Dwelf Sphynx Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -583,14 +564,12 @@ fun postSphynx(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Sphynx Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/sphynx-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -598,6 +577,7 @@ fun postSphynx(driver: ChromeDriver,location: String) {
             "Pet Sphynx Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -611,14 +591,12 @@ fun postTurkish(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Turkish Angora Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("1874.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/turkish-angora/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -626,6 +604,7 @@ fun postTurkish(driver: ChromeDriver,location: String) {
             "Pet Turkish Angora Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
@@ -639,14 +618,12 @@ fun postTonkinese(driver: ChromeDriver,location: String) {
     driver.get("https://www.classifiedads.com/post.php")
     Thread.sleep(3000)
 
-    kittenDropdowns(driver,location)
+    kittenDropdownSecond(driver,location)
     driver.findElement(By.name("title")).sendKeys("Tonkinese Kittens for Sale")
     Thread.sleep(1000)
     driver.findElement(By.name("price")).sendKeys("2249.99")
     Thread.sleep(1000)
-    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
-    driver.switchTo().frame(iframe)
-    Thread.sleep(3000)
+    iframe(driver)
     driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']")).sendKeys("https://www.petkittensforsale.com/tonkinese-kitten/\n" +
             "email  - customersupport@petkittensforsale.com\n" +
             "call 877-527-5656\n" +
@@ -654,14 +631,20 @@ fun postTonkinese(driver: ChromeDriver,location: String) {
             "Pet Tonkinese Kittens for Sale\n" +
             "Active, Playful, Requires Attention, Affectionate , Vocal, Docile, Intelligent, Independent, Health, Grooming, Child Friendly, Pet Friendly\n" +
             "Health Certificate, Vet certified")
+    Thread.sleep(3000)
     driver.switchTo().defaultContent()
     captchaLoop(driver,location)
     Thread.sleep(3000)
     driver.findElement(By.xpath("//a[@class='flat']")).click()
 }
 
+fun iframe(driver: ChromeDriver) {
+    val iframe = driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"))
+    driver.switchTo().frame(iframe)
+    Thread.sleep(3000)
+}
 
-fun kittenDropdowns(driver: ChromeDriver,location: String) {
+fun kittenDropdownFirst(driver: ChromeDriver,location: String) {
     //pets dropdown
     Select(driver.findElement(By.name("category"))).selectByValue("17")
     Thread.sleep(3000)
@@ -675,6 +658,17 @@ fun kittenDropdowns(driver: ChromeDriver,location: String) {
     var locString = locMap.getValue(location)
     driver.findElement(By.xpath("//li[@lid='$locString']")).click()
     Thread.sleep(3000)
+}
+
+fun kittenDropdownSecond(driver: ChromeDriver,location: String) {
+    //pets dropdown
+    Select(driver.findElement(By.name("category"))).selectByValue("17")
+    Thread.sleep(3000)
+
+    //pets dropdown
+    Select(driver.findElement(By.id("subcategory"))).selectByValue("290")
+    Thread.sleep(3000)
+    
 }
 
 fun captchaLoop(driver: ChromeDriver, location: String) {
